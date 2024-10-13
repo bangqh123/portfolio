@@ -1,0 +1,76 @@
+// Padding variables
+$padding-4: 4px;
+$padding-8: 8px;
+$padding-12: 12px;
+$padding-16: 16px;
+$padding-20: 20px;
+
+// Margin variables
+$margin-4: 4px;
+$margin-8: 8px;
+$margin-12: 12px;
+$margin-16: 16px;
+$margin-20: 20px;
+
+// Color variables
+$white-color: #ffffff;
+$black-color: #000000;
+
+// Border radius variables
+$border-radius-4: 4px;
+$border-radius-8: 8px;
+$border-radius-12: 12px;
+$border-radius-16: 16px;
+$border-radius-20: 20px;
+
+// Z-index variables
+$z-index-sm: 10;
+$z-index-md: 100;
+$z-index-lg: 1000;
+
+// Font size variables
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-20: 20px;
+
+// Font weight variables
+$font-weight-100: 100;
+$font-weight-200: 200;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-weight-800: 800;
+$font-weight-900: 900;
+
+// Mixin for color
+@mixin color($color: $white-color) {
+    color: $color;
+}
+
+// Mixin for background color
+@mixin bg-color($bg: $white-color) {
+    background: $bg;
+}
+
+// Mixin for padding
+@mixin padding($size: $padding-4) {
+    padding: $size;
+}
+
+// Mixin for margin
+@mixin margin($size: $margin-4) {
+    margin: $size;
+}
+
+// Mixin for border-radius
+@mixin border-radius($radius: $border-radius-4) {
+    border-radius: $radius;
+}
+
+// Mixin for font size
+@mixin font-size($size: $font-size-16) {
+    font-size: $size;
+}
