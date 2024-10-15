@@ -1,12 +1,14 @@
 .header {
+    top: 0;
     width: 86%;
     height: 60px;
     display: flex;
+    position: sticky;
     align-items: center;
     justify-content: space-between;
 
     .header-name {
-        color: #ca6471;
+        color: $text-color;
         text-decoration: none;
         @include font-size(28px);
         text-transform: uppercase;
@@ -30,7 +32,7 @@
 
     .header-menu.active {
         .header-menu-icon {
-            color: #cc6c79;
+            color: $item-color;
         }
     }
 

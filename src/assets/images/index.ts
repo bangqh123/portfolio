@@ -1,3 +1,4 @@
+// images.js
 export const IMAGES = {
-    HERO: new URL('./images/totnghiep.jpg', import.meta.url).href,
-}
+    HERO: new URL('./totnghiep.png', import.meta.url).href,
+};
