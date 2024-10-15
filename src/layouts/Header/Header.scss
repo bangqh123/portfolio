@@ -1,12 +1,16 @@
 .header {
-    top: 0;
+    top: 20px;
     width: 86%;
     height: 60px;
     display: flex;
     z-index: 1000;
+    padding: 0 20px;
     position: sticky;
     align-items: center;
+    border-radius: 32px;
     justify-content: space-between;
+    background-color: $primary-color;
+
 
     .header-name {
         color: $text-color;
@@ -44,6 +48,8 @@
         list-style: none;
         color: $white-color;
         text-transform: uppercase;
+        background-color: $primary-color;
+
 
         .header-nav-item {
             font-size: $font-size-16;
@@ -59,4 +65,8 @@
             color: #cc6c79;
         }
     }
+}
+
+.header.scrolled {
+    box-shadow: 0 0 16px black;
 }

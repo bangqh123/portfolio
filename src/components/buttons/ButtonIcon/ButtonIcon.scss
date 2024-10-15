@@ -1,3 +1,14 @@
 .button-icon {
-    
+    border: none;
+    border-radius: 50%;
+    background-color: $btn-color;
+
+    svg {
+        color: $white-color;
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 }

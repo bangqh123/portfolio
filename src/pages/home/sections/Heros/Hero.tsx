@@ -4,7 +4,7 @@ import "./Hero.media.scss";
 import React from "react";
 import { IMAGES } from "../../../../assets/images";
 import { ICONS } from "../../../../assets/icons";
-import ButtonText from "../../../../components/buttons/ButtonText/ButtonText";
+import Button from "../../../../components/buttons/ButtonText/ButtonText";
 
 const Hero: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           <p>
             I am a Front-End and Website developer with over 1 year of experience.
           </p>
-          <ButtonText title="Contact Me" className="c" />
+          <Button title="Contact Me" className="hero-content-btn" />
         </div>
         <div className="hero-img">
           <img src={IMAGES.HERO} alt="Ảnh tốt nghiệp" />
