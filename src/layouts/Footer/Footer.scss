@@ -1,0 +1,31 @@
+.footer {
+    width: 86%;
+    display: flex;
+    text-align: center;
+    color: $white-color;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-16;
+    text-transform: capitalize;
+
+    .footer-heart {
+        color: #cc6c79;
+        font-size: 32px;
+        margin: 0 8px;
+    }
+
+    .footer-copyright {
+        font-size: $font-size-16;
+    }
+
+    a {
+        color: $white-color;
+        font-size: $font-size-18;
+        text-decoration: underline;
+        font-weight: $font-weight-600;
+
+        &:hover {
+            color: #cc6c79;
+        }
+    }
+}

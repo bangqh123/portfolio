@@ -1,0 +1,19 @@
+/* max 768px */
+@media screen and (max-width: 767px) {
+    .footer {
+        font-size: $font-size-12;
+
+        .footer-heart {
+            font-size: 28px;
+            margin: 0 4px;
+        }
+
+        .footer-copyright {
+            font-size: $font-size-14;
+        }
+
+        a {
+            font-size: $font-size-14;
+        }
+    }
+}
