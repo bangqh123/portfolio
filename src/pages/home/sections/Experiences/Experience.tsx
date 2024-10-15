@@ -1,9 +1,9 @@
-
+import './Experience.scss'
 
 const Experience = () => {
     return (
-        <div>
-          sds
+        <div id="experience" className="experience">
+          Experience
         </div>
       );
 }
