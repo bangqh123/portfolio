@@ -1,7 +1,9 @@
+import './Project.scss'
+
 const Project = () => {
     return (
-        <div>
-          sds
+        <div id="project" className="project">
+          Project
         </div>
       );
 }

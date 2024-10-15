@@ -9,7 +9,7 @@ import ButtonText from "../../../../components/buttons/ButtonText/ButtonText";
 const Hero: React.FC = () => {
   return (
     <>
-      <div className="hero">
+      <div id="hero" className="hero">
         <div className="hero-content">
           <h1>
             Hello!
