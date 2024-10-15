@@ -1,4 +1,74 @@
+#particles-js {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
 .hero {
     width: 100%;
-    border: 1px solid;
+    height: 400px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+    justify-content: space-between;
+
+    .hero-content {
+        display: flex;
+        margin-left: 20px;
+        color: $white-color;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h1 {
+            @include font-size(32px);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: 0;
+
+            img {
+                top: -88%;
+                width: 40px;
+                right: -28%;
+                position: absolute;
+            }
+        }
+
+        h3 {
+            margin: 20px 0;
+
+            strong {
+                color: $text-color;
+                font-size: $font-size-20;
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        .button-text {
+            width: 140px;
+            padding: 12px 16px;
+            border-radius: 20px;
+            color: $white-color;
+            background-color: $btn-color;
+            font-weight: $font-weight-700;
+        }
+    }
+
+    .hero-img {
+        text-align: center;
+
+        img {
+            width: 88%;
+        }
+    }
 }

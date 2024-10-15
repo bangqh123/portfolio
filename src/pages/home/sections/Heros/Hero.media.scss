@@ -1,0 +1,82 @@
+/* min 1200px */
+@media screen and (min-width: 1200px) {}
+
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hero {
+        .hero-content {
+            h1 {
+                font-size: $font-size-20;
+
+                img {
+                    width: 32px;
+                }
+            }
+
+            h3 {
+                font-size: $font-size-16;
+
+                strong {
+                    font-size: $font-size-16;
+                }
+            }
+
+            p {
+                font-size: $font-size-12;
+            }
+
+            .button-text {
+                width: 120px;
+                font-size: $font-size-14;
+            }
+        }
+    }
+}
+
+/* max 768px */
+@media screen and (max-width: 767px) {
+    .hero {
+        height: auto;
+        flex-direction: column;
+
+        .hero-content {
+            h1 {
+                font-size: $font-size-16;
+
+                img {
+                    width: 24px;
+                }
+            }
+
+            h3 {
+                font-size: $font-size-12;
+
+                strong {
+                    font-size: $font-size-14;
+                }
+            }
+
+            p {
+                font-size: $font-size-12;
+            }
+
+            .button-text {
+                width: 100px;
+                font-size: $font-size-12;
+            }
+        }
+
+        .hero-img {
+            height: 460px;
+
+            img {
+                width: 400px;
+            }
+        }
+    }
+}
