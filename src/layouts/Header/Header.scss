@@ -6,7 +6,9 @@
     z-index: 1000;
     position: sticky;
     align-items: center;
-    justify-content: space-between;
+    border-radius: 32px;
+    justify-content: space-around;
+    background-color: $primary-color;
 
     .header-name {
         color: $text-color;
@@ -59,4 +61,8 @@
             color: #cc6c79;
         }
     }
+}
+
+.header.scrolled {
+    box-shadow: 0 0 16px black;
 }
