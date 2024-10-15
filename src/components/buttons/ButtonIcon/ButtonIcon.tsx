@@ -1,11 +1,12 @@
+import React from "react";
 import "./ButtonIcon.scss";
 
 interface ButtonProps {
-    icon: string;
+    icon: React.ReactNode;
     className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ className, icon}) => {
+const ButtonIcon: React.FC<ButtonProps> = ({ className, icon}) => {
   return (
     <button className={`button-icon ${className}`}>
         {icon}
@@ -13,4 +14,4 @@ const Button: React.FC<ButtonProps> = ({ className, icon}) => {
   )
 };
 
-export default Button;
+export default ButtonIcon;
