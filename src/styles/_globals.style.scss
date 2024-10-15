@@ -1,11 +1,11 @@
 @import './variables.style.scss';
-// Scrollbar styling
+
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: $black-color;
+    background-color: $primary-color;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -17,7 +17,6 @@
     background-color: $white-color;
 }
 
-// Styling for the #root element
 body {
     all: unset;
 }
