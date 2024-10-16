@@ -1,9 +1,32 @@
-/* min 1200px */
-@media screen and (min-width: 1200px) {}
-
 /* 992px to 1199px */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-    
+    .hero {
+        .hero-content {
+            h1 {
+                @include font-size(32px);
+
+                img {
+                    width: 40px;
+                }
+            }
+
+            h3 {
+                font-size: $font-size-20;
+
+                strong {
+                    @include font-size(28px);
+                }
+            }
+
+            p {
+                font-size: $font-size-20;
+            }
+
+            .button-text {
+                font-size: $font-size-20;
+            }
+        }
+    }
 }
 
 /* 768px to 991px */
@@ -11,28 +34,27 @@
     .hero {
         .hero-content {
             h1 {
-                font-size: $font-size-20;
+                @include font-size(28px);
 
                 img {
-                    width: 32px;
+                    width: 40px;
                 }
             }
 
             h3 {
-                font-size: $font-size-16;
-
+                font-size: $font-size-20;
+                
                 strong {
-                    font-size: $font-size-16;
+                    @include font-size(24px);
                 }
             }
 
             p {
-                font-size: $font-size-12;
+                font-size: $font-size-16;
             }
 
             .button-text {
-                width: 128px;
-                font-size: $font-size-14;
+                font-size: $font-size-16;
             }
         }
     }
@@ -42,6 +64,7 @@
 @media screen and (min-width: 500px) and (max-width: 767px) {
     .hero {
         height: auto;
+        padding-top: 40px;
         flex-direction: column;
 
         .hero-content {
@@ -72,10 +95,10 @@
         }
 
         .hero-img {
-            height: 460px;
+            height: 400px;
 
             img {
-                width: 400px;
+                width: 360px;
             }
         }
     }
@@ -85,6 +108,7 @@
 @media screen and (max-width: 499px) {
     .hero {
         height: auto;
+        padding-top: 40px;
         flex-direction: column;
 
         .hero-content {
@@ -109,16 +133,15 @@
             }
 
             .button-text {
-                width: 120px;
                 font-size: $font-size-12;
             }
         }
 
         .hero-img {
-            height: 380px;
+            height: 360px;
 
             img {
-                width: 360px;
+                width: 320px;
             }
         }
     }
