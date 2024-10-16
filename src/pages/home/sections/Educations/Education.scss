@@ -1,4 +1,67 @@
 .education {
     width: 100%;
-    height: 500px;
+    height: auto;
+    display: flex;
+    padding: 60px 0;
+    flex-direction: column;
+
+    .education-title {
+        margin: 0 0 40px;
+        color: $text-color;
+        text-transform: uppercase;
+    }
+
+    .education-school {
+        gap: 40px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        .education-school-item {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .school-item-infor {
+                gap: 20px;
+                display: flex;
+                color: $white-color;
+                flex-direction: column;
+                
+                .item-infor-name {
+                    margin: 0;
+                    opacity: .6;
+                    text-transform: uppercase;
+                }
+
+                .item-infor-major {
+                    margin: 0;
+                    color: $white-color;
+                    font-size: $font-size-20;
+                    text-transform: uppercase;
+                }
+
+                .item-infor-subject {
+                    margin: 0;
+                    text-transform: capitalize;
+                }
+            }
+
+            .school-item-time {
+                gap: 8px;
+                display: flex;
+                color: $text-color;
+                // flex-direction: column;
+                align-items: flex-start;
+                font-size: $font-size-20;
+                text-transform: capitalize;
+                justify-content: flex-start;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
