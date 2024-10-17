@@ -74,9 +74,9 @@ const About: React.FC<TAboutUsProps> = ({
           </table>
           <div className="content-information-btn">
             <ButtonText title="Download cv" className="btn-download" />
-            <ButtonIcon className="btn-git" icon={<FaGithub />} />
-            <ButtonIcon className="btn-link" icon={<FaLinkedinIn />} />
-            <ButtonIcon className="btn-face" icon={<FaFacebookF />} />
+            <ButtonIcon className="btn-git" icon={<FaGithub />} link="https://github.com/bangqh123"/>
+            <ButtonIcon className="btn-link" icon={<FaLinkedinIn />} link="https://www.linkedin.com/in/bang-quach-265a0126b/"/>
+            <ButtonIcon className="btn-face" icon={<FaFacebookF />} link="https://web.facebook.com/bang.quach.906" />
           </div>
         </div>
       </div>
