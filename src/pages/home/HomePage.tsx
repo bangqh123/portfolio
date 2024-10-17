@@ -8,14 +8,15 @@ import Experience from './sections/Experiences/Experience';
 import Skill from './sections/Skill/Skill';
 import Project from './sections/Projects/Project';
 import Contact from './sections/Contacts/Contact';
+import { PROPS } from '../../configs/constants/homepage.config';
 
 const HomePage = () => {
   return (
     <LayoutLandingPage>
-      <HeroSection />
+      <HeroSection {...PROPS.HERO} />
       <div className='content-wrapper'>
-        < About />
-        <Education />
+        <About  {...PROPS.ABOUTUS}/>
+        <Education {...PROPS.EDUCATION}/>
         <Experience />
         <Skill />
         <Project />
