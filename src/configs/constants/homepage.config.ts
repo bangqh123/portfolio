@@ -22,8 +22,8 @@ const educationProps = {
     major: 'computer science',
     subjects: 'HTMl & CSS, Java, PhP, C#',
     gpa: 'GPA:3.55/4',
-    start: 'From: Jul 2018',
-    end : 'To: Jul 2023'
+    start: 'Jul 2018',
+    end : 'Jul 2023'
 }
 
 export const PROPS = {
