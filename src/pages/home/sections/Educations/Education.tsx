@@ -26,9 +26,9 @@ const Education: React.FC<TEducationProps> = ({title, schoolName, major, subject
                 <span className='item-infor-gpa'>{gpa}</span>
               </div>
               <div className='school-item-time'>
-                <p className='item-time-start'>{start}</p>
+                <p className='item-time-start'>From: <strong>{start}</strong></p>
                 <span>-</span>
-                <p className='item-time-end'>{end}</p>
+                <p className='item-time-end'>To: <strong>{end}</strong></p>
               </div>
             </div>
           </div>
