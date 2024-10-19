@@ -19,7 +19,7 @@ const aboutUsProps = {
 const educationProps = {
     title: 'Education',
     schoolName: 'University of Greenwich (Can Tho)',
-    major: 'computer science',
+    major: 'major: computer science',
     subjects: 'HTMl & CSS, Java, PhP, C#',
     gpa: 'GPA:3.55/4',
     start: 'Jul 2018',
