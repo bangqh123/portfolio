@@ -1,15 +1,38 @@
 import "./About.scss";
 import "./About.media.scss";
 
+import React from "react";
 import { IMAGES } from "../../../../assets/images";
 import ButtonText from "./../../../../components/buttons/ButtonText/ButtonText";
 import ButtonIcon from "../../../../components/buttons/ButtonIcon/ButtonIcon";
 import { FaGithub, FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
 
-const About = () => {
+type TAboutUsProps = {
+  title: string;
+  myself: string;
+  description1: string;
+  description2: string;
+  name: string;
+  age: number;
+  address: string;
+  phone: string;
+  email: string;
+};
+
+const About: React.FC<TAboutUsProps> = ({
+  title,
+  myself,
+  description1,
+  description2,
+  name,
+  age,
+  address,
+  phone,
+  email,
+}) => {
   return (
     <div id="about" className="about">
-      <h1 className="about-title">About Us</h1>
+      <h1 className="about-title">{title}</h1>
       <div className="about-content">
         <div className="about-content-avatar">
           <div className="content-avatar-img">
@@ -17,55 +40,43 @@ const About = () => {
           </div>
         </div>
         <div className="about-content-information">
-          <h2>
-            I am Professional <strong>Web Developer</strong>
-          </h2>
-          <p>
-            I am a Front-End programmer with more than 1 year of experience in
-            HTML & CSS, JavaScript and nearly 4 months of experience in learning
-            and developing TypeScript with the ReactJs library. I can use
-            Bootstrap and Tailwind with Ant Design.
-          </p>
-          <p>
-            I have actively researched and developed projects such as W3school's
-            The Band, Mentor Frontend QR code component and Blog preview card,
-            Shop and F_News, which helped me practice teamwork, communication,
-            problem-solving and investigation skills.
-          </p>
+          <h2 dangerouslySetInnerHTML={{ __html: myself }} />
+          <p>{description1}</p>
+          <p>{description2}</p>
           <table>
             <tbody>
               <tr>
                 <td>Name</td>
                 <td>:</td>
-                <td>Quach Hai Bang</td>
+                <td>{name}</td>
               </tr>
               <tr>
                 <td>Age</td>
                 <td>:</td>
-                <td>24</td>
+                <td>{age}</td>
               </tr>
               <tr>
                 <td>Address</td>
                 <td>:</td>
-                <td>Ca Mau, Viet Nam</td>
+                <td>{address}</td>
               </tr>
               <tr>
                 <td>Phone</td>
                 <td>:</td>
-                <td>(+84) 368459077</td>
+                <td>{phone}</td>
               </tr>
               <tr>
                 <td>E-mail</td>
                 <td>:</td>
-                <td>quachbang2404@gmail.com</td>
+                <td>{email}</td>
               </tr>
             </tbody>
           </table>
           <div className="content-information-btn">
             <ButtonText title="Download cv" className="btn-download" />
-            <ButtonIcon className="btn-git" icon={<FaGithub />} />
-            <ButtonIcon className="btn-link" icon={<FaLinkedinIn />} />
-            <ButtonIcon className="btn-face" icon={<FaFacebookF />} />
+            <ButtonIcon className="btn-git" icon={<FaGithub />} link="https://github.com/bangqh123"/>
+            <ButtonIcon className="btn-link" icon={<FaLinkedinIn />} link="https://www.linkedin.com/in/bang-quach-265a0126b/"/>
+            <ButtonIcon className="btn-face" icon={<FaFacebookF />} link="https://web.facebook.com/bang.quach.906" />
           </div>
         </div>
       </div>

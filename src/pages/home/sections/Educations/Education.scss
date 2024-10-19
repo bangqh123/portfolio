@@ -52,14 +52,20 @@
                 gap: 8px;
                 display: flex;
                 color: $text-color;
-                // flex-direction: column;
                 align-items: flex-start;
                 font-size: $font-size-20;
                 text-transform: capitalize;
                 justify-content: flex-start;
 
-                p {
+                .item-time-end,
+                .item-time-start {
                     margin: 0;
+                    color: $white-color;
+
+                    strong {
+                        color: $text-color;
+                        font-weight: $font-weight-400;
+                    }
                 }
             }
         }

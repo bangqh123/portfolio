@@ -6,21 +6,23 @@ import { IMAGES } from "../../../../assets/images";
 import { ICONS } from "../../../../assets/icons";
 import Button from "../../../../components/buttons/ButtonText/ButtonText";
 
-const Hero: React.FC = () => {
+type THeroProps = {
+  title: string;
+  name: string;
+  description: string;
+};
+
+const Hero: React.FC<THeroProps> = ({ title, name, description }) => {
   return (
     <>
       <div id="hero" className="hero">
         <div className="hero-content">
           <h1>
-            Hello!
+            {title}
             <img src={ICONS.HI} alt="Icon Hi" />
           </h1>
-          <h3>
-            My name is <strong>Quach Hai Bang</strong>
-          </h3>
-          <p>
-            I am a Front-End and Website developer with over 1 year of experience.
-          </p>
+          <h3 dangerouslySetInnerHTML={{ __html: name }} />
+          <p>{description}</p>
           <Button title="Contact Me" className="hero-content-btn" />
         </div>
         <div className="hero-img">
@@ -28,7 +30,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
     </>
-    
   );
 };
 
