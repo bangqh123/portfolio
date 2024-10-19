@@ -17,7 +17,7 @@ const HomePage = () => {
       <div className='content-wrapper'>
         <About  {...PROPS.ABOUTUS}/>
         <Education {...PROPS.EDUCATION}/>
-        <Experience />
+        <Experience {...PROPS.EXPERIENCE}/>
         <Skill />
         <Project />
         <Contact />

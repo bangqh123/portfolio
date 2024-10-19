@@ -26,6 +26,12 @@ const educationProps = {
     end : 'Jul 2023'
 }
 
+const experienceProps = {
+    title: 'Experience',
+    company: 'Company',
+    role: 'Roles/Responsibilities'
+}
+
 export const PROPS = {
     HERO: {
         ...heroProps,
@@ -36,4 +42,7 @@ export const PROPS = {
     EDUCATION: {
         ...educationProps
     },
+    EXPERIENCE: {
+        ...experienceProps
+    }
 }
