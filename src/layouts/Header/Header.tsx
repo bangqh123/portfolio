@@ -2,7 +2,7 @@ import "./Header.scss";
 import "./Header.media.scss";
 
 import React, { useState, useEffect, useMemo } from "react";
-import { TfiMenuAlt } from "react-icons/tfi";
+import { ICONS } from "../../assets/icons";
 
 interface HeaderLayoutProps {
   isScroll: boolean;
@@ -52,8 +52,14 @@ const Header: React.FC<HeaderLayoutProps> = ({ isScroll }) => {
       <div
         className={`header-menu ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <TfiMenuAlt className="header-menu-icon" />
+      > 
+        <img 
+          className="header-menu-icon" 
+          src={
+            menuOpen ? (ICONS.CLOSE) : (ICONS.HAMBURGER)
+          } 
+          alt="Menu Icon"
+        />
       </div>
       <ul className={`header-nav ${menuOpen ? "open" : ""}`}>
         {navItems.map((item, index) => (

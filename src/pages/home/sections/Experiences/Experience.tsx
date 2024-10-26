@@ -22,17 +22,15 @@ const Experience: React.FC<TExperienceProps> = ({title, company, role}) => {
                 <div className='item-infor-role'>
                   {role}
                   <ul>
-                    <li>dsds</li>
-                    <li>dsds</li>
-                    <li>dsds</li>
-                    <li>dsds</li>
+                    <li>Programme outsourcing projects</li>
+                    <li>Create coding frames and design database based on project descriptions</li>
                   </ul>
                 </div>
               </div>
               <div className='content-item-time'>
-                <p className='item-time-start'>From: <strong>Jun 2024</strong></p>
+                <p className='item-time-start'>Jun 2024</p>
                 <span>-</span>
-                <p className='item-time-end'>To: <strong>Present</strong></p>
+                <p className='item-time-end'>Present</p>
               </div>
             </div>
             <div className='experience-content-item'>
@@ -43,17 +41,15 @@ const Experience: React.FC<TExperienceProps> = ({title, company, role}) => {
                 <div className='item-infor-role'>
                   {role}
                   <ul>
-                    <li>dsds</li>
-                    <li>dsds</li>
-                    <li>dsds</li>
-                    <li>dsds</li>
+                    <li>Programme outsourcing projects</li>
+                    <li>Create coding frames and design database based on project descriptions</li>
                   </ul>
                 </div>
               </div>
               <div className='content-item-time'>
-                <p className='item-time-start'>From: <strong>Nov 2021</strong></p>
+                <p className='item-time-start'>Nov 2021</p>
                 <span>-</span>
-                <p className='item-time-end'>To: <strong>Apr 2022</strong></p>
+                <p className='item-time-end'>Apr 2022</p>
               </div>
             </div>
           </div>
