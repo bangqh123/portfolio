@@ -60,12 +60,13 @@
                 .item-time-end,
                 .item-time-start {
                     margin: 0;
-                    color: $white-color;
+                    color: $text-color;
+                    font-weight: $font-weight-400;
+                }
 
-                    strong {
-                        color: $text-color;
-                        font-weight: $font-weight-400;
-                    }
+                span {
+                    color: $white-color;
+                    font-weight: $font-weight-600;
                 }
             }
         }

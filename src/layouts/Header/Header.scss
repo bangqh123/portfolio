@@ -8,12 +8,12 @@
     position: sticky;
     align-items: center;
     border-radius: 32px;
+    backdrop-filter: blur(24px);
     justify-content: space-between;
-    background-color: $primary-color;
-
+    background-color: transparent;
 
     .header-name {
-        color: $text-color;
+        color: $white-color;
         text-decoration: none;
         @include font-size(28px);
         text-transform: uppercase;
