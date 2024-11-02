@@ -13,11 +13,11 @@
     background-color: transparent;
 
     .header-name {
+        font-weight: 700;
         color: $white-color;
         text-decoration: none;
         @include font-size(28px);
         text-transform: uppercase;
-        font-weight: $font-weight-700;
     }
 
     .header-menu {
@@ -48,12 +48,12 @@
         list-style: none;
         color: $white-color;
         text-transform: uppercase;
-        background-color: $primary-color;
+        background-color: transparent;
 
 
         .header-nav-item {
+            font-weight: 400;
             font-size: $font-size-16;
-            font-weight: $font-weight-400;
 
             &:hover {
                 cursor: pointer;

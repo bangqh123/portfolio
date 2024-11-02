@@ -3,6 +3,7 @@ import "./Header.media.scss";
 
 import React, { useState, useEffect, useMemo } from "react";
 import { ICONS } from "../../assets/icons";
+import HeaderNav from "./partials/HeaderINav";
 
 interface HeaderLayoutProps {
   isScroll: boolean;
@@ -61,26 +62,12 @@ const Header: React.FC<HeaderLayoutProps> = ({ isScroll }) => {
           alt="Menu Icon"
         />
       </div>
-      <ul className={`header-nav ${menuOpen ? "open" : ""}`}>
-        {navItems.map((item, index) => (
-          <li
-            key={index}
-            className={`header-nav-item ${
-              activeIndex === index ? "active" : ""
-            }`}
-            onClick={() => {
-              setActiveIndex(index);
-              const section = document.getElementById(item.id);
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-            aria-current={activeIndex === index ? "page" : undefined}
-          >
-            {item.name}
-          </li>
-        ))}
-      </ul>
+      <HeaderNav
+        navItems={navItems}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        menuOpen={menuOpen}
+      />
     </header>
   );
 };

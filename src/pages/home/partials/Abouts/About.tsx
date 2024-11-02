@@ -3,8 +3,8 @@ import "./About.media.scss";
 
 import React from "react";
 import { IMAGES } from "../../../../assets/images";
-import ButtonText from "./../../../../components/buttons/ButtonText/ButtonText";
-import ButtonIcon from "../../../../components/buttons/ButtonIcon/ButtonIcon";
+import Button from "../../../../components/buttons/Buttons/Buttons";
+// import ButtonIcon from "../../../../components/buttons/ButtonIcon/ButtonIcon";
 import { FaGithub, FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
 
 type TAboutUsProps = {
@@ -73,10 +73,16 @@ const About: React.FC<TAboutUsProps> = ({
             </tbody>
           </table>
           <div className="content-information-btn">
-            <ButtonText title="Download cv" className="btn-download" />
-            <ButtonIcon className="btn-git" icon={<FaGithub />} link="https://github.com/bangqh123"/>
-            <ButtonIcon className="btn-link" icon={<FaLinkedinIn />} link="https://www.linkedin.com/in/bang-quach-265a0126b/"/>
-            <ButtonIcon className="btn-face" icon={<FaFacebookF />} link="https://web.facebook.com/bang.quach.906" />
+            <Button
+              newTab={true}
+              download={true}
+              title="Download cv"
+              className="btn-download"
+              link="../public/CV_QH_Bang_FE_0368459077.pdf"
+            />
+            <Button className="btn-git" icon={<FaGithub />} link="https://github.com/bangqh123"/>
+            <Button className="btn-link" icon={<FaLinkedinIn />} link="https://www.linkedin.com/in/bang-quach-265a0126b/"/>
+            <Button className="btn-face" icon={<FaFacebookF />} link="https://web.facebook.com/bang.quach.906" />
           </div>
         </div>
       </div>

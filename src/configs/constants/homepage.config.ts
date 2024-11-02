@@ -1,6 +1,6 @@
 const heroProps = {
     title: ' Hello',
-    name: 'My name is <strong>Quach Hai Bang</strong>',
+    name: 'My name is <a href="https://www.linkedin.com/in/bang-quach-hai/">Quach Hai Bang</a>',
     description: 'I am a Front-End and Website developer with over 1 year of experience.',
 }
 
