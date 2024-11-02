@@ -78,7 +78,7 @@ const About: React.FC<TAboutUsProps> = ({
               download={true}
               title="Download cv"
               className="btn-download"
-              link="../public/CV_QH_Bang_FE_0368459077.pdf"
+              link="/CV_QH_Bang_FE_0368459077.pdf"
             />
             <Button className="btn-git" icon={<FaGithub />} link="https://github.com/bangqh123"/>
             <Button className="btn-link" icon={<FaLinkedinIn />} link="https://www.linkedin.com/in/bang-quach-265a0126b/"/>
