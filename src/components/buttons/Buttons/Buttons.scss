@@ -1,6 +1,7 @@
-.button-icon {
+.button {
     border: none;
-    border-radius: 50%;
+    font-weight: 700;
+    color: $white-color;
     background-color: $btn-color;
 
     svg {
@@ -8,7 +9,7 @@
     }
 
     &:hover {
-        cursor: pointer;
         opacity: 0.8;
+        cursor: pointer;
     }
 }

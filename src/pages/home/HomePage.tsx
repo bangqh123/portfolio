@@ -1,13 +1,13 @@
 import './HomePage.scss'
 
-import HeroSection from './sections/Heros/Hero'
+import HeroSection from './partials/Heros/Hero'
 import LayoutLandingPage from "../../layouts/LayoutLandingPage/LayoutLandingPage";
-import About from './sections/Abouts/About';
-import Education from './sections/Educations/Education';
-import Experience from './sections/Experiences/Experience';
-import Skill from './sections/Skill/Skill';
-import Project from './sections/Projects/Project';
-import Contact from './sections/Contacts/Contact';
+import About from './partials/Abouts/About';
+import Education from './partials/Educations/Education';
+import Experience from './partials/Experiences/Experience';
+import Skill from './partials/Skill/Skill';
+import Project from './partials/Projects/Project';
+import Contact from './partials/Contacts/Contact';
 import { PROPS } from '../../configs/constants/homepage.config';
 
 const HomePage = () => {

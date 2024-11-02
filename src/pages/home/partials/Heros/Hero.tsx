@@ -4,7 +4,8 @@ import "./Hero.media.scss";
 import React from "react";
 import { IMAGES } from "../../../../assets/images";
 import { ICONS } from "../../../../assets/icons";
-import Button from "../../../../components/buttons/ButtonText/ButtonText";
+import Button from "../../../../components/buttons/Buttons/Buttons"
+// import Button from "../../../../components/buttons/ButtonText/ButtonText";
 
 type THeroProps = {
   title: string;
@@ -13,6 +14,13 @@ type THeroProps = {
 };
 
 const Hero: React.FC<THeroProps> = ({ title, name, description }) => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div id="hero" className="hero">
@@ -23,10 +31,10 @@ const Hero: React.FC<THeroProps> = ({ title, name, description }) => {
           </h1>
           <h3 dangerouslySetInnerHTML={{ __html: name }} />
           <p>{description}</p>
-          <Button title="Contact Me" className="hero-content-btn" />
+          <Button title="Contact Me" className="hero-content-btn"  scroll={scrollToContact}/>
         </div>
         <div className="hero-img">
-          <img src={IMAGES.HERO} alt="Ảnh tốt nghiệp" />
+          <img src={IMAGES.HERO} alt="Ảnh tốt nghiệp"/>
         </div>
       </div>
     </>
