@@ -1,6 +1,7 @@
 /* max 768px */
 @media screen and (max-width: 767px) {
     .footer {
+        flex-direction: column;
         font-size: $font-size-12;
 
         .footer-heart {

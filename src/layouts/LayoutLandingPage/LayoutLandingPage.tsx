@@ -2,6 +2,7 @@ import "./LayoutLandingPage.scss";
 import React, { useEffect, useState, PropsWithChildren } from "react";
 import HeaderLayout from "../Header/Header";
 import FooterLayout from "../Footer/Footer";
+import { PROPS } from "../../configs/constants/footer.config";
 
 interface LayoutLandingPageProps {
     children: React.ReactNode;
@@ -36,7 +37,7 @@ const LayoutLandingPage: React.FC<LayoutLandingPageProps> = ({ children }: Props
             <div className="wrapper-landing-page">
                 <HeaderLayout isScroll={isScroll} />
                 <main className="content-landing-page">{children}</main>
-                <FooterLayout />
+                <FooterLayout {...PROPS.FOOTER}/>
             </div>
         </>
     )

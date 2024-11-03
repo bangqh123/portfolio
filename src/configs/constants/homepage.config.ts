@@ -11,7 +11,7 @@ const aboutUsProps = {
     description2: 'I have actively researched and developed projects such as W3school`s The Band, Mentor Frontend QR code component and Blog preview card, Shop and F_News, which helped me practice teamwork, communication, problem-solving and investigation skills.',
     name: 'Quach Hai Bang',
     age: 24,  
-    address: 'Ca Mau, Viet Nam',
+    address: 'Cai Nuoc, Ca Mau, Viet Nam',
     phone: '(+84) 368459077',
     email: 'quachbang2404@gmail.com'
 }
