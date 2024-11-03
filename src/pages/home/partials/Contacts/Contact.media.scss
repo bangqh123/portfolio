@@ -1,0 +1,37 @@
+/* max 991px */
+@media screen and (max-width: 991px) {
+    .contact {
+        .contact-content {
+            gap: 20px;
+            flex-direction: column-reverse;
+
+            .contact-content-map {
+                iframe {
+                    width: 90%;
+                    min-height: 400px;
+                }
+            }
+        }
+    }
+}
+
+/* max 768px */
+@media screen and (max-width: 767px) {
+    .contact {
+        .contact-content {
+            gap: 20px;
+            flex-direction: column-reverse;
+
+            .contact-content-form {
+                width: 100%;
+            }
+
+            .contact-content-map {
+                iframe {
+                    width: 100%;
+                    min-height: 360px;
+                }
+            }
+        }
+    }
+}

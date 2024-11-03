@@ -20,6 +20,14 @@
           "backdrop-filter"
         ]
       }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[loading]"
+        ]
+      }
     ]
   }
 }

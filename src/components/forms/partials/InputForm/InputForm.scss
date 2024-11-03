@@ -1,0 +1,43 @@
+.form-group {
+    width: 80%;
+    position: relative;
+
+    .form-input {
+        width: 90%;
+        outline: none;
+        padding: 16px;
+        border-radius: 6px;
+        color: $white-color;
+        font-size: $font-size-20;
+        border: 2px solid gray;
+        background-color: transparent;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            border-color: $text-color;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        &:focus+.form-label,
+        &:not(:placeholder-shown)+.form-label {
+            color: gray;
+            font-size: $font-size-14;
+            transform: translateY(-40px);
+        }
+    }
+
+    .form-label {
+        top: 50%;
+        left: 8px;
+        padding: 0 4px;
+        position: absolute;
+        color: $white-color;
+        pointer-events: none;
+        font-size: $font-size-18;
+        text-transform: capitalize;
+        transform: translateY(-50%);
+        background-color: $primary-color;
+        transition: transform 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    }
+}

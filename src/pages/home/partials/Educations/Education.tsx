@@ -1,7 +1,7 @@
-import './Education.scss'
-import './Education.media.scss'
+import "./Education.scss"
+import "./Education.media.scss"
 
-import React from 'react';
+import React from "react"
 
 type TEducationProps = {
   title: string,

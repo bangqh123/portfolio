@@ -10,4 +10,21 @@
         color: $text-color;
         text-transform: uppercase;
     }
+
+    .contact-content {
+        width: 100%;
+        display: flex;
+
+        .contact-content-map {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+    }
 }
