@@ -10,6 +10,7 @@ interface THeaderNavProps {
   activeIndex: number;
   setActiveIndex: (index: number) => void;
   menuOpen: boolean;
+  setMenuOpen: (open: boolean) => void;
 }
 
 const HeaderNav: React.FC<THeaderNavProps> = ({
@@ -17,6 +18,7 @@ const HeaderNav: React.FC<THeaderNavProps> = ({
   activeIndex,
   setActiveIndex,
   menuOpen,
+  setMenuOpen,
 }) => {
   return (
     <ul className={`header-nav ${menuOpen ? "open" : ""}`}>
@@ -30,6 +32,7 @@ const HeaderNav: React.FC<THeaderNavProps> = ({
             if (section) {
               section.scrollIntoView({ behavior: "smooth" });
             }
+            setMenuOpen(false);
           }}
           aria-current={activeIndex === index ? "page" : undefined}
         >

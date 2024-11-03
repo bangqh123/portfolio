@@ -8,9 +8,8 @@
     position: sticky;
     align-items: center;
     border-radius: 32px;
-    backdrop-filter: blur(24px);
     justify-content: space-between;
-    background-color: transparent;
+    background-color: $primary-color;
 
     .header-name {
         font-weight: 700;
@@ -48,7 +47,7 @@
         list-style: none;
         color: $white-color;
         text-transform: uppercase;
-        background-color: transparent;
+        background-color: $primary-color;
 
 
         .header-nav-item {
