@@ -1,4 +1,4 @@
-@import './variables.style.scss';
+@import "./variables.style.scss";
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -28,6 +28,6 @@ body {
     height: auto;
     font-weight: 300;
     font-style: normal;
-    font-family: "Merriweather", serif;
+    font-family: $font-family;
     background-color: $primary-color;
 }

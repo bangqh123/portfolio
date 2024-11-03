@@ -1,13 +1,13 @@
-import './styles/index.scss'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import "./styles/index.scss"
+import { StrictMode } from "react"
+import { createRoot } from "react-dom/client"
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
-} from 'react-router-dom';
-import HomePage from './pages/home/HomePage.tsx';
+} from "react-router-dom";
+import HomePage from "./pages/home/HomePage.tsx";
 
 
 const router = createBrowserRouter(

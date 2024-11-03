@@ -5,7 +5,6 @@ import React from "react";
 import { IMAGES } from "../../../../assets/images";
 import { ICONS } from "../../../../assets/icons";
 import Button from "../../../../components/buttons/Buttons/Buttons"
-// import Button from "../../../../components/buttons/ButtonText/ButtonText";
 
 type THeroProps = {
   title: string;

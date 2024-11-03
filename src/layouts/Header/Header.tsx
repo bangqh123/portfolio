@@ -67,6 +67,7 @@ const Header: React.FC<HeaderLayoutProps> = ({ isScroll }) => {
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
         menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
       />
     </header>
   );

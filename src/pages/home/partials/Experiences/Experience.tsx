@@ -1,7 +1,7 @@
-import './Experience.scss'
-import './Experience.media.scss'
+import "./Experience.scss"
+import "./Experience.media.scss"
 
-import React from 'react';
+import React from "react"
 
 type TExperienceProps = {
   title: string,

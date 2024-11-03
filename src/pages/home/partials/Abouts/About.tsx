@@ -4,7 +4,6 @@ import "./About.media.scss";
 import React from "react";
 import { IMAGES } from "../../../../assets/images";
 import Button from "../../../../components/buttons/Buttons/Buttons";
-// import ButtonIcon from "../../../../components/buttons/ButtonIcon/ButtonIcon";
 import { FaGithub, FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
 
 type TAboutUsProps = {

@@ -10,11 +10,14 @@ interface TButtonsProps {
   scroll?: () => void;
   download?: boolean;
   newTab?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Buttons: React.FC<TButtonsProps> = ({ title, className, icon, link, scroll, download, newTab }) => {
-  const handleClick = () => {
-    if (scroll) {
+const Buttons: React.FC<TButtonsProps> = ({ title, className, icon, link, scroll, download, newTab, onClick }) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (onClick) {
+      onClick(e);
+    } else if (scroll) {
       scroll();
     } else if (link) {
       if (newTab) {
@@ -32,8 +35,8 @@ const Buttons: React.FC<TButtonsProps> = ({ title, className, icon, link, scroll
 
   return (
     <button className={`button ${className}`} onClick={handleClick}>
-      {title}
       {icon}
+      {title}
     </button>
   );
 };

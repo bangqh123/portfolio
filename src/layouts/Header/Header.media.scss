@@ -23,10 +23,10 @@
 
         .header-nav {
             top: 80%;
-            right: 12px;
             gap: 12px;
             opacity: 0;
-            padding: 12px 28px;
+            right: 12px;
+            padding: 12px 40px;
             position: absolute;
             visibility: hidden;
             flex-direction: column;
@@ -61,9 +61,10 @@
         }
 
         .header-nav {
-            top: 80%;
-            right: 12px;
+            top: 76%;
             gap: 12px;
+            left: 8px;
+            right: 8px;
             opacity: 0;
             padding: 12px 28px;
             position: absolute;

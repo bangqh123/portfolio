@@ -1,4 +1,4 @@
-import './Project.scss'
+import "./Project.scss"
 
 const Project = () => {
     return (
