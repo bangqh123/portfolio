@@ -33,7 +33,7 @@ const Hero: React.FC<THeroProps> = ({ title, name, description }) => {
           <Button title="Contact Me" className="hero-content-btn"  scroll={scrollToContact}/>
         </div>
         <div className="hero-img">
-          <img src={IMAGES.HERO} alt="Ảnh tốt nghiệp"/>
+          <img src={IMAGES.HERO} alt="Avatar Profolio"/>
         </div>
       </div>
     </>
