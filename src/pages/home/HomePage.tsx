@@ -9,6 +9,7 @@ import Skill from "./partials/Skill/Skill"
 import Project from "./partials/Projects/Project"
 import Contact from "./partials/Contacts/Contact"
 import { PROPS } from "../../configs/constants/homepage.config"
+import Resume from "./partials/Resume/Resume"
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
         <Education {...PROPS.EDUCATION}/>
         <Experience {...PROPS.EXPERIENCE}/>
         <Skill />
+        <Resume />
         <Project />
         <Contact />
       </div>

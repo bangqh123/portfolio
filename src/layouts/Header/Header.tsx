@@ -20,6 +20,7 @@ const Header: React.FC<HeaderLayoutProps> = ({ isScroll }) => {
       { name: "Education", id: "education" },
       { name: "Experience", id: "experience" },
       { name: "Skills", id: "skill" },
+      { name: "Resume", id: "resume" },
       { name: "Projects", id: "project" },
       { name: "Contact", id: "contact" },
     ],
