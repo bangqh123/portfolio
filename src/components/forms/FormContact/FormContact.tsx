@@ -38,38 +38,35 @@ const FormContact: React.FC<TFormContactProps> = ({ title, className }) => {
   };
 
   return (
-    <>
+    <fieldset>
       <h2>{title}</h2>
       <form className={className}>
         <InputForm
           type="text"
           name="fullName"
           title="full name"
-          className="form-message-group"
           onChange={handleChange}
         />
         <InputForm
           type="email"
           name="email"
           title="email address"
-          className="form-message-group"
           onChange={handleChange}
         />
         <InputForm
           type="text"
           name="message"
           title="message"
-          className="form-message-group"
           onChange={handleChange}
         />
       </form>
       <Button
         icon={<GrSend />}
         title="Send Message"
-        className="form-message-btn"
+        className="content-form-btn"
         onClick={handleSubmit}
       />
-    </>
+    </fieldset>
   );
 };
 
