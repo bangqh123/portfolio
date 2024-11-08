@@ -24,7 +24,7 @@ const Hero: React.FC<THeroProps> = ({ title, name, description }) => {
     <>
       <div id="hero" className="hero">
         <div className="hero-content">
-          <h1>
+          <h1 className="hero-content-title">
             {title}
             <img src={ICONS.HI} alt="Icon Hi" />
           </h1>
