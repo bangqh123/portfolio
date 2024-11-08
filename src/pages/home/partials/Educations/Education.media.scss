@@ -1,6 +1,10 @@
 /* 992px to 1199px */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .education {
+        .education-title {
+            @include font-size(30px)
+        }
+
         .education-school {
             .education-school-item {
                 .school-item-infor {
