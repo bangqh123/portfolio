@@ -1,0 +1,12 @@
+.resumeitem {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+
+    .resumeitem-cv {
+        width: 100%;
+        height: 640px;
+    }
+}
