@@ -4,10 +4,11 @@ import "./InputForm.media.scss";
 import React from "react";
 
 type TInputFormProps = {
-  type: string;
+  type: "text" | "email";
   title: string;
   className?: string;
   name: string;
+  required?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -16,6 +17,7 @@ const InputForm: React.FC<TInputFormProps> = ({
   title,
   className,
   name,
+  required = true,
   onChange
 }) => {
 
@@ -27,7 +29,7 @@ const InputForm: React.FC<TInputFormProps> = ({
         name={name}
         id={name}
         placeholder=""
-        required
+        required={required}
         onChange={onChange}
       />
       <label htmlFor={name} className="form-label">

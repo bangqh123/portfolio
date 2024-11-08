@@ -8,7 +8,7 @@ import InputForm from "../partials/InputForm/InputForm";
 
 type TFormContactProps = {
   title: string;
-  className: string;
+  className?: string;
 };
 
 type FormData = {
@@ -17,7 +17,7 @@ type FormData = {
   message: string;
 };
 
-const FormContact: React.FC<TFormContactProps> = ({ title, className }) => {
+const FormContact: React.FC<TFormContactProps> = ({ title, className = "" }) => {
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
@@ -32,40 +32,39 @@ const FormContact: React.FC<TFormContactProps> = ({ title, className }) => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
   };
 
   return (
-    <fieldset>
-      <h2>{title}</h2>
-      <form className={className}>
+    <fieldset className={`form-contact ${className}`}>
+      <legend>{title}</legend>
+      <form className="form-contact__form" onSubmit={handleSubmit}>
         <InputForm
           type="text"
           name="fullName"
-          title="full name"
+          title="Full Name"
           onChange={handleChange}
         />
         <InputForm
           type="email"
           name="email"
-          title="email address"
+          title="Email Address"
           onChange={handleChange}
         />
         <InputForm
           type="text"
           name="message"
-          title="message"
+          title="Message"
           onChange={handleChange}
         />
+        <Button
+          icon={<GrSend />}
+          title="Send Message"
+          className="form-contact__btn"
+        />
       </form>
-      <Button
-        icon={<GrSend />}
-        title="Send Message"
-        className="content-form-btn"
-        onClick={handleSubmit}
-      />
     </fieldset>
   );
 };
