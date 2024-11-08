@@ -1,9 +1,9 @@
 import "./Header.scss";
 import "./Header.media.scss";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { ICONS } from "../../assets/icons";
-import HeaderNav from "./partials/HeaderINav";
+import HeaderNav from "./partials/HeaderNav";
 
 interface HeaderLayoutProps {
   isScroll: boolean;
@@ -15,36 +15,13 @@ const Header: React.FC<HeaderLayoutProps> = ({ isScroll }) => {
 
   const navItems = useMemo(
     () => [
-      { name: "Home", id: "hero" },
-      { name: "About", id: "about" },
-      { name: "Education", id: "education" },
-      { name: "Experience", id: "experience" },
-      { name: "Skills", id: "skill" },
-      { name: "Resume", id: "resume" },
-      { name: "Projects", id: "project" },
-      { name: "Contact", id: "contact" },
+      { name: "Home", link: "/" },
+      { name: "Resume", link: "/resume" },
+      { name: "Projects", link: "/project" },
+      { name: "Contact", link: "/contact" },
     ],
     []
   );
-
-  useEffect(() => {
-    const handleScroll = () => {
-      navItems.forEach((item, index) => {
-        const section = document.getElementById(item.id);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            setActiveIndex(index);
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [navItems]);
 
   return (
     <header className={`header ${isScroll ? "scrolled" : ""}`}>
