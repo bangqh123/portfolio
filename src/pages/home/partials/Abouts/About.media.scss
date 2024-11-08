@@ -19,7 +19,7 @@
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .about {
         .about-title {
-            @include font-size(30px);
+            @include font-size(28px);
             margin-bottom: 20px;
         }
 
@@ -63,7 +63,7 @@
     .about {
         .about-title {
             margin-bottom: 20px;
-            @include font-size(28px);
+            @include font-size(24px);
         }
         
         .about-content {
