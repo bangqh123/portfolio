@@ -1,6 +1,10 @@
 /* 992px to 1199px */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .about {
+        .about-title {
+            @include font-size(30px);
+        }
+
         .about-content {
             .about-content-avatar {
                 .content-avatar-img {
@@ -8,6 +12,29 @@
     
                     img{
                         width: 100%;
+                    }
+                }
+            }
+
+            .about-content-information {
+                h2 {
+                    font-size: $font-size-20;
+    
+                    strong {
+                        @include font-size(22px)
+                    }
+                }
+    
+                p,table {
+                    font-size: $font-size-18;
+                }
+    
+                .content-information-btn {
+                    .btn-git,
+                    .btn-link,
+                    .btn-face {
+                        width: 48px;
+                        height: 48px;
                     }
                 }
             }
@@ -24,7 +51,6 @@
         }
 
         .about-content {
-
             .about-content-avatar {
                 .content-avatar-img {
                     height: 380px;
@@ -37,20 +63,27 @@
     
             .about-content-information {
                 h2 {
-                    font-size: $font-size-20;
+                    font-size: $font-size-18;
     
                     strong {
-                        @include font-size(24px)
+                        @include font-size(20px)
                     }
                 }
     
                 p,table {
-                    font-size: $font-size-14;
+                    font-size: $font-size-16;
                 }
     
                 .content-information-btn {
-                    .btn-download {
-                        font-size: $font-size-14;
+                    .btn-git,
+                    .btn-link,
+                    .btn-face {
+                        width: 44px;
+                        height: 44px;
+        
+                        svg {
+                            font-size: 20px;
+                        }
                     }
                 }
             }
@@ -85,17 +118,24 @@
                     font-size: $font-size-16;
     
                     strong {
-                        font-size: $font-size-20;
+                        font-size: $font-size-18;
                     }
                 }
     
                 p, table {
-                    font-size: $font-size-12;
+                    font-size: $font-size-14;
                 }
     
                 .content-information-btn {
-                    .btn-download {
-                        font-size: $font-size-12;
+                    .btn-git,
+                    .btn-link,
+                    .btn-face {
+                        width: 44px;
+                        height: 44px;
+        
+                        svg {
+                            font-size: 20px;
+                        }
                     }
                 }
             }
@@ -127,10 +167,10 @@
     
             .about-content-information {
                 h2 {
-                    font-size: $font-size-16;
+                    font-size: $font-size-14;
     
                     strong {
-                        font-size: $font-size-20;
+                        font-size: $font-size-16;
                     }
                 }
     
@@ -139,8 +179,15 @@
                 }
     
                 .content-information-btn {
-                    .btn-download {
-                        font-size: $font-size-12;
+                    .btn-git,
+                    .btn-link,
+                    .btn-face {
+                        width: 44px;
+                        height: 44px;
+        
+                        svg {
+                            font-size: 20px;
+                        }
                     }
                 }
             }
