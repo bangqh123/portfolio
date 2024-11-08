@@ -1,0 +1,11 @@
+.layout-page {
+    width: 100%;
+    display: flex;
+    min-width: 360px;
+    align-items: center;
+    flex-direction: column;
+
+    .content-layout-page {
+        width: 86%;
+    }
+}

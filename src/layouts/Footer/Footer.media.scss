@@ -1,20 +1,107 @@
-/* max 768px */
-@media screen and (max-width: 767px) {
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
     .footer {
-        flex-direction: column;
-        font-size: $font-size-12;
+        .footer-copyright {
+            font-size: $font-size-18;
 
-        .footer-heart {
-            font-size: 28px;
-            margin: 0 4px;
+            .footer-copyright-img {
+                font-size: $font-size-16;
+            }
         }
 
+        .footer-develop {
+            font-size: $font-size-18;
+
+            .footer-develop-last,
+            .footer-develop-first {
+                color: #cc6c79;
+                font-size: 32px;
+            }
+
+            a {
+                font-size: $font-size-18;
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .footer {
+        .footer-copyright {
+            font-size: $font-size-16;
+
+            .footer-copyright-img {
+                font-size: $font-size-14;
+            }
+        }
+
+        .footer-develop {
+            font-size: $font-size-16;
+
+            .footer-develop-last,
+            .footer-develop-first {
+                color: #cc6c79;
+                font-size: 28px;
+            }
+
+            a {
+                font-size: $font-size-16;
+            }
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .footer {
         .footer-copyright {
             font-size: $font-size-14;
+
+            .footer-copyright-img {
+                font-size: $font-size-12;
+            }
         }
 
-        a {
+        .footer-develop {
             font-size: $font-size-14;
+
+            .footer-develop-last,
+            .footer-develop-first {
+                color: #cc6c79;
+                font-size: 24px;
+            }
+
+            a {
+                font-size: $font-size-14;
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .footer {
+        .footer-copyright {
+            font-size: $font-size-12;
+
+            .footer-copyright-img {
+                font-size: $font-size-10;
+            }
+        }
+
+        .footer-develop {
+            font-size: $font-size-14;
+
+            .footer-develop-last,
+            .footer-develop-first {
+                color: #cc6c79;
+                font-size: 20px;
+            }
+
+            a {
+                font-size: $font-size-12;
+            }
         }
     }
 }

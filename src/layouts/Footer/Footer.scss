@@ -1,33 +1,32 @@
 .footer {
-    width: 86%;
+    width: 90%;
     display: flex;
-    text-align: center;
-    color: $white-color;
     padding: 40px 0;
+    color: $white-color;
     align-items: center;
-    font-size: $font-size-18;
-    text-transform: capitalize;
     justify-content: space-around;
-    border-top: 2px solid #cc6c79;
-
+    
     .footer-copyright {
         gap: 4px;
         display: flex;
         align-items: center;
+        font-size: $font-size-20;
+
         .footer-copyright-img {
-            font-size: $font-size-16;
+            font-size: $font-size-18;
         }
     }
 
     .footer-develop {
-        display: flex;
         gap: 4px;
+        display: flex;
         align-items: center;
+        font-size: $font-size-20;
 
         .footer-develop-last,
         .footer-develop-first {
             color: #cc6c79;
-            font-size: 32px;
+            font-size: 36px;
         }
 
         .footer-develop-last {
@@ -37,6 +36,7 @@
         a {
             font-weight: 600;
             color: $white-color;
+            font-size: $font-size-20;
             text-transform: uppercase;
             text-decoration: underline;
     

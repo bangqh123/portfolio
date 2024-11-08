@@ -2,15 +2,6 @@
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .education {
         .education-title {
-            @include font-size(32px)
-        }
-    }
-}
-
-/* 768px to 991px */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .education {
-        .education-title {
             @include font-size(30px)
         }
 
@@ -27,24 +18,20 @@
 
                     .item-infor-gpa,
                     .item-infor-subject {
-                        font-size: $font-size-16;
+                        font-size: $font-size-18;
                     }
                 }
 
                 .school-item-time {
-                    flex-direction: column;
-
-                    span {
-                        display: none;
-                    }
+                    font-size: $font-size-20;
                 }
             }
         }
     }
 }
 
-/* 500px to 768px */
-@media screen and (min-width: 500px) and (max-width: 767px) {
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .education {
         .education-title {
             @include font-size(28px)
@@ -54,34 +41,29 @@
             .education-school-item {
                 .school-item-infor {
                     .item-infor-name {
-                        font-size: $font-size-16;
+                        font-size: $font-size-18;
                     }
 
                     .item-infor-major {
-                        font-size: $font-size-14;
+                        font-size: $font-size-16;
                     }
 
                     .item-infor-gpa,
                     .item-infor-subject {
-                        font-size: $font-size-12;
+                        font-size: $font-size-16;
                     }
                 }
 
                 .school-item-time {
-                    flex-direction: column;
-                    font-size: $font-size-16;
-
-                    span {
-                        display: none;
-                    }
+                    font-size: $font-size-18;
                 }
             }
         }
     }
 }
 
-/* max 499px */
-@media screen and (max-width: 499px) {
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
     .education {
         .education-title {
             @include font-size(24px)
@@ -103,18 +85,48 @@
 
                     .item-infor-gpa,
                     .item-infor-subject {
+                        font-size: $font-size-14;
+                    }
+                }
+
+                .school-item-time {
+                    font-size: $font-size-16;
+                }
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .education {
+        .education-title {
+            @include font-size(20px)
+        }
+
+        .education-school {
+            .education-school-item {
+                gap: 20px;
+                flex-direction: column;
+
+                .school-item-infor {
+                    .item-infor-name {
+                        font-size: $font-size-14;
+                    }
+
+                    .item-infor-major {
+                        font-size: $font-size-12;
+                    }
+
+                    .item-infor-gpa,
+                    .item-infor-subject {
                         font-size: $font-size-12;
                     }
                 }
 
                 .school-item-time {
                     gap: 12px;
-                    flex-direction: column;
                     font-size: $font-size-14;
-
-                    span {
-                        display: none;
-                    }
                 }
             }
         }

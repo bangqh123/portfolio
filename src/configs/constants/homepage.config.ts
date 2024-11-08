@@ -6,7 +6,7 @@ const heroProps = {
 
 const aboutUsProps = {
     title: 'About',
-    myself: 'I am Professional <strong>Web Developer</strong>',
+    myself: 'I am a <strong>Front-End Developer</strong>',
     description1: 'I am a Front-End programmer with more than 1 year of experience in HTML & CSS, JavaScript and nearly 4 months of experience in learning and developing TypeScript with the ReactJs library. I can use Bootstrap and Tailwind with Ant Design.',
     description2: 'I have actively researched and developed projects such as W3school`s The Band, Mentor Frontend QR code component and Blog preview card, Shop and F_News, which helped me practice teamwork, communication, problem-solving and investigation skills.',
     name: 'Quach Hai Bang',
