@@ -40,7 +40,7 @@ const FormContact: React.FC<TFormContactProps> = ({ title, className = "" }) => 
   return (
     <fieldset className={`form-contact ${className}`}>
       <legend>{title}</legend>
-      <form className="form-contact__form" onSubmit={handleSubmit}>
+      <form className="form-contact-content" onSubmit={handleSubmit}>
         <InputForm
           type="text"
           name="fullName"
@@ -55,6 +55,12 @@ const FormContact: React.FC<TFormContactProps> = ({ title, className = "" }) => 
         />
         <InputForm
           type="text"
+          name="subject"
+          title="Subject"
+          onChange={handleChange}
+        />
+        <InputForm
+          type="text"
           name="message"
           title="Message"
           onChange={handleChange}
@@ -62,7 +68,7 @@ const FormContact: React.FC<TFormContactProps> = ({ title, className = "" }) => 
         <Button
           icon={<GrSend />}
           title="Send Message"
-          className="form-contact__btn"
+          className="form-contact-btn"
         />
       </form>
     </fieldset>

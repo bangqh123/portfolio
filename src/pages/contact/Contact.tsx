@@ -1,12 +1,16 @@
 import "./Contact.scss"
 
 import LayoutPage from "../../layouts/LayoutPage/LayoutPage";
-import Contact from "../home/partials/Contacts/Contact";
+import ContactForm from "./partials/ContactForm/ContactForm";
+import ContactMap from "./partials/ContactMap/ContactMap";
 
 const ContactPage = () => {
     return (
       <LayoutPage>
-        <Contact />
+        <div className="contact">
+          <ContactMap />
+          <ContactForm />
+        </div>
       </LayoutPage>
     )
   };
