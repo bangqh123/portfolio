@@ -1,0 +1,32 @@
+.content-soft-item {
+    gap: 12px;
+    display: flex;
+    padding: 12px;
+    max-width: 240px;
+    border-radius: 8px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid #ff879d;
+
+    .soft-item-title{
+        color: #f793a6;
+        font-weight: 500;
+        font-size: $font-size-20;
+    }
+
+    .soft-item-description {
+        font-weight: 300;
+        color: #d3d3d3;
+        font-size: $font-size-20;
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 1px 0 4px #b0a4e3;
+
+        .soft-item-description {
+            color: #ffbcc8;
+        }
+    }
+}
