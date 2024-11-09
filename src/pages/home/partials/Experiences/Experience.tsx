@@ -30,7 +30,7 @@ const Experience: React.FC<TExperienceProps> = ({title, company, role}) => {
               <div className='content-item-time'>
                 <p className='item-time-start'>Jun 2024</p>
                 <span>-</span>
-                <p className='item-time-end'>Present</p>
+                <p className='item-time-end'>Nov 2024</p>
               </div>
             </div>
             <div className='experience-content-item'>
