@@ -2,7 +2,7 @@ import "./Footer.scss";
 import "./Footer.media.scss";
 
 import React from "react";
-import { IoIosHeartHalf } from "react-icons/io";
+import { IoIosHeartHalf, IoMdGitBranch } from "react-icons/io";
 import { PiCopyrightFill } from "react-icons/pi";
 
 type TFooterProps = {
@@ -13,6 +13,11 @@ type TFooterProps = {
 }
 
 const Footer: React.FC<TFooterProps> = ({copyright, year, by, name}) => {
+
+  const handleGit = () => {
+    window.location.href = "https://github.com/bangqh123/portfolio";
+  }
+
   return (
     <footer className="footer">
       <div className="footer-copyright">
@@ -25,6 +30,9 @@ const Footer: React.FC<TFooterProps> = ({copyright, year, by, name}) => {
         {by}
         <a href="https://github.com/bangqh123">{name}</a>
         <IoIosHeartHalf className="footer-develop-last" />
+      </div>
+      <div className="footer-github" onClick={handleGit}>
+        <IoMdGitBranch />
       </div>
     </footer>
   );

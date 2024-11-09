@@ -46,4 +46,23 @@
             }
         }
     }
+
+    .footer-github {
+        width: 62px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 8px;
+
+        svg {
+            @include font-size(28px);
+        }
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid $item-color;
+        }
+    }
 }

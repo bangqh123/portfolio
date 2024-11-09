@@ -22,6 +22,12 @@
                 font-size: $font-size-18;
             }
         }
+
+        .footer-github {
+            svg {
+                @include font-size(26px);
+            }
+        }
     }
 }
 
@@ -47,6 +53,12 @@
 
             a {
                 font-size: $font-size-16;
+            }
+        }
+
+        .footer-github {
+            svg {
+                @include font-size(24px);
             }
         }
     }
@@ -76,6 +88,14 @@
                 font-size: $font-size-14;
             }
         }
+
+        .footer-github {
+            border-color: #cc6c79;
+
+            svg {
+                @include font-size(22px);
+            }
+        }
     }
 }
 
@@ -101,6 +121,16 @@
 
             a {
                 font-size: $font-size-12;
+            }
+        }
+
+        .footer-github {
+            width: 54px;
+            height: 26px;
+            border-color: #cc6c79;
+
+            svg {
+                font-size: $font-size-20;
             }
         }
     }
