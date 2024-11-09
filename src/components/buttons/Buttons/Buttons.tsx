@@ -7,18 +7,15 @@ interface TButtonsProps {
   title?: string;
   className?: string;
   icon?: React.ReactNode;
-  scroll?: () => void;
   download?: boolean;
   newTab?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Buttons: React.FC<TButtonsProps> = ({ title, className, icon, link, scroll, download, newTab, onClick }) => {
+const Buttons: React.FC<TButtonsProps> = ({ title, className, icon, link, download, newTab, onClick }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (onClick) {
       onClick(e);
-    } else if (scroll) {
-      scroll();
     } else if (link) {
       if (newTab) {
         window.open(link, "_blank");

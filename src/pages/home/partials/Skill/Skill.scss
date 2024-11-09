@@ -10,4 +10,42 @@
         color: $text-color;
         text-transform: uppercase;
     }
+
+    .skill-content {
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .skill-content-soft,
+        .skill-content-technical {
+            gap: 12px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            h2 {
+                @include font-size(24px);
+                font-weight: 500;
+                color: $white-color;
+                text-transform: capitalize;
+            }
+        }
+
+        .skill-content-soft {
+            .content-soft-group {
+                gap: 20px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        .skill-content-technical {
+            .content-technical-group {
+                gap: 20px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
 }
