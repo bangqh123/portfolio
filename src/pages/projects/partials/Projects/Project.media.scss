@@ -1,0 +1,74 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .project {    
+        h1 {
+            @include font-size(30px);
+        }
+    
+        p {
+            @include font-size(20px);
+        }
+    
+        .project-cards {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .project {    
+        h1 {
+            @include font-size(28px);
+        }
+    
+        p {
+            font-size: $font-size-18;
+        }
+    
+        .project-cards {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .project {    
+        h1 {
+            @include font-size(24px);
+        }
+    
+        p {
+            font-size: $font-size-16;
+        }
+    
+        .project-cards {
+            width: 80%;
+            flex-wrap: nowrap;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .project {    
+        h1 {
+            font-size: $font-size-20;
+        }
+    
+        p {
+            text-align: center;
+            font-size: $font-size-14;
+        }
+    
+        .project-cards {
+            width: 100%;
+            flex-wrap: nowrap;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
