@@ -32,6 +32,12 @@ const experienceProps = {
     role: 'Roles/Responsibilities'
 }
 
+const skillPros = {
+    title: 'Experience',
+    soft: 'Soft Skills',
+    technical: 'Technical Skills',
+}
+
 export const PROPS = {
     HERO: {
         ...heroProps,
@@ -44,5 +50,8 @@ export const PROPS = {
     },
     EXPERIENCE: {
         ...experienceProps
-    }
+    },
+    SKILL: {
+        ...skillPros
+    },
 }

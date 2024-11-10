@@ -16,7 +16,7 @@ const HomePage = () => {
         <About  {...PROPS.ABOUTUS}/>
         <Education {...PROPS.EDUCATION}/>
         <Experience {...PROPS.EXPERIENCE}/>
-        <Skill />
+        <Skill {...PROPS.SKILL}/>
       </div>
     </LayoutPage>
   )
