@@ -10,13 +10,13 @@ import {
 } from "react-router-dom";
 
 const HomePage = lazy(() => import("./pages/home/HomePage"));
-const ResumePage = lazy(() => import("./pages/resume/Resume.tsx"))
-const ProjectPage = lazy(() => import("./pages/projects/Projects.tsx"))
-const ContactPage = lazy(() => import("./pages/contact/Contact.tsx"))
+const ResumePage = lazy(() => import("./pages/resume/ResumePage"))
+const ProjectPage = lazy(() => import("./pages/projects/ProjectsPage"))
+const ContactPage = lazy(() => import("./pages/contact/ContactPage"))
 
 
-import NotFoundPage from "./pages/notfound/NotFound.tsx";
-import Loading from "./components/loadings/Loadings.tsx";
+import NotFoundPage from "./pages/notfound/NotFoundPage";
+import Loading from "./components/loadings/Loadings";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
