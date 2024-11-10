@@ -2,7 +2,6 @@ import "./About.scss";
 import "./About.media.scss";
 
 import React from "react";
-import { IMAGES } from "../../../../assets/images";
 import Button from "../../../../components/buttons/Buttons/Buttons";
 import { FaGithub, FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
 
@@ -35,7 +34,7 @@ const About: React.FC<TAboutUsProps> = ({
       <div className="about-content">
         <div className="about-content-avatar">
           <div className="content-avatar-img">
-            <img src={IMAGES.AVATAR} alt="Avatar" />
+            <img src="http://localhost:1337/uploads/about_b823c91c49.PNG" alt="Avatar" />
           </div>
         </div>
         <div className="about-content-information">

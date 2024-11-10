@@ -2,7 +2,6 @@ import "./Hero.scss";
 import "./Hero.media.scss";
 
 import React from "react";
-import { IMAGES } from "../../../../assets/images";
 import { ICONS } from "../../../../assets/icons";
 import Button from "../../../../components/buttons/Buttons/Buttons";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +36,7 @@ const Hero: React.FC<THeroProps> = ({ title, name, description }) => {
           />
         </div>
         <div className="hero-img">
-          <img src={IMAGES.HERO} alt="Avatar Profolio" />
+          <img src="http://localhost:1337/uploads/hero_3c510a4f35.PNG" alt="Avatar Profolio" />
         </div>
       </div>
     </>

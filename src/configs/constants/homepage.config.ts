@@ -33,7 +33,7 @@ const experienceProps = {
 }
 
 const skillPros = {
-    title: 'Experience',
+    title: 'Skill',
     soft: 'Soft Skills',
     technical: 'Technical Skills',
 }
