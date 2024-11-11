@@ -1,79 +1,112 @@
 import "./About.scss";
 import "./About.media.scss";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../../../components/buttons/Buttons/Buttons";
 import { FaGithub, FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
+import { RootState, AppDispatch } from "../../../../redux/store/store";
+import { fetchPortfolio } from "../../../../redux/slices/portfolioSlices";
+import { useDispatch, useSelector } from "react-redux";
 
 type TAboutUsProps = {
   title: string;
   myself: string;
-  description1: string;
-  description2: string;
   name: string;
-  age: number;
+  age: string;
   address: string;
   phone: string;
   email: string;
 };
 
+interface TAbout {
+  name: string;
+  age: number;
+  image: string;
+  address: string;
+  phone: string;
+  email: string;
+  major: string;
+  desc1: string;
+  desc2: string;
+  git: string;
+  linkin: string;
+  facebook: string;
+}
+
 const About: React.FC<TAboutUsProps> = ({
   title,
   myself,
-  description1,
-  description2,
   name,
   age,
   address,
   phone,
   email,
 }) => {
+  const dispatch = useDispatch<AppDispatch>();
+
+  const [isData, setIsData] = useState<TAbout>();
+  
+  const { userInfo } = useSelector(
+    (state: RootState) => state.portfolio
+  );
+  
+  useEffect(() => {
+    if (!userInfo?.[0]) {
+      dispatch(fetchPortfolio());
+    } else {
+      setIsData(userInfo?.[0].about); 
+    }
+  }, [dispatch, userInfo]);
+  
   return (
     <div id="about" className="about">
       <h1 className="about-title">{title}</h1>
       <div className="about-content">
         <div className="about-content-avatar">
           <div className="content-avatar-img">
-            <img src="http://localhost:1337/uploads/about_b823c91c49.PNG" alt="Avatar" />
+            <img src={isData?.image} alt="Avatar" />
           </div>
         </div>
         <div className="about-content-information">
-          <h2 dangerouslySetInnerHTML={{ __html: myself }} />
-          <p>{description1}</p>
-          <p>{description2}</p>
+          <h2>
+            {myself}
+            <strong>{isData?.major}</strong>
+          </h2>
+          <p>{isData?.desc1}</p>
+          <p>{isData?.desc2}</p>
           <table>
             <tbody>
               <tr>
-                <td>Name</td>
-                <td>:</td>
                 <td>{name}</td>
+                <td>:</td>
+                <td>{isData?.name}</td>
               </tr>
               <tr>
-                <td>Age</td>
-                <td>:</td>
                 <td>{age}</td>
+                <td>:</td>
+                <td>{isData?.age}</td>
               </tr>
               <tr>
-                <td>Address</td>
-                <td>:</td>
-                <td>{address}</td>
-              </tr>
-              <tr>
-                <td>Phone</td>
-                <td>:</td>
                 <td>{phone}</td>
+                <td>:</td>
+                <td>{isData?.phone}</td>
               </tr>
               <tr>
-                <td>E-mail</td>
-                <td>:</td>
                 <td>{email}</td>
+                <td>:</td>
+                <td>{isData?.email}</td>
+              </tr>
+              <tr>
+                <td>{address}</td>
+                <td>:</td>
+                <td>{isData?.address}</td>
               </tr>
             </tbody>
           </table>
           <div className="content-information-btn">
-            <Button className="btn-git" icon={<FaGithub />} link="https://github.com/bangqh123"/>
-            <Button className="btn-link" icon={<FaLinkedinIn />} link="https://www.linkedin.com/in/bang-quach-265a0126b/"/>
-            <Button className="btn-face" icon={<FaFacebookF />} link="https://web.facebook.com/bang.quach.906" />
+            <Button className="btn-git" icon={<FaGithub />} link={isData?.git}/>
+            <Button className="btn-link" icon={<FaLinkedinIn />} link={isData?.linkin} />
+            <Button className="btn-face" icon={<FaFacebookF />} link={isData?.facebook} />
           </div>
         </div>
       </div>

@@ -1,6 +1,9 @@
 import "./Skill.scss";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { RootState, AppDispatch } from "../../../../redux/store/store";
+import { fetchPortfolio } from "../../../../redux/slices/portfolioSlices";
+import { useDispatch, useSelector } from "react-redux";
 import SkillItem from "./SkillItem/SkillItem";
 
 type TSkillsProps = {
@@ -9,36 +12,31 @@ type TSkillsProps = {
   technical: string;
 };
 
-// Dữ liệu kỹ năng kỹ thuật
-const technicalSkills = [
-  {
-    title: "Programmings",
-    description: "HTML, CSS, JavaScript, TypeScript, ReactJS",
-  },
-  {
-    title: "Databases",
-    description: "MongoDB, MySQL, SQLServer",
-  },
-  {
-    title: "Librarys",
-    description: "Bootstrap, Tailwind, Ant Design, React",
-  },
-  {
-    title: "Tools",
-    description: "VSCode, Git, PostMan, Figma, Vercel",
-  },
-];
+interface TSoft {
+  name: string;
+}
 
-// Dữ liệu kỹ năng mềm
-const softSkills = [
-  { title: "Team Work" },
-  { title: "Communication" },
-  { title: "Problem-Solving" },
-];
+interface TTechnical {
+  name: string;
+  desc: string;
+}
 
 const Skill: React.FC<TSkillsProps> = ({ title, soft, technical }) => {
-  const [isTechnical] = useState(technicalSkills);
-  const [isSoft] = useState(softSkills);
+  const dispatch = useDispatch<AppDispatch>();
+
+  const [isTechnical, setIsTechnical] = useState<TTechnical[] | null>(null);
+  const [isSoft, setIsSoft] = useState<TSoft[] | null>(null);
+
+  const { userInfo } = useSelector((state: RootState) => state.portfolio);
+
+  useEffect(() => {
+    if (!userInfo?.[0]) {
+      dispatch(fetchPortfolio());
+    } else {
+      setIsTechnical(userInfo?.[0].skill.technical);
+      setIsSoft(userInfo?.[0].skill.soft);
+    }
+  }, [dispatch, userInfo]);
 
   return (
     <div id="skill" className="skill">
@@ -47,11 +45,11 @@ const Skill: React.FC<TSkillsProps> = ({ title, soft, technical }) => {
         <div className="skill-content-technical">
           <h2>{technical}</h2>
           <div className="content-technical-group">
-            {isTechnical.map((technical, index) => (
+            {isTechnical?.map((item, index) => (
               <SkillItem
                 key={index}
-                title={technical.title}
-                description={technical.description}
+                title={item?.name}
+                description={item?.desc}
               />
             ))}
           </div>
@@ -59,8 +57,8 @@ const Skill: React.FC<TSkillsProps> = ({ title, soft, technical }) => {
         <div className="skill-content-soft">
           <h2>{soft}</h2>
           <div className="content-soft-group">
-            {isSoft.map((soft, index) => (
-              <SkillItem key={index} title={soft.title} />
+            {isSoft?.map((item, index) => (
+              <SkillItem key={index} title={item?.name} />
             ))}
           </div>
         </div>

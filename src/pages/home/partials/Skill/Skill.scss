@@ -12,22 +12,23 @@
     }
 
     .skill-content {
-        gap: 20px;
+        gap: 40px;
         display: flex;
         align-items: center;
         flex-direction: column;
 
         .skill-content-soft,
         .skill-content-technical {
-            gap: 12px;
+            gap: 20px;
             display: flex;
             align-items: center;
             flex-direction: column;
 
             h2 {
-                @include font-size(24px);
+                margin: 0;
                 font-weight: 500;
                 color: $white-color;
+                @include font-size(24px);
                 text-transform: capitalize;
             }
         }
