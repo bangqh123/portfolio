@@ -36,7 +36,7 @@ const Hero: React.FC<THeroProps> = ({ title, name, description }) => {
           />
         </div>
         <div className="hero-img">
-          <img src="http://localhost:1337/uploads/hero_3c510a4f35.PNG" alt="Avatar Profolio" />
+          <img src="https://drive.google.com/file/d/14evgRd6hdKX7LP-8Hb-x-5jDx8Lz0Bpz/view?usp=drive_link" alt="Avatar Profolio" />
         </div>
       </div>
     </>
