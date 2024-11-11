@@ -2,7 +2,6 @@ import "./ProjectItem.scss";
 import "./ProjectItem.media.scss";
 
 import React from "react";
-import { IMAGES } from "../../../../assets/images";
 import Buttons from "../../../../components/buttons/Buttons/Buttons";
 import { GoProjectSymlink } from "react-icons/go";
 import { FaGithub } from "react-icons/fa6";
@@ -11,7 +10,7 @@ const ProjectItem: React.FC = () => {
   return (
     <div className="card">
       <div className="card-img">
-        <img src={IMAGES.SHOP} alt="Demo picture" />
+        <img src="https://asset.cloudinary.com/dpikkuzzk/72702faa5402469b6a1c31df43106ff4" alt="Demo picture" />
       </div>
       <div className="card-content">
         <div className="card-content-header">

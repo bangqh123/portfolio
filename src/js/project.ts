@@ -1,10 +1,9 @@
 import { TProjectsPortfolio } from "../types/projectsType"
-import { IMAGES } from "../assets/images/index";
 
 const portfolioProjects: TProjectsPortfolio[] = [
     {
         id: 1,
-        image: IMAGES.SHOP,
+        image: "https://asset.cloudinary.com/dpikkuzzk/72702faa5402469b6a1c31df43106ff4",
         name: "Shop",
         description: "Html & Css, JavaScript",
         git: "https://github.com/bangqh123/Shop",
@@ -12,7 +11,7 @@ const portfolioProjects: TProjectsPortfolio[] = [
     },
     {
         id: 2,
-        image: IMAGES.SHOP,
+        image: "https://asset.cloudinary.com/dpikkuzzk/72702faa5402469b6a1c31df43106ff4",
         name: "Shop",
         description: "Html & Css, JavaScript",
         git: "https://github.com/bangqh123/Shop",
@@ -20,7 +19,7 @@ const portfolioProjects: TProjectsPortfolio[] = [
     },
     {
         id: 3,
-        image: IMAGES.SHOP,
+        image: "https://asset.cloudinary.com/dpikkuzzk/72702faa5402469b6a1c31df43106ff4",
         name: "Shop",
         description: "Html & Css, JavaScript",
         git: "https://github.com/bangqh123/Shop",
@@ -28,7 +27,7 @@ const portfolioProjects: TProjectsPortfolio[] = [
     },
     {
         id: 4,
-        image: IMAGES.SHOP,
+        image: "https://asset.cloudinary.com/dpikkuzzk/72702faa5402469b6a1c31df43106ff4",
         name: "Shop",
         description: "Html & Css, JavaScript",
         git: "https://github.com/bangqh123/Shop",
@@ -36,7 +35,7 @@ const portfolioProjects: TProjectsPortfolio[] = [
     },
     {
         id: 5,
-        image: IMAGES.SHOP,
+        image: "https://asset.cloudinary.com/dpikkuzzk/72702faa5402469b6a1c31df43106ff4",
         name: "Shop",
         description: "Html & Css, JavaScript",
         git: "https://github.com/bangqh123/Shop",
@@ -44,7 +43,7 @@ const portfolioProjects: TProjectsPortfolio[] = [
     },
     {
         id: 6,
-        image: IMAGES.SHOP,
+        image: "https://asset.cloudinary.com/dpikkuzzk/72702faa5402469b6a1c31df43106ff4",
         name: "Shop",
         description: "Html & Css, JavaScript",
         git: "https://github.com/bangqh123/Shop",
