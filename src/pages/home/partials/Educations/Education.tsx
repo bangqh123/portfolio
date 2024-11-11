@@ -8,12 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 type TEducationProps = {
   title: string;
-  schoolName: string;
   major: string;
-  subjects: string;
   gpa: string;
-  start: string;
-  end: string;
 };
 
 interface TEducation {

@@ -15,7 +15,6 @@ const aboutUsProps = {
 
 const educationProps = {
     title: 'Education',
-    schoolName: 'University of Greenwich (Can Tho)',
     major: 'major: ',
     gpa: 'GPA: ',
 }

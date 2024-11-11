@@ -12,7 +12,7 @@ type TAboutUsProps = {
   title: string;
   myself: string;
   name: string;
-  age: number;
+  age: string;
   address: string;
   phone: string;
   email: string;
