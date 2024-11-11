@@ -1,5 +1,3 @@
-import { IMAGES } from "../assets/images/index";
-import { FILE } from "../assets/file/index";
 import { TUserPortfolio } from "../types/usersType";
 
 // Portfolio data structure
@@ -8,10 +6,10 @@ const portfolioData: TUserPortfolio[] = [
     hero: {
       name: "Quach Hai Bang",
       desc: "I am a Front-End and Website developer with over 1 year of experience.",
-      image: IMAGES.HERO,
+      image: "https://asset.cloudinary.com/dpikkuzzk/4f7598012e6b5a82b3328369d2e687c4",
     },
     about: {
-      image: IMAGES.AVATAR,
+      image: "https://asset.cloudinary.com/dpikkuzzk/167dfc38c6a35c3bb07ad363d43e671f",
       age: 24,
       address: "Cai Nuoc, Ca Mau, Viet Nam",
       phone: "0368459077",
@@ -90,7 +88,7 @@ const portfolioData: TUserPortfolio[] = [
       ],
     },
     resume: {
-      cv: FILE.CV,
+      cv: "https://asset.cloudinary.com/dpikkuzzk/d8123bdee30deb7e1ef9a6c7cd58b5ff",
     },
   },
 ];
