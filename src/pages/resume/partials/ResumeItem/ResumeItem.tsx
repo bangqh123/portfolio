@@ -6,7 +6,7 @@ const ResumeItem = () => {
       <div className="resumeitem">
         <object 
           className="resumeitem-cv" 
-          data="https://res-console.cloudinary.com/dpikkuzzk/thumbnails/v1/image/upload/v1731346138/UUhfQmFuZ19Gcm9udEVuZF9hdm94d3U=/as_is/QH_Bang_FrontEnd_avoxwu"
+          data="https://asset.cloudinary.com/dpikkuzzk/d8123bdee30deb7e1ef9a6c7cd58b5ff"
           type="application/pdf" 
         />
       </div>
