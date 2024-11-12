@@ -2,7 +2,6 @@ import "./Skill.scss";
 
 import React, { useEffect, useState } from "react";
 import { RootState, AppDispatch } from "../../../../redux/store/store";
-import { fetchPortfolio } from "../../../../redux/slices/portfolioSlices";
 import { useDispatch, useSelector } from "react-redux";
 import SkillItem from "./SkillItem/SkillItem";
 
@@ -30,12 +29,8 @@ const Skill: React.FC<TSkillsProps> = ({ title, soft, technical }) => {
   const { userInfo } = useSelector((state: RootState) => state.portfolio);
 
   useEffect(() => {
-    if (!userInfo?.[0]) {
-      dispatch(fetchPortfolio());
-    } else {
-      setIsTechnical(userInfo?.[0].skill.technical);
-      setIsSoft(userInfo?.[0].skill.soft);
-    }
+    setIsTechnical(userInfo?.[0].skill.technical);
+    setIsSoft(userInfo?.[0].skill.soft);
   }, [dispatch, userInfo]);
 
   return (

@@ -3,7 +3,6 @@ import "./Experience.media.scss";
 
 import React, { useEffect, useState } from "react";
 import { RootState, AppDispatch } from "../../../../redux/store/store";
-import { fetchPortfolio } from "../../../../redux/slices/portfolioSlices";
 import { useDispatch, useSelector } from "react-redux";
 
 type TExperienceProps = {
@@ -30,11 +29,7 @@ const Experience: React.FC<TExperienceProps> = ({ title, company, role }) => {
   const { userInfo } = useSelector((state: RootState) => state.portfolio);
 
   useEffect(() => {
-    if (!userInfo?.[0]) {
-      dispatch(fetchPortfolio());
-    } else {
-      setIsData(userInfo?.[0].experience);
-    }
+    setIsData(userInfo?.[0].experience);
   }, [dispatch, userInfo]);
 
   return (

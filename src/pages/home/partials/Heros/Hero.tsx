@@ -7,7 +7,6 @@ import { ICONS } from "../../../../assets/icons";
 import Button from "../../../../components/buttons/Buttons/Buttons";
 import { useNavigate } from "react-router-dom";
 import { RootState, AppDispatch } from "../../../../redux/store/store";
-import { fetchPortfolio } from "../../../../redux/slices/portfolioSlices";
 
 type THeroProps = {
   title: string;
@@ -17,31 +16,25 @@ type THeroProps = {
 interface THero {
   name: string;
   desc: string;
-  image: string;
-};
+  img: string;
+}
 
 const Hero: React.FC<THeroProps> = ({ title, name }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
 
   const [isData, setIsData] = useState<THero>();
-  
-  const { userInfo } = useSelector(
-    (state: RootState) => state.portfolio
-  );
-  
+
+  const { userInfo } = useSelector((state: RootState) => state.portfolio);
+
   useEffect(() => {
-    if (!userInfo?.[0]) {
-      dispatch(fetchPortfolio());
-    } else {
-      setIsData(userInfo?.[0].hero); 
-    }
+    setIsData(userInfo?.[0].hero);
   }, [dispatch, userInfo]);
 
   const handleContact = () => {
     navigate("/contact");
   };
-  
+
   return (
     <>
       <div id="hero" className="hero">
@@ -52,7 +45,9 @@ const Hero: React.FC<THeroProps> = ({ title, name }) => {
           </h1>
           <h3>
             {name}
-            <a href="https://www.linkedin.com/in/bang-quach-hai/">{isData?.name}</a>
+            <a href="https://www.linkedin.com/in/bang-quach-hai/">
+              {isData?.name}
+            </a>
           </h3>
           <p>{isData?.desc}</p>
           <Button
@@ -62,7 +57,7 @@ const Hero: React.FC<THeroProps> = ({ title, name }) => {
           />
         </div>
         <div className="hero-img">
-          <img src={isData?.image} alt="Avatar Profolio" />
+          <img src={isData?.img} alt="Avatar Profolio" />
         </div>
       </div>
     </>

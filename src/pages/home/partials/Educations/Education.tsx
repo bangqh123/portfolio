@@ -3,7 +3,6 @@ import "./Education.media.scss";
 
 import React, { useEffect, useState } from "react";
 import { RootState, AppDispatch } from "../../../../redux/store/store";
-import { fetchPortfolio } from "../../../../redux/slices/portfolioSlices";
 import { useDispatch, useSelector } from "react-redux";
 
 type TEducationProps = {
@@ -30,11 +29,7 @@ const Education: React.FC<TEducationProps> = ({ title, major, gpa }) => {
   const { userInfo } = useSelector((state: RootState) => state.portfolio);
 
   useEffect(() => {
-    if (!userInfo?.[0]) {
-      dispatch(fetchPortfolio());
-    } else {
-      setIsData(userInfo?.[0].education);
-    }
+    setIsData(userInfo?.[0].education);
   }, [dispatch, userInfo]);
 
   return (
