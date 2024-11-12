@@ -7,6 +7,6 @@ const profolioContacts: TContactPortfolio[] = [
         subject: "Test 1",
         message: "Test 1",
     },
-]
+];
 
 export default profolioContacts;
