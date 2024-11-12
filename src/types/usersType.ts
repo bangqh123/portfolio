@@ -2,12 +2,12 @@ export interface TUserPortfolio {
   hero: {
     name: string;
     desc: string;
-    image: string;
+    img: string;
   };
   about: {
     name: string;
     age: number;
-    image: string;
+    img: string;
     address: string;
     phone: string;
     email: string;
