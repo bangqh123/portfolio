@@ -3,6 +3,7 @@ import "./NotFoundPage.scss"
 import React from "react";
 import Buttons from "../../components/buttons/Buttons/Buttons";
 import { useNavigate } from "react-router-dom";
+import NotFound from "../../assets/images/404.png"
 
 const NotFoundPage: React.FC = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const NotFoundPage: React.FC = () => {
     return (
       <div className="notfound">
         <div className="notfound-error">
-            <img src="https://asset.cloudinary.com/dpikkuzzk/94a32f0c23dac46d810b4afb3c92be5e" className="notfound-error-img" alt="Not Found"/>
+            <img src={NotFound} className="notfound-error-img" alt="Not Found"/>
         </div>
         <div className="notfound-text">
             <h1>Oops!</h1>

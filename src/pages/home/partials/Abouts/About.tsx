@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import Button from "../../../../components/buttons/Buttons/Buttons";
 import { FaGithub, FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
 import { RootState, AppDispatch } from "../../../../redux/store/store";
-import { fetchPortfolio } from "../../../../redux/slices/portfolioSlices";
 import { useDispatch, useSelector } from "react-redux";
 
 type TAboutUsProps = {
@@ -21,7 +20,7 @@ type TAboutUsProps = {
 interface TAbout {
   name: string;
   age: number;
-  image: string;
+  img: string;
   address: string;
   phone: string;
   email: string;
@@ -45,26 +44,20 @@ const About: React.FC<TAboutUsProps> = ({
   const dispatch = useDispatch<AppDispatch>();
 
   const [isData, setIsData] = useState<TAbout>();
-  
-  const { userInfo } = useSelector(
-    (state: RootState) => state.portfolio
-  );
-  
+
+  const { userInfo } = useSelector((state: RootState) => state.portfolio);
+
   useEffect(() => {
-    if (!userInfo?.[0]) {
-      dispatch(fetchPortfolio());
-    } else {
-      setIsData(userInfo?.[0].about); 
-    }
+    setIsData(userInfo?.[0].about);
   }, [dispatch, userInfo]);
-  
+
   return (
     <div id="about" className="about">
       <h1 className="about-title">{title}</h1>
       <div className="about-content">
         <div className="about-content-avatar">
           <div className="content-avatar-img">
-            <img src={isData?.image} alt="Avatar" />
+            <img src={isData?.img} alt="Avatar" />
           </div>
         </div>
         <div className="about-content-information">
@@ -104,9 +97,21 @@ const About: React.FC<TAboutUsProps> = ({
             </tbody>
           </table>
           <div className="content-information-btn">
-            <Button className="btn-git" icon={<FaGithub />} link={isData?.git}/>
-            <Button className="btn-link" icon={<FaLinkedinIn />} link={isData?.linkin} />
-            <Button className="btn-face" icon={<FaFacebookF />} link={isData?.facebook} />
+            <Button
+              className="btn-git"
+              icon={<FaGithub />}
+              link={isData?.git}
+            />
+            <Button
+              className="btn-link"
+              icon={<FaLinkedinIn />}
+              link={isData?.linkin}
+            />
+            <Button
+              className="btn-face"
+              icon={<FaFacebookF />}
+              link={isData?.facebook}
+            />
           </div>
         </div>
       </div>
