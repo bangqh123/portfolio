@@ -2,7 +2,7 @@ import { TUserPortfolio } from "../types/usersType";
 
 import HeroImg from "../assets/images/hero.png";
 import AboutImg from "../assets/images/about.png";
-import CV from "../assets/file/QH_Bang_FrontEnd.pdf"
+import CV from "../../public/QH_Bang_FrontEnd.pdf"
 
 // Portfolio data structure
 const portfolioData: TUserPortfolio[] = [

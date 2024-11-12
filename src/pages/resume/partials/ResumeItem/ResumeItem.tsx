@@ -1,12 +1,12 @@
-import "./ResumeItem.scss"
-import "./ResumeItem.media.scss"
+import "./ResumeItem.scss";
+import "./ResumeItem.media.scss";
 
 import React, { useEffect, useState } from "react";
 import { RootState, AppDispatch } from "../../../../redux/store/store";
 import { useDispatch, useSelector } from "react-redux";
 
 interface TResumeItem {
-  cv: string
+  cv: string;
 }
 
 const ResumeItem: React.FC = () => {
@@ -20,17 +20,15 @@ const ResumeItem: React.FC = () => {
     setIsData(userInfo?.[0].resume);
   }, [dispatch, userInfo]);
 
-  console.log(isData)
-
-    return (
-      <div className="resumeitem">
-        <object 
-          className="resumeitem-cv" 
-          data={isData?.cv} 
-          type="application/pdf" 
-        />
-      </div>
-      );
-}
+  return (
+    <div className="resumeitem">
+      <object
+        className="resumeitem-cv"
+        data={isData?.cv}
+        type="application/pdf"
+      />
+    </div>
+  );
+};
 
 export default ResumeItem;
