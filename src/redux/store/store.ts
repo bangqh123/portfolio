@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import portfolioReducer from "./../slices/portfolioSlices"; // Update the path as needed
+import portfolioReducer from "./../slices/portfolioSlices";
+import projectReducer from "./../slices/projectsSlice";
 
 const store = configureStore({
     reducer: {
         portfolio: portfolioReducer,
+        project: projectReducer,
     },
 });
 

@@ -14,13 +14,7 @@ const Project: React.FC<TProjectProps> = ( { title, description } ) => {
         <div className="project">
             <h1>{title}</h1>
             <p>{description}</p>
-            <div className="project-cards">
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-            </div>
+            <ProjectItem />    
         </div>
     )
 }

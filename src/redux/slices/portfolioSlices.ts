@@ -23,14 +23,7 @@ const initialState = {
 export const portfolioSlice = createSlice({
   name: "portfolio",
   initialState,
-  reducers: {
-    logoutUser: (state) => {
-      localStorage.clear();
-      Object.assign(state, initialState, {
-        userInfo: null,
-      });
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchPortfolio.pending, (state) => {
@@ -50,4 +43,3 @@ export const portfolioSlice = createSlice({
 });
 
 export default portfolioSlice.reducer;
-export const { logoutUser } = portfolioSlice.actions;

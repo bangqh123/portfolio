@@ -1,6 +1,5 @@
 export interface TProjectsPortfolio {
-    id: number;
-    image: string;
+    img: string;
     name: string;
     description: string;
     git: string;
