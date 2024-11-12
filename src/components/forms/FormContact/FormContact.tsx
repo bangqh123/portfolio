@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import { GrSend } from "react-icons/gr";
 import Button from "../../buttons/Buttons/Buttons";
 import InputForm from "../partials/InputForm/InputForm";
+import ContactUserService from "../../../redux/api/apiContact";
+import Notify from "../../notifications/notifications";
 
 type TFormContactProps = {
   title: string;
@@ -12,17 +14,23 @@ type TFormContactProps = {
 };
 
 type FormData = {
-  fullName: string;
+  fullname: string;
   email: string;
+  subject: string;
   message: string;
 };
 
 const FormContact: React.FC<TFormContactProps> = ({ title, className = "" }) => {
   const [formData, setFormData] = useState<FormData>({
-    fullName: "",
+    fullname: "",
     email: "",
+    subject: "",
     message: "",
   });
+
+  const [status, setStatus] = useState<"success" | "error">("success");
+  const [message, setMessage] = useState<string>("");
+  const [showNotification, setShowNotification] = useState<boolean>(false); // New state to control notification
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -32,18 +40,30 @@ const FormContact: React.FC<TFormContactProps> = ({ title, className = "" }) => 
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      const response = await ContactUserService.postContact(formData);
+      console.log("Success:", response);
+      setStatus("success");
+      setMessage("Your sent successfully!");
+      setShowNotification(true);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus("error");
+      setMessage("An error occurred, please try again.");
+      setShowNotification(true);
+    }
   };
 
   return (
     <fieldset className={`form-contact ${className}`}>
+      {showNotification && <Notify status={status} message={message} />}
       <legend>{title}</legend>
       <form className="form-contact-content" onSubmit={handleSubmit}>
         <InputForm
           type="text"
-          name="fullName"
+          name="fullname"
           title="Full Name"
           onChange={handleChange}
         />
