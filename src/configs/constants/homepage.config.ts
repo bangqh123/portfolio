@@ -1,42 +1,13 @@
-const aboutUsProps = {
-    title: 'About',
-    myself: 'I am a ',
-    name: 'Name',
-    age: 'Age',  
-    address: 'Address',
-    phone: 'Phone',
-    email: 'E-mail'
-}
-
-const educationProps = {
-    title: 'Education',
-    major: 'major: ',
-    gpa: 'GPA: ',
-}
-
-const experienceProps = {
-    title: 'Experience',
-    company: 'Company: ',
-    role: 'Roles/Responsibilities'
-}
-
-const skillPros = {
-    title: 'Skill',
-    soft: 'Soft Skills',
-    technical: 'Technical Skills',
+const whatIDoProps = {
+    title: 'What I Do',
+    do1: 'Web Developer',
+    do2: 'Frontend Development',
+    do3: 'Backend Development',
+    do4: 'UI,UX Design'
 }
 
 export const PROPS = {
-    ABOUTUS: {
-        ...aboutUsProps
-    },
-    EDUCATION: {
-        ...educationProps
-    },
-    EXPERIENCE: {
-        ...experienceProps
-    },
-    SKILL: {
-        ...skillPros
+    WHAT: {
+        ...whatIDoProps,
     },
 }
