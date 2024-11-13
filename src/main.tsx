@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import "./styles/index.scss";
 
 import { StrictMode, Suspense, lazy } from "react";
@@ -32,7 +33,7 @@ const router = createBrowserRouter(
         }
       />
       <Route
-        path="/resume"
+        path="/education"
         element={
           <Suspense fallback={<Loading isLoading={true} />}>
             <EducationPage />
@@ -40,7 +41,7 @@ const router = createBrowserRouter(
         }
       />
       <Route
-        path="/resume"
+        path="/experience"
         element={
           <Suspense fallback={<Loading isLoading={true} />}>
             <ExperiencePage />
