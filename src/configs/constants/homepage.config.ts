@@ -1,8 +1,3 @@
-const heroProps = {
-    title: ' Hello',
-    name: 'My name is ',
-}
-
 const aboutUsProps = {
     title: 'About',
     myself: 'I am a ',
@@ -32,9 +27,6 @@ const skillPros = {
 }
 
 export const PROPS = {
-    HERO: {
-        ...heroProps,
-    },
     ABOUTUS: {
         ...aboutUsProps
     },
