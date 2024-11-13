@@ -2,15 +2,23 @@ import { TUserPortfolio } from "../types/usersType";
 
 import HeroImg from "../assets/images/hero.png";
 import AboutImg from "../assets/images/about.png";
-import CV from "../../public/QH_Bang_FrontEnd.pdf"
+import CV from "../QH_Bang_FrontEnd.pdf";
 
 // Portfolio data structure
 const portfolioData: TUserPortfolio[] = [
   {
     hero: {
       name: "Quach Hai Bang",
-      desc: "I am a Front-End and Website developer with over 1 year of experience.",
+      desc1:
+        "I am a Front-End programmer with more than 1 year of experience in HTML & CSS, JavaScript and nearly 4 months of experience in learning and developing TypeScript with the ReactJs library. I can use Bootstrap and Tailwind with Ant Design.",
+      desc2:
+        "I have actively researched and developed projects such as W3school`s The Band, Mentor Frontend QR code component and Blog preview card, Shop and F_News, which helped me practice teamwork, communication, problem-solving and investigation skills.",
       img: HeroImg,
+      git: "https://github.com/bangqh123",
+      linkin: "https://www.linkedin.com/in/bang-quach-hai/",
+      facebook: "https://web.facebook.com/bang.quach.906",
+      gitrepo: "https://github.com/bangqh123/portfolio",
+      twitter: "https://x.com/BangQuach4",
     },
     about: {
       img: AboutImg,
