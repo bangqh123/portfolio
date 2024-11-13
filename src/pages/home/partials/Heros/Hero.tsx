@@ -3,24 +3,29 @@ import "./Hero.media.scss";
 
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ICONS } from "../../../../assets/icons";
+import { FaStar } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaXTwitter,
+} from "react-icons/fa6";
 import Button from "../../../../components/buttons/Buttons/Buttons";
-import { useNavigate } from "react-router-dom";
 import { RootState, AppDispatch } from "../../../../redux/store/store";
-
-type THeroProps = {
-  title: string;
-  name: string;
-};
 
 interface THero {
   name: string;
-  desc: string;
+  desc1: string;
+  desc2: string;
   img: string;
+  git: string;
+  linkin: string;
+  facebook: string;
+  gitrepo: string;
+  twitter: string;
 }
 
-const Hero: React.FC<THeroProps> = ({ title, name }) => {
-  const navigate = useNavigate();
+const Hero: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const [isData, setIsData] = useState<THero>();
@@ -31,29 +36,47 @@ const Hero: React.FC<THeroProps> = ({ title, name }) => {
     setIsData(userInfo?.[0].hero);
   }, [dispatch, userInfo]);
 
-  const handleContact = () => {
-    navigate("/contact");
-  };
-
   return (
     <>
       <div id="hero" className="hero">
         <div className="hero-content">
-          <h1 className="hero-content-title">
-            {title}
-            <img src={ICONS.HI} alt="Icon Hi" />
-          </h1>
           <h3>
-            {name}
-            <a href="https://www.linkedin.com/in/bang-quach-hai/">
-              {isData?.name}
-            </a>
+            <a href={isData?.linkin}>{isData?.name}</a>
           </h3>
-          <p>{isData?.desc}</p>
+          <p>{isData?.desc1}</p>
+          <p>{isData?.desc2}</p>
+          <div className="hero-content-btn">
+            <Button
+              newTab={true}
+              icon={<FaGithub />}
+              className="git"
+              link={isData?.git}
+            />
+            <Button
+              newTab={true}
+              icon={<FaLinkedinIn />}
+              className="linkin"
+              link={isData?.linkin}
+            />
+            <Button
+              newTab={true}
+              icon={<FaXTwitter />}
+              className="twitter"
+              link={isData?.twitter}
+            />
+            <Button
+              newTab={true}
+              icon={<FaFacebookF />}
+              className="face"
+              link={isData?.facebook}
+            />
+          </div>
           <Button
-            title="Contact Me"
-            className="hero-content-btn"
-            onClick={handleContact}
+            newTab={true}
+            icon={<FaStar />}
+            title="Start me on Github"
+            className="hero-content-git"
+            link={isData?.gitrepo}
           />
         </div>
         <div className="hero-img">

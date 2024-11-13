@@ -2,14 +2,6 @@
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .hero {
         .hero-content {
-            h1 {
-                @include font-size(32px);
-
-                img {
-                    width: 40px;
-                }
-            }
-
             h3 {
                 font-size: $font-size-20;
 
@@ -23,6 +15,16 @@
             }
 
             .hero-content-btn {
+                .git,
+                .face,
+                .linkin,
+                .twitter {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+            
+            .hero-content-git {
                 font-size: $font-size-18;
             }
         }
@@ -33,16 +35,6 @@
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .hero {
         .hero-content {
-            width: 60%;
-
-            h1 {
-                @include font-size(28px);
-
-                img {
-                    width: 40px;
-                }
-            }
-
             h3 {
                 font-size: $font-size-18;
                 
@@ -56,6 +48,20 @@
             }
 
             .hero-content-btn {
+                .git,
+                .face,
+                .linkin,
+                .twitter {
+                    width: 44px;
+                    height: 44px;
+
+                    svg {
+                        font-size: 20px;
+                    }
+                }
+            }
+            
+            .hero-content-git {
                 font-size: $font-size-14;
             }
         }
@@ -65,18 +71,13 @@
 /* 500px to 768px */
 @media screen and (min-width: 500px) and (max-width: 767px) {
     .hero {
+        gap: 20px;
         height: auto;
-        padding-top: 40px;
+        padding: 20px 0 40px;
         flex-direction: column;
 
         .hero-content {
-            h1 {
-                font-size: $font-size-16;
-
-                img {
-                    width: 24px;
-                }
-            }
+            width: 100%;
 
             h3 {
                 font-size: $font-size-14;
@@ -91,13 +92,27 @@
             }
 
             .hero-content-btn {
+                .git,
+                .face,
+                .linkin,
+                .twitter {
+                    width: 44px;
+                    height: 44px;
+
+                    svg {
+                        font-size: 20px;
+                    }
+                }
+            }
+            
+            .hero-content-git {
                 font-size: $font-size-12;
             }
         }
 
         .hero-img {
             img {
-                width: 28%;
+                width: 40%;
             }
         }
     }
@@ -106,18 +121,13 @@
 /* max 499px */
 @media screen and (max-width: 499px) {
     .hero {
+        gap: 20px;
         height: auto;
-        padding-top: 40px;
+        padding: 20px 0 20px;
         flex-direction: column;
 
         .hero-content {
-            h1 {
-                font-size: $font-size-16;
-
-                img {
-                    width: 24px;
-                }
-            }
+            width: 100%;
 
             h3 {
                 font-size: $font-size-12;
@@ -132,13 +142,28 @@
             }
 
             .hero-content-btn {
+                .git,
+                .face,
+                .linkin,
+                .twitter {
+                    width: 44px;
+                    height: 44px;
+
+                    svg {
+                        font-size: 20px;
+                    }
+                }
+            }
+            
+            .hero-content-git {
+                padding: 8px 12px;
                 font-size: $font-size-10;
             }
         }
 
         .hero-img {
             img {
-                width: 40%;
+                width: 50%;
             }
         }
     }
