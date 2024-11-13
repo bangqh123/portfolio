@@ -1,8 +1,14 @@
 export interface TUserPortfolio {
   hero: {
     name: string;
-    desc: string;
+    desc1: string;
+    desc2: string;
     img: string;
+    git: string;
+    linkin: string;
+    facebook: string;
+    gitrepo: string;
+    twitter: string;
   };
   about: {
     name: string;
