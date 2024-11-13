@@ -2,14 +2,16 @@ interface IRoute {
   [key: string]: string;
 
   HOMEPAGE: string;
-  RESUMEPAGE: string;
+  EDUCATION: string;
+  EXPERIENCE: string;
   PROJECTPAGE: string;
   CONTACTPAGE: string;
 }
 
 export const ROUTES: IRoute = {
   HOMEPAGE: "",
-  RESUMEPAGE: "/resume",
+  EDUCATION: "/education",
+  EXPERIENCE: "/experience",
   PROJECTPAGE: "/project",
   CONTACTPAGE: "/contact",
 };
