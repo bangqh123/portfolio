@@ -34,9 +34,9 @@
             padding: 20px 60px;
             position: absolute;
             visibility: hidden;
+            border-radius: 8px;
             flex-direction: column;
             box-shadow: 0 0 10px black;
-            border-radius: $border-radius-8;
             background-color: $primary-color;
             transition: opacity 1s ease, visibility 1s ease;
 
@@ -74,9 +74,9 @@
             padding: 20px 80px;
             position: absolute;
             visibility: hidden;
+            border-radius: 8px;
             flex-direction: column;
             box-shadow: 0 0 10px black;
-            border-radius: $border-radius-8;
             background-color: $primary-color;
             transition: opacity 1s ease, visibility 1s ease;
 
@@ -115,9 +115,9 @@
             padding: 12px 28px;
             position: absolute;
             visibility: hidden;
+            border-radius: 8px;
             flex-direction: column;
             box-shadow: 0 0 10px black;
-            border-radius: $border-radius-8;
             background-color: $primary-color;
             transition: opacity 1s ease, visibility 1s ease;
 
