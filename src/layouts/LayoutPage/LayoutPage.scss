@@ -1,10 +1,10 @@
 .layout-page {
     width: 100%;
     display: flex;
-    min-width: 360px;
     position: relative;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 40px;
 
     .content-layout-page {
         width: 86%;
@@ -29,6 +29,19 @@
 
             svg {
                 color: $btn-hover-text-color;
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .layout-page {
+        .layout-page-top {
+            padding: 16px 12px;
+
+            svg {
+                font-size: $font-size-18;
             }
         }
     }
