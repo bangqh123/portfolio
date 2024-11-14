@@ -26,9 +26,11 @@
                 @include font-size(36px);
                 text-decoration: none;
                 text-transform: uppercase;
+                // pointer-events: none;
 
                 &:hover {
-                    text-decoration: underline;
+                    cursor: auto;
+                    // text-decoration: underline;
                 }
             }
         }

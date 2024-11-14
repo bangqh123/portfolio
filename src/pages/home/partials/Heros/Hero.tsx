@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
       <div id="hero" className="hero">
         <div className="hero-content">
           <h3>
-            <a href={isData?.linkin}>{isData?.name}</a>
+            <a href="#">{isData?.name}</a>
           </h3>
           <p>{isData?.desc1}</p>
           <p>{isData?.desc2}</p>
