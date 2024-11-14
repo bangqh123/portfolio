@@ -1,4 +1,4 @@
-export interface TProjectsPortfolio {
+export interface TProjectData {
     img: string;
     name: string;
     description: string;
