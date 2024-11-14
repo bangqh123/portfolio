@@ -1,6 +1,6 @@
-import { TContactPortfolio } from "../types/contactsType"
+import { TContactData } from "../types/contactsType"
 
-const profolioContacts: TContactPortfolio[] = [
+const contactData: TContactData[] = [
     {
         fullname: "Quach Hai Bang",
         email: "quachbang2404@gmail.com",
@@ -9,4 +9,4 @@ const profolioContacts: TContactPortfolio[] = [
     },
 ];
 
-export default profolioContacts;
+export default contactData;
