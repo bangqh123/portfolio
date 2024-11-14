@@ -14,4 +14,5 @@ export const ICONS = {
     REACT: new URL('./react.svg', import.meta.url).href,
     SASS: new URL('./sass.svg', import.meta.url).href,
     TYPE: new URL('./typescript.svg', import.meta.url).href,
+    LIGHTNING: new URL('./lightning.svg', import.meta.url).href,
 };
