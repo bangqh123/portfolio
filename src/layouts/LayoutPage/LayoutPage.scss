@@ -5,9 +5,11 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 40px;
+    
 
     .content-layout-page {
         width: 86%;
+        animation: slideInFromBottom 1s forwards;
     }
 
     .layout-page-top {
