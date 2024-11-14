@@ -10,7 +10,8 @@
 
 ::-webkit-scrollbar-thumb {
     @include bg-color(#888);
-    border-radius: 4px; ;
+    border-radius: 4px;
+    ;
 }
 
 body {
