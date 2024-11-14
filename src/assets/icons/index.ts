@@ -1,4 +1,17 @@
 export const ICONS = {
     CLOSE: new URL('./close.svg', import.meta.url).href,
     HAMBURGER: new URL('./hamburger.svg', import.meta.url).href,
+    AXURE: new URL('./axure.svg', import.meta.url).href,
+    BOOTSTRAP: new URL('./bootstrap.svg', import.meta.url).href,
+    CANVA: new URL('./canva.svg', import.meta.url).href,
+    EXPRESS: new URL('./express.svg', import.meta.url).href,
+    FIGMA: new URL('./figma.svg', import.meta.url).href,
+    JAVA: new URL('./javascript.svg', import.meta.url).href,
+    MONGO: new URL('./mongodb.svg', import.meta.url).href,
+    MYSQL: new URL('./mysql.svg',  import.meta.url).href,
+    NODE: new URL('./nodejs.svg', import.meta.url).href,
+    NPM: new URL('./npm.svg', import.meta.url).href,
+    REACT: new URL('./react.svg', import.meta.url).href,
+    SASS: new URL('./sass.svg', import.meta.url).href,
+    TYPE: new URL('./typescript.svg', import.meta.url).href,
 };

@@ -1,14 +1,8 @@
 import { TUserData } from "../types/usersType";
 
 import HeroImg from "../assets/images/hero.png";
-import Axure from "../assets/icons/axure.svg"
 
-import { SiNpm } from "react-icons/si";
-import { GrReactjs, GrMysql } from "react-icons/gr";
-import { IoLogoCss3 } from "react-icons/io";
-import { SiMongodb, SiSass, SiExpress, SiCanva } from "react-icons/si";
-import { BiLogoTypescript, BiLogoJavascript } from "react-icons/bi";
-import { FaHtml5, FaNodeJs, FaBootstrap,FaFigma } from "react-icons/fa6"
+import { ICONS } from "../assets/icons/index";
 
 // Portfolio data structure
 const portfolioData: TUserData[] = [
@@ -32,39 +26,24 @@ const portfolioData: TUserData[] = [
         fileName: "FrontEndImg",
         icons: [
           {
-            name: "HTML5",
-            icon: FaHtml5,
-            color: "#e34f26",
-          },
-          {
-            name: "CSS3",
-            icon: IoLogoCss3,
-            color: "#1572b6"
-          },
-          {
             name: "Bootstrap",
-            icon: FaBootstrap,
-            color: "#8613f3",
+            icon: ICONS.BOOTSTRAP,
           },
           {
             name: "TypeScript",
-            icon: BiLogoTypescript,
-            color: "#3178c6",
+            icon: ICONS.TYPE,
           },
           {
             name: "JavaScript",
-            icon: BiLogoJavascript,
-            color: "#f7df1e",
+            icon: ICONS.JAVA,
           },
           {
             name: "ReactJS",
-            icon: GrReactjs,
-            color: "#61dafb",
+            icon: ICONS.REACT,
           },
           {
             name: "SASS",
-            icon: SiSass,
-            color: "#cc6699",
+            icon: ICONS.SASS,
           },
         ],
         desc: [
@@ -78,27 +57,23 @@ const portfolioData: TUserData[] = [
         icons: [
           {
             name: "NodeJS",
-            icon: FaNodeJs,
-            color: "#339933",
+            icon: ICONS.NODE,
           },
           {
             name: "Express",
-            icon: SiExpress,
+            icon: ICONS.EXPRESS,
           },
           {
             name: "MySQL",
-            icon: GrMysql,
-            color: "#507e9c",
+            icon: ICONS.MYSQL,
           },
           {
             name: "MongoDB",
-            icon: SiMongodb,
-            color: "#47a248",
+            icon: ICONS.MONGO,
           },
           {
             name: "NPM",
-            icon: SiNpm,
-            color: "#cb3837",
+            icon: ICONS.NPM,
           },
         ],
         desc: [
@@ -112,18 +87,15 @@ const portfolioData: TUserData[] = [
         icons: [
           {
             name: "Figma",
-            icon: FaFigma,
-            color: "#f24e1e"
+            icon: ICONS.FIGMA,
           },
           {
             name: "Axure",
-            icon: Axure,
-            color: ""
+            icon: ICONS.AXURE,
           },
           {
             name: "Canva",
-            icon: SiCanva,
-            color: "#4570dc"
+            icon: ICONS.CANVA,
           },
         ],
         desc: [
