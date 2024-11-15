@@ -6,7 +6,8 @@ interface TButtonsProps {
   link?: string;
   title?: string;
   className?: string;
-  icon?: React.ReactNode;
+  color?: string;
+  icon?: React.ReactNode | string;
   newTab?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
@@ -18,6 +19,7 @@ const Buttons: React.FC<TButtonsProps> = ({
   link,
   newTab,
   onClick,
+  color
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (onClick) {
@@ -32,8 +34,12 @@ const Buttons: React.FC<TButtonsProps> = ({
   };  
 
   return (
-    <button className={`button ${className}`} onClick={handleClick}>
-      {icon}
+    <button className={`button ${className} ${color}`} onClick={handleClick} color="primary">
+      {typeof icon === "string" ? (
+        <img src={icon} alt="" />
+      ) : (
+        icon
+      )}
       {title}
     </button>
   );
