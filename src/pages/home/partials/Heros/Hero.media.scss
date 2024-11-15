@@ -15,10 +15,7 @@
             }
 
             .hero-content-btn {
-                .git,
-                .face,
-                .linkin,
-                .twitter {
+                .icon {
                     width: 48px;
                     height: 48px;
                 }
@@ -26,6 +23,16 @@
             
             .hero-content-git {
                 font-size: $font-size-18;
+
+                img {
+                    height: 18px;
+                }
+            }
+        }
+
+        .hero-img {
+            img {
+                width: 62%;
             }
         }
     }
@@ -48,21 +55,24 @@
             }
 
             .hero-content-btn {
-                .git,
-                .face,
-                .linkin,
-                .twitter {
+                .icon {
                     width: 44px;
                     height: 44px;
-
-                    svg {
-                        font-size: 20px;
-                    }
                 }
             }
             
             .hero-content-git {
                 font-size: $font-size-14;
+
+                img {
+                    height: 16px;
+                }
+            }  
+        }
+
+        .hero-img {
+            img {
+                width: 72%;
             }
         }
     }
@@ -92,21 +102,18 @@
             }
 
             .hero-content-btn {
-                .git,
-                .face,
-                .linkin,
-                .twitter {
+                .icon {
                     width: 44px;
                     height: 44px;
-
-                    svg {
-                        font-size: 20px;
-                    }
                 }
             }
             
             .hero-content-git {
                 font-size: $font-size-12;
+
+                img {
+                    height: 14px;
+                }
             }
         }
 
@@ -142,22 +149,20 @@
             }
 
             .hero-content-btn {
-                .git,
-                .face,
-                .linkin,
-                .twitter {
+                .icon {
                     width: 40px;
                     height: 40px;
-
-                    svg {
-                        font-size: 16px;
-                    }
                 }
             }
             
             .hero-content-git {
                 padding: 8px 12px;
                 font-size: $font-size-10;
+                border-radius: 12px;
+
+                img {
+                    height: 12px;
+                }
             }
         }
 

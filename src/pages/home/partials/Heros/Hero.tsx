@@ -2,88 +2,67 @@ import "./Hero.scss";
 import "./Hero.media.scss";
 
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { FaStar } from "react-icons/fa";
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaFacebookF,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { useSelector } from "react-redux";
 import Button from "../../../../components/buttons/Buttons/Buttons";
-import { RootState, AppDispatch } from "../../../../redux/store/store";
+import { RootState } from "../../../../redux/store/store";
+import SocailButton from "../../../../components/buttons/SocialButtonGroup/SocialButtonGroup";
 
 interface THero {
   name: string;
-  desc1: string;
-  desc2: string;
+  desc: string[];
   img: string;
-  git: string;
-  linkin: string;
-  facebook: string;
-  gitrepo: string;
-  twitter: string;
+  repo: TRepo;
+  socials: TSocial[] | undefined;
+}
+
+interface TSocial {
+  icon: React.ReactNode;
+  color: string;
+  link: string;
+}
+
+interface TRepo {
+  icon: string;
+  link: string;
 }
 
 const Hero: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
-
-  const [isData, setIsData] = useState<THero>();
+  const [isData, setIsData] = useState<THero | undefined>();
+  const [socialsData, setSocialsData] = useState<TSocial[] | undefined>();
 
   const { userInfo } = useSelector((state: RootState) => state.portfolio);
 
   useEffect(() => {
-    setIsData(userInfo?.[0].hero);
-  }, [dispatch, userInfo]);
+    const heroData = userInfo?.[0]?.hero;
+    setIsData(heroData);
+    setSocialsData(heroData?.socials);
+  }, [userInfo]);
 
   return (
-    <>
-      <div id="hero" className="hero">
-        <div className="hero-content">
-          <h3>
-            <a href="#">{isData?.name}</a>
-          </h3>
-          <p>{isData?.desc1}</p>
-          <p>{isData?.desc2}</p>
-          <div className="hero-content-btn">
-            <Button
-              newTab={true}
-              icon={<FaGithub />}
-              className="git"
-              link={isData?.git}
-            />
-            <Button
-              newTab={true}
-              icon={<FaLinkedinIn />}
-              className="linkin"
-              link={isData?.linkin}
-            />
-            <Button
-              newTab={true}
-              icon={<FaXTwitter />}
-              className="twitter"
-              link={isData?.twitter}
-            />
-            <Button
-              newTab={true}
-              icon={<FaFacebookF />}
-              className="face"
-              link={isData?.facebook}
-            />
-          </div>
-          <Button
-            newTab={true}
-            icon={<FaStar />}
-            title="Start me on Github"
-            className="hero-content-git"
-            link={isData?.gitrepo}
-          />
-        </div>
-        <div className="hero-img">
-          <img src={isData?.img} alt="Avatar Profolio" />
-        </div>
+    <div id="hero" className="hero">
+      <div className="hero-content">
+        <h3>
+          <a href="#">{isData?.name}</a>
+        </h3>
+        {isData?.desc?.map((desc, i) => (
+          <p key={i}>{desc}</p>
+        ))}
+        <SocailButton
+          classname="hero-content-btn"
+          data={socialsData}
+        />
+        <Button
+          newTab={true}
+          icon={isData?.repo.icon}
+          title="Star me on Github"
+          className="hero-content-git"
+          link={isData?.repo.link}
+        />
       </div>
-    </>
+      <div className="hero-img">
+        <img src={isData?.img} alt="Avatar Portfolio" />
+      </div>
+    </div>
   );
 };
 

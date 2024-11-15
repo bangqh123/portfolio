@@ -45,30 +45,13 @@
             gap: 20px;
             display: flex;
 
-            .git,
-            .face,
-            .linkin,
-            .twitter {
+            .icon {
                 width: 52px;
                 height: 52px;
-                border-radius: 50%;
-                @include font-size(24px);
-            }
 
-            .git {
-                background-color: $black-color;
-            }
-
-            .face {
-                background-color: #1877f2;
-            }
-
-            .linkin {
-                background-color: #0077b5;
-            }
-
-            .twitter {
-                background-color: $black-color;
+                img {
+                    width: 70%;
+                }
             }
         }
 
@@ -79,8 +62,8 @@
             text-transform: uppercase;
             border: 1px solid $btn-color;
             
-            svg {
-                fill: yellow;
+            img {
+                height: 20px;
             }
         }
     }
@@ -91,7 +74,7 @@
         justify-content: center;
 
         img {
-            width: 48%;
+            width: 52%;
             object-fit: cover;
         }
     }
