@@ -1,21 +1,22 @@
-import { IconType } from 'react-icons';
-
 export interface TUserData {
   hero: {
     name: string;
-    desc1: string;
-    desc2: string;
+    desc: string[];
     img: string;
-    git: string;
-    linkin: string;
-    facebook: string;
-    gitrepo: string;
-    twitter: string;
-  },
+    socials: { icon: string; color: string; link: string }[];
+    repo: {
+      icon: string;
+      link: string;
+    }
+  };
   whatido: {
+    id?: string;
     title: string;
     fileName: string;
-    icons: { name: string; color?:string; icon:IconType | string}[];
-    desc: string[];
+    icons: { name: string; color?: string; icon: string }[];
+    descs: {
+      icon: string;
+      desc: string;
+    }[];
   }[];
 }

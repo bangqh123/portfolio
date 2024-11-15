@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import PortfolioUserService from "../api/apiPortfolio";
-import { TUserPortfolio } from "../../types/usersType";
+import { TUserData } from "../../types/usersType";
 
 // Define the async thunk to fetch the portfolio data
-export const fetchPortfolio = createAsyncThunk<TUserPortfolio, void>(
+export const fetchPortfolio = createAsyncThunk<TUserData, void>(
   "portfolio/fetchPortfolio",
   async () => {
     const response = await PortfolioUserService.getPortfolio();
-    return response as TUserPortfolio;
+    return response as TUserData;
   }
 );
 
