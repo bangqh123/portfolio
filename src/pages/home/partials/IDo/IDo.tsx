@@ -9,17 +9,17 @@ import { blueTheme } from "../../../../styles/theme";
 import DesignImg from "./SVG/designImg";
 import BackEndImg from "./SVG/backendImg";
 import FrontEndImg from "./SVG/frontendImg";
-import { ICONS } from "../../../../assets/icons";
 
 type TIDoProps = {
   title: string;
 };
 
 interface TIDo {
+  id: string;
   title: string;
   fileName: string;
   icons: TIDoIcon[];
-  desc: string[];
+  descs: TDescs[];
 }
 
 interface TIDoIcon {
@@ -27,9 +27,14 @@ interface TIDoIcon {
   icon: string;
 }
 
+interface TDescs {
+  icon: string;
+  desc: string;
+}
+
 const IDo: React.FC<TIDoProps> = ({ title }) => {
   const [isData, setIsData] = useState<TIDo[]>([]);
-  const [isAnimation, setIsAnimation] = useState(false); // Array of booleans
+  const [isAnimation, setIsAnimation] = useState(false);
   const { userInfo } = useSelector((state: RootState) => state.portfolio);
   const itemsRef = useRef<HTMLDivElement[]>([]);
 
@@ -70,6 +75,7 @@ const IDo: React.FC<TIDoProps> = ({ title }) => {
             key={index}
             ref={(el) => (itemsRef.current[index] = el!)}
             className={`what-group-item ${isAnimation ? "animation" : ""}`}
+            id={item.id}
           >
             <div className="item-img">
               <GetSkillSvg fileName={item.fileName} />
@@ -88,10 +94,10 @@ const IDo: React.FC<TIDoProps> = ({ title }) => {
                 })}
               </div>
               <div className="item-content-desc">
-                {item.desc.map((description, id) => (
+                {item.descs.map((descs, id) => (
                   <div className="desc-item" key={id}>
-                    <img src={ICONS.LIGHTNING} alt="" />
-                    <p>{description}</p>
+                    <img src={descs.icon} alt="" />
+                    <p>{descs.desc}</p>
                   </div>
                 ))}
               </div>
