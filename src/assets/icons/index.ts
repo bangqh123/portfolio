@@ -15,4 +15,9 @@ export const ICONS = {
     SASS: new URL('./sass.svg', import.meta.url).href,
     TYPE: new URL('./typescript.svg', import.meta.url).href,
     LIGHTNING: new URL('./lightning.svg', import.meta.url).href,
+    FACE: new URL('./facebook.svg', import.meta.url).href,
+    GIT: new URL('./github.svg', import.meta.url).href,
+    LINKIN: new URL('./linkedin.svg', import.meta.url).href,
+    TWITTER: new URL('./twitter.svg', import.meta.url).href,
+    STAR: new URL('./star.svg', import.meta.url).href,
 };
