@@ -1,16 +1,16 @@
 import contactData from "../../js/contact";
-import { TContactPortfolio } from "../../types/contactsType";
 
-const ContactUserService = {
-  postContact: async (data: TContactPortfolio) => {
-    try {
-      contactData.push(data);
-      return contactData;
-    } catch (error) {
-      console.error("Error posting contact data:", error);
-      throw error;
-    }
+const ProfolioContactService = {
+  getPortfolio: async () => {
+      try {
+          return await new Promise((resolve) => {
+              setTimeout(() => resolve(contactData), 500);
+          });
+      } catch (error) {
+          console.error("Error fetching data:", error);
+          throw error;
+      }
   },
 };
 
-export default ContactUserService;
+export default ProfolioContactService;

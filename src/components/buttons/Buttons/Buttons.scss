@@ -3,8 +3,8 @@
     border: none;
     display: flex;
     font-weight: 700;
-    color: $white-color;
     align-items: center;
+    color: $btn-text-color;
     justify-content: center;
     font-family: $font-family;
     background-color: $btn-color;
@@ -14,7 +14,23 @@
     }
 
     &:hover {
-        opacity: 0.8;
+        opacity: 0.9;
         cursor: pointer;
+        color: $btn-hover-text-color;
+        background-color: $white-color;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
     }
+}
+
+.button.git,
+.button.face {
+    background-color: $black-color;
+}
+
+.button.linkedin {
+    background-color: #0077b5;
+}
+
+.button.twitter{
+    background-color: #1877f2
 }

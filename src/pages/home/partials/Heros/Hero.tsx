@@ -2,65 +2,67 @@ import "./Hero.scss";
 import "./Hero.media.scss";
 
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { ICONS } from "../../../../assets/icons";
+import { useSelector } from "react-redux";
 import Button from "../../../../components/buttons/Buttons/Buttons";
-import { useNavigate } from "react-router-dom";
-import { RootState, AppDispatch } from "../../../../redux/store/store";
-
-type THeroProps = {
-  title: string;
-  name: string;
-};
+import { RootState } from "../../../../redux/store/store";
+import SocailButton from "../../../../components/buttons/SocialButtonGroup/SocialButtonGroup";
 
 interface THero {
   name: string;
-  desc: string;
+  desc: string[];
   img: string;
+  repo: TRepo;
+  socials: TSocial[] | undefined;
 }
 
-const Hero: React.FC<THeroProps> = ({ title, name }) => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch<AppDispatch>();
+interface TSocial {
+  icon: React.ReactNode;
+  color: string;
+  link: string;
+}
 
-  const [isData, setIsData] = useState<THero>();
+interface TRepo {
+  icon: string;
+  link: string;
+}
+
+const Hero: React.FC = () => {
+  const [isData, setIsData] = useState<THero | undefined>();
+  const [socialsData, setSocialsData] = useState<TSocial[] | undefined>();
 
   const { userInfo } = useSelector((state: RootState) => state.portfolio);
 
   useEffect(() => {
-    setIsData(userInfo?.[0].hero);
-  }, [dispatch, userInfo]);
-
-  const handleContact = () => {
-    navigate("/contact");
-  };
+    const heroData = userInfo?.[0]?.hero;
+    setIsData(heroData);
+    setSocialsData(heroData?.socials);
+  }, [userInfo]);
 
   return (
-    <>
-      <div id="hero" className="hero">
-        <div className="hero-content">
-          <h1 className="hero-content-title">
-            {title}
-            <img src={ICONS.HI} alt="Icon Hi" />
-          </h1>
-          <h3>
-            {name}
-            <a href="https://www.linkedin.com/in/bang-quach-hai/">
-              {isData?.name}
-            </a>
-          </h3>
-          <p>{isData?.desc}</p>
-          <Button
-            title="Contact Me"
-            className="hero-content-btn"
-            onClick={handleContact}
-          />
-        </div>
-        <div className="hero-img">
-          <img src={isData?.img} alt="Avatar Profolio" />
-        </div>
+    <div id="hero" className="hero">
+      <div className="hero-content">
+        <h3>
+          <a href="#">{isData?.name}</a>
+        </h3>
+        {isData?.desc?.map((desc, i) => (
+          <p key={i}>{desc}</p>
+        ))}
+        <SocailButton
+          classname="hero-content-btn"
+          data={socialsData}
+        />
+        <Button
+          newTab={true}
+          icon={isData?.repo.icon}
+          title="Star me on Github"
+          className="hero-content-git"
+          link={isData?.repo.link}
+        />
       </div>
-    </>
+      <div className="hero-img">
+        <img src={isData?.img} alt="Avatar Portfolio" />
+      </div>
+    </div>
   );
 };
 

@@ -10,15 +10,14 @@
 
 ::-webkit-scrollbar-thumb {
     @include bg-color(#888);
-    border-radius: $border-radius-4; ;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: $white-color;
+    border-radius: 4px;
+    ;
 }
 
 body {
     all: unset;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 #root {

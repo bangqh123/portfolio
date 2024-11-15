@@ -1,99 +1,100 @@
-import { TUserPortfolio } from "../types/usersType";
+import { TUserData } from "../types/usersType";
 
 import HeroImg from "../assets/images/hero.png";
-import AboutImg from "../assets/images/about.png";
-import CV from "../../public/QH_Bang_FrontEnd.pdf"
+
+import { ICONS } from "../assets/icons/index";
 
 // Portfolio data structure
-const portfolioData: TUserPortfolio[] = [
+const portfolioData: TUserData[] = [
   {
     hero: {
       name: "Quach Hai Bang",
-      desc: "I am a Front-End and Website developer with over 1 year of experience.",
-      img: HeroImg,
-    },
-    about: {
-      img: AboutImg,
-      age: 24,
-      address: "Cai Nuoc, Ca Mau, Viet Nam",
-      phone: "0368459077",
-      email: "quachbang2404@gmail.com",
-      name: "Quach Hai Bang",
-      major: "Front-End Developer",
-      desc1:
+      desc: [
         "I am a Front-End programmer with more than 1 year of experience in HTML & CSS, JavaScript and nearly 4 months of experience in learning and developing TypeScript with the ReactJs library. I can use Bootstrap and Tailwind with Ant Design.",
-      desc2:
         "I have actively researched and developed projects such as W3school`s The Band, Mentor Frontend QR code component and Blog preview card, Shop and F_News, which helped me practice teamwork, communication, problem-solving and investigation skills.",
-      git: "https://github.com/bangqh123",
-      linkin: "https://www.linkedin.com/in/bang-quach-hai/",
-      facebook: "https://web.facebook.com/bang.quach.906",
+      ],
+      img: HeroImg,
+      socials: [
+        { icon: ICONS.GIT, color: "git", link: "https://github.com/bangqh123" },
+        { icon: ICONS.LINKIN, color: "linkedin", link: "https://www.linkedin.com/in/bang-quach-hai/"},
+        { icon: ICONS.FACE, color: "face", link: "https://web.facebook.com/bang.quach.906"},
+        { icon: ICONS.TWITTER, color: "twitter", link: "https://x.com/BangQuach4"}
+      ],
+      repo: {
+        icon: ICONS.STAR,
+        link: "https://github.com/bangqh123/portfolio",
+      }
     },
-    education: [
+    whatido: [
       {
-        school_name: "University of Greenwich (Can Tho)",
-        major: "computer science",
-        desc: "HTML & CSS, Java, PhP, C#",
-        gpa: "3.55/4",
-        start: "Jul 2018",
-        end: "Jul 2023",
+        id: "frontend",
+        title: "Front End Developer",
+        fileName: "FrontEndImg",
+        icons: [
+          { name: "Bootstrap", icon: ICONS.BOOTSTRAP },
+          { name: "TypeScript", icon: ICONS.TYPE },
+          { name: "JavaScript", icon: ICONS.JAVA },
+          { name: "ReactJS", icon: ICONS.REACT },
+          { name: "SASS", icon: ICONS.SASS },
+        ],
+        descs: [
+          {
+            icon: ICONS.LIGHTNING,
+            desc: "Build front-end with React, Redux, TypeScript and JavaScript",
+          },
+          {
+            icon: ICONS.LIGHTNING,
+            desc: "Responsive front-end design using CSS and Sass, Less",
+          }
+        ],
+      },
+      {
+        id: "backend",
+        title: "Back End Developer",
+        fileName: "BackEndImg",
+        icons: [
+          { name: "NodeJS", icon: ICONS.NODE },
+          { name: "Express", icon: ICONS.EXPRESS },
+          { name: "MySQL", icon: ICONS.MYSQL },
+          { name: "MongoDB", icon: ICONS.MONGO },
+          { name: "NPM", icon: ICONS.NPM },
+        ],
+        descs: [
+          {
+            icon: ICONS.LIGHTNING,
+            desc: "Create application backend in Node & Express.",
+          },
+          {
+            icon: ICONS.LIGHTNING,
+            desc: "Relational and non-relational databases MySQL and MongoDB.",
+          }
+        ],
+      },
+      {
+        id: "design",
+        title: "UI/UX Design",
+        fileName: "DesignImg",
+        icons: [
+          { name: "Figma", icon: ICONS.FIGMA },
+          { name: "Axure", icon: ICONS.AXURE },
+          { name: "Canva", icon: ICONS.CANVA },
+        ],
+        descs: [
+          {
+            icon: ICONS.LIGHTNING,
+            desc: "Designing beautiful user interfaces for web applications.",
+          },
+          {
+            icon: ICONS.LIGHTNING,
+            desc: "Customizing logo designs and building logos from scratch.",
+          },
+          {
+            icon: ICONS.LIGHTNING,
+            desc: "Create the flow of application functionalities to optimize user experience.",
+          }
+        ],
       },
     ],
-    experience: [
-      {
-        job: "Front end developer",
-        company: "LikeLion",
-        desc: "HTML & CSS, JavaScript, TypeScript, ReactJS",
-        role1: "Programme outsourcing projects",
-        role2:
-          "Create coding frames and design database based on project descriptions",
-        start: "Jun 2024",
-        end: "Nov 2024",
-      },
-      {
-        job: "Front end developer",
-        company: "IVS(Can Tho)",
-        desc: "HTML & CSS, PhP(Laravel), MySQL",
-        role1: "Programme outsourcing projects",
-        role2:
-          "Create coding frames and design database based on project descriptions",
-        start: "Nov 2021",
-        end: "Apr 2022",
-      },
-    ],
-    skill: {
-      technical: [
-        {
-          name: "Programming",
-          desc: "HTML, CSS, JavaScript, TypeScript, ReactJS",
-        },
-        {
-          name: "Databases",
-          desc: "MongoDB, MySQL, SQLServer",
-        },
-        {
-          name: "Libraries",
-          desc: "Bootstrap, Tailwind, Ant Design, React",
-        },
-        {
-          name: "Tools",
-          desc: "VSCode, Git, PostMan, Figma, Vercel",
-        },
-      ],
-      soft: [
-        {
-          name: "Team Work",
-        },
-        {
-          name: "Communication",
-        },
-        {
-          name: "Problem-Solving",
-        },
-      ],
-    },
-    resume: {
-      cv: CV,
-    },
   },
 ];
 

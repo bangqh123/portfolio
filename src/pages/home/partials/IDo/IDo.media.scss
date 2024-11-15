@@ -1,0 +1,183 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .what {
+        .what-title {
+            @include font-size(44px);
+        }
+
+        .what-group {
+            .what-group-item {
+                .item-content {
+                    .item-content-title {
+                        @include font-size(32px);
+                    }
+
+                    .item-content-icons {
+                        .icon {
+                            @include font-size(44px);
+
+                            img {
+                                width: 44px;
+                                height: 44px;
+                            }
+                        }
+                    }
+
+                    .item-content-desc {
+                        .desc-item {
+                            img {
+                                width: 18px;
+                            }
+
+                            p {
+                                font-size: $font-size-18;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .what {
+        .what-title {
+            @include font-size(38px);
+        }
+
+        .what-group {
+            .what-group-item {
+                .item-content {
+                    .item-content-title {
+                        @include font-size(28px);
+                    }
+
+                    .item-content-icons {
+                        .icon {
+                            img {
+                                width: 38px;
+                                height: 38px;
+                            }
+                        }
+                    }
+
+                    .item-content-desc {
+                        .desc-item {
+                            img {
+                                width: 16px;
+                            }
+
+                            p {
+                                font-size: $font-size-16;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .what {
+        .what-title {
+            @include font-size(32px);
+        }
+
+        .what-group {
+            gap: 60px;
+
+            .what-group-item {
+                flex-direction: column-reverse;
+
+                .item-img {
+                    display: flex;
+                    justify-content: center;
+
+                    svg {
+                        width: 80%;
+                    }
+                }
+
+                .item-content {
+                    .item-content-title {
+                        @include font-size(24px);
+                    }
+
+                    .item-content-icons {
+                        .icon {
+                            img {
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
+                    }
+
+                    .item-content-desc {
+                        .desc-item {
+                            img {
+                                width: 14px;
+                            }
+
+                            p {
+                                font-size: $font-size-14;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .what {
+        .what-title {
+            @include font-size(32px);
+        }
+
+        .what-group {
+            gap: 60px;
+
+            .what-group-item {
+                flex-direction: column-reverse;
+
+                .item-img {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .item-content {
+                    .item-content-title {
+                        @include font-size(20px);
+                    }
+
+                    .item-content-icons {
+                        .icon {
+                            img {
+                                width: 26px;
+                                height: 26px;
+                            }
+                        }
+                    }
+
+                    .item-content-desc {
+                        .desc-item {
+                            img {
+                                width: 12px;
+                            }
+
+                            p {
+                                font-size: $font-size-12;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,8 @@
-import { TProjectsPortfolio } from "../types/projectsType"
+import { TProjectData } from "../types/projectsType"
 
 import ShopImage from "../assets/images/Shop.png"
 
-const portfolioProjects: TProjectsPortfolio[] = [
+const projectData: TProjectData[] = [
     {
         img: ShopImage,
         name: "Shop",
@@ -47,4 +47,4 @@ const portfolioProjects: TProjectsPortfolio[] = [
     },
 ]
 
-export default portfolioProjects
+export default projectData;

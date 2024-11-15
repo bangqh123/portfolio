@@ -16,8 +16,9 @@ const Header: React.FC<HeaderLayoutProps> = ({ isScroll }) => {
   const navItems = useMemo(
     () => [
       { name: "Home", link: "/" },
-      { name: "Resume", link: "/resume" },
-      { name: "Projects", link: "/project" },
+      { name: "Education", link: "/education" },
+      { name: "Experience", link: "/experience" },
+      { name: "Project", link: "/project" },
       { name: "Contact", link: "/contact" },
     ],
     []
@@ -26,7 +27,7 @@ const Header: React.FC<HeaderLayoutProps> = ({ isScroll }) => {
   return (
     <header className={`header ${isScroll ? "scrolled" : ""}`}>
       <a className="header-name" href="/">
-        Hai Bang
+        HaiBang
       </a>
       <div
         className={`header-menu ${menuOpen ? "active" : ""}`}
