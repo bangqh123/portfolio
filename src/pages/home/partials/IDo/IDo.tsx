@@ -34,7 +34,7 @@ interface TDescs {
 
 const IDo: React.FC<TIDoProps> = ({ title }) => {
   const [isData, setIsData] = useState<TIDo[]>([]);
-  const [isAnimation, setIsAnimation] = useState(false);
+  const [isAnimation, setIsAnimation] = useState<{ [key: string]: boolean }>({});
   const { userInfo } = useSelector((state: RootState) => state.portfolio);
   const itemsRef = useRef<HTMLDivElement[]>([]);
 
@@ -46,18 +46,21 @@ const IDo: React.FC<TIDoProps> = ({ title }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollFraction = scrollTop / docHeight;
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollFraction = scrollTop / docHeight;
 
-        setIsAnimation(scrollFraction >= 0.26);
+      // Check for each item with specific ids
+      setIsAnimation((prevState) => ({
+        ...prevState,
+        frontend: itemsRef.current[0]?.getBoundingClientRect().top <= window.innerHeight && scrollFraction >= 0.01,
+        backend: itemsRef.current[1]?.getBoundingClientRect().top <= window.innerHeight && scrollFraction >= 0.01,
+        design: itemsRef.current[2]?.getBoundingClientRect().top <= window.innerHeight && scrollFraction >= 0.01,
+      }));
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-        window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -74,7 +77,7 @@ const IDo: React.FC<TIDoProps> = ({ title }) => {
           <div
             key={index}
             ref={(el) => (itemsRef.current[index] = el!)}
-            className={`what-group-item ${isAnimation ? "animation" : ""}`}
+            className={`what-group-item ${isAnimation[item.id] ? "animation" : ""}`}
             id={item.id}
           >
             <div className="item-img">
