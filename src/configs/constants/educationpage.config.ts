@@ -1,11 +1,23 @@
-const educationProps = {
+const heroProps = {
     title: 'Education',
-    major: 'major: ',
-    gpa: 'GPA: ',
+}
+
+const degreeProps = {
+    title: "Degrees Received"
+}
+
+const certificationProps = {
+    title: "Certifications"
 }
 
 export const PROPS = {
-    EDUCATION: {
-        ...educationProps
+    HERO: {
+        ...heroProps
     },
+    DEGRESS: {
+        ...degreeProps
+    },
+    CERTIFICATION: {
+        ...certificationProps
+    }
 }
