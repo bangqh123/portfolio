@@ -1,0 +1,131 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .contacthero {
+        .contacthero-img {
+            img {
+                width: 56%;
+            }
+        }
+    
+        .contacthero-content {
+            .contacthero-content-title {
+                @include font-size(28px);
+            }
+    
+            .contacthero-content-desc {
+                font-size: $font-size-18;
+            }
+    
+            .contacthero-content-resume {
+                font-size: $font-size-18;
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .contacthero {
+        .contacthero-img {
+            img {
+                width: 50%;
+            }
+        }
+    
+        .contacthero-content {
+            .contacthero-content-title {
+                @include font-size(24px);
+            }
+    
+            .contacthero-content-desc {
+                font-size: $font-size-16;
+            }
+    
+            .contacthero-content-btn {
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+    
+            .contacthero-content-resume {
+                font-size: $font-size-16;
+            }
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .contacthero {
+        align-items: center;
+        flex-direction: column;
+
+        .contacthero-img {
+            img {
+                width: 40%;
+            }
+        }
+    
+        .contacthero-content {
+            width: 80%;
+            
+            .contacthero-content-title {
+                font-size: $font-size-20;
+            }
+    
+            .contacthero-content-desc {
+                font-size: $font-size-14;
+            }
+    
+            .contacthero-content-btn {
+                .icon {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+    
+            .contacthero-content-resume {
+                font-size: $font-size-14;
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .contacthero {
+        align-items: center;
+        flex-direction: column;
+
+        .contacthero-img {
+            img {
+                width: 36%;
+            }
+        }
+    
+        .contacthero-content {
+            width: 80%;
+            
+            .contacthero-content-title {
+                font-size: $font-size-16;
+            }
+    
+            .contacthero-content-desc {
+                font-size: $font-size-12;
+            }
+    
+            .contacthero-content-btn {
+                .icon {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+    
+            .contacthero-content-resume {
+                padding: 8px 20px;
+                font-size: $font-size-12;
+            }
+        }
+    }
+}
