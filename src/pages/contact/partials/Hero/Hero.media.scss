@@ -15,6 +15,13 @@
             .contacthero-content-desc {
                 font-size: $font-size-18;
             }
+
+            .contacthero-content-btn {
+                .icon {
+                    width: 44px;
+                    height: 44px;
+                }
+            }
     
             .contacthero-content-resume {
                 font-size: $font-size-18;
@@ -59,6 +66,7 @@
 @media screen and (min-width: 500px) and (max-width: 767px) {
     .contacthero {
         align-items: center;
+        margin-bottom: 40px;
         flex-direction: column;
 
         .contacthero-img {
@@ -96,6 +104,7 @@
 @media screen and (max-width: 499px) {
     .contacthero {
         align-items: center;
+        margin-bottom: 40px;
         flex-direction: column;
 
         .contacthero-img {
