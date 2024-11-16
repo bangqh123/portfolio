@@ -50,7 +50,6 @@ const IDo: React.FC<TIDoProps> = ({ title }) => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollFraction = scrollTop / docHeight;
 
-      // Check for each item with specific ids
       setIsAnimation((prevState) => ({
         ...prevState,
         frontend: itemsRef.current[0]?.getBoundingClientRect().top <= window.innerHeight && scrollFraction >= 0.01,
