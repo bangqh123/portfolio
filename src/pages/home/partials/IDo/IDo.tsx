@@ -63,8 +63,8 @@ const IDo: React.FC<TIDoProps> = ({ title }) => {
   }, []);
 
   useEffect(() => {
-    if (userInfo?.[0]?.whatido) {
-      setIsData(userInfo[0].whatido);
+    if (userInfo?.whatido) {
+      setIsData(userInfo.whatido);
     }
   }, [userInfo]);
 

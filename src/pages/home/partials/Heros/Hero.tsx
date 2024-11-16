@@ -33,8 +33,8 @@ const Hero: React.FC = () => {
   const { userInfo } = useSelector((state: RootState) => state.portfolio);
 
   useEffect(() => {
-    const heroData = userInfo?.[0]?.hero;
-    setIsData(heroData);
+    const heroData = userInfo?.hero;
+    setIsData(userInfo?.hero);
     setSocialsData(heroData?.socials);
   }, [userInfo]);
 

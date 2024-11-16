@@ -2,8 +2,8 @@ import "./Address.scss";
 import "./Address.media.scss";
 
 import React, { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState, AppDispatch } from "../../../../redux/store/store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../redux/store/store";
 import { blueTheme } from "../../../../styles/theme";
 import AddressImg from "./addressImg";
 import Button from "../../../../components/buttons/Buttons/Buttons";
@@ -18,8 +18,6 @@ interface TAddress {
 }
 
 const Address: React.FC<TAddressProps> = ({ address }) => {
-    const dispatch = useDispatch<AppDispatch>();
-
     const [isData, setIsData] = useState<TAddress>();
     const [isAnimation, setIsAnimation] = useState(false);
     const { contactInfo } = useSelector((state: RootState) => state.contact);
@@ -42,11 +40,11 @@ const Address: React.FC<TAddressProps> = ({ address }) => {
     }, []);
 
     useEffect(() => {
-        setIsData(contactInfo?.[0]?.address);
-    }, [dispatch, contactInfo]);
+        setIsData(contactInfo?.address);
+    }, [contactInfo]);
 
     return (
-        <div  
+        <div
             ref={itemRef}
             className={`contactaddress ${isAnimation ? "animation" : ""}`}
         >
