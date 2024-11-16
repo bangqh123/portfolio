@@ -1,0 +1,60 @@
+.contactblog {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .contactblog-content {
+        gap: 20px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .contactblog-content-title {
+            margin: 0;
+            font-weight: 700;
+            text-align: center;
+            color: $title-text-color;
+            @include font-size(32px);
+            text-transform: uppercase;
+        }
+
+        .contactblog-content-desc {
+            margin: 0;
+            font-weight: 400;
+            color: $text-color;
+            text-align: center;
+            font-size: $font-size-20;
+        }
+
+        .contactblog-content-btn {
+            margin-top: 40px;
+            padding: 12px 24px;
+            border-radius: 16px;
+            font-size: $font-size-20;
+            border: 1px solid $btn-color;
+        }
+    }
+
+    .contactblog-img {
+        flex: 1;
+
+        svg {
+            width: 100%;
+            height: 400px;
+        }
+    }
+}
+
+.contactblog.animation {
+    opacity: 1;
+
+    .contactblog-img {
+        animation: slideInFromRight 2s ease forwards;
+    }
+
+    .contactblog-content {
+        animation: slideInFromLeft 2s ease forwards;
+    }
+}
