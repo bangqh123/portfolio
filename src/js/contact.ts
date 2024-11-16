@@ -19,8 +19,8 @@ const contactData: TContactData[] = [
             resume: CV,  
         },
         blog: {
-            desc: "Hung My, Cai Nuoc, Ca Mau, Viet Nam",
-            link: "https://maps.app.goo.gl/3KoTTWgWMoQMwbLh6"
+            // desc: "Hung My, Cai Nuoc, Ca Mau, Viet Nam",
+            // link: "https://maps.app.goo.gl/3KoTTWgWMoQMwbLh6"
         },
         address: {
             desc: "Hung My, Cai Nuoc, Ca Mau, Viet Nam",

@@ -4,9 +4,12 @@ export interface TContactData {
         alt: string;
         desc: string;
         icons: { icon: string; color: string; link: string }[];
-        resume: string ;
+        resume: string;
     },
-    blog?: { desc: string, link: string};
+    blog: { 
+        desc?: string, 
+        link?: string 
+    };
     address: {
         desc: string;
         link: string;
