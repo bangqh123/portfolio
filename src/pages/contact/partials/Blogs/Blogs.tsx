@@ -2,9 +2,13 @@ import "./Blogs.scss"
 
 import React from "react"
 
-const Blogs: React.FC = () => {
+type TBlogProps = {
+    blog: string;
+}
+
+const Blogs: React.FC<TBlogProps> = ( {blog} ) => {
     return (
-        <div>Blogs</div>
+        <div>{blog}</div>
     )
 }
 

@@ -2,9 +2,13 @@ import "./Address.scss"
 
 import React from "react"
 
-const Address: React.FC = () => {
+type TAddressProps = {
+    address: string;
+}
+
+const Address: React.FC<TAddressProps> = ( {address} ) => {
     return (
-        <div>Address</div>
+        <div>{address}</div>
     )
 }
 
