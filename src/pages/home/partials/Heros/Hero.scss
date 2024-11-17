@@ -11,7 +11,6 @@
         gap: 28px;
         width: 50%;
         display: flex;
-        margin-left: 20px;
         color: $white-color;
         flex-direction: column;
         align-items: flex-start;
@@ -26,11 +25,9 @@
                 @include font-size(36px);
                 text-decoration: none;
                 text-transform: uppercase;
-                // pointer-events: none;
 
                 &:hover {
                     cursor: auto;
-                    // text-decoration: underline;
                 }
             }
         }
