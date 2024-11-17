@@ -20,7 +20,7 @@ const BackEndImg: React.FC<ThemeProps> = ({ theme }) => {
       height="829.80067"
       viewBox="0 0 1120 829.80067"
     >
-      <title>all the data</title>
+      <title>BackEnd</title>
       <ellipse
         cx="975.57906"
         cy="811.05902"
