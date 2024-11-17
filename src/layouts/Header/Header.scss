@@ -1,14 +1,21 @@
 .header {
-    width: 86%;
+    width: 100%;
     height: 60px;
     display: flex;
     z-index: 1000;
     position: sticky;
     margin-top: 12px;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-    animation: slideInFromTop 1.5s ease forwards;
+    justify-content: center;
+
+
+    .header-layout {
+        width: 86%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        animation: slideInFromTop 1.5s ease forwards;
+    }
 
     .header-name {
         gap: 16px;
@@ -63,6 +70,5 @@
 
 .header.scrolled {
     top: 0;
-    width: 86%;
     background-color: $header-color;
 }
