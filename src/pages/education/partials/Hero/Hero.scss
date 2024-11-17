@@ -1,0 +1,83 @@
+.educationhero {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+
+    .contacthero-img {
+        flex: 1;
+
+        svg {
+            width: 100%;
+            height: 600px;
+        }
+    }
+
+    .contacthero-content {
+        gap: 20px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .contacthero-content-title {
+            margin: 0;
+            font-weight: 700;
+            text-align: center;
+            color: $title-text-color;
+            @include font-size(32px);
+            text-transform: uppercase;
+        }
+
+        .contacthero-content-desc {
+            margin: 0;
+            font-weight: 400;
+            text-align: center;
+            color: $title-text-color;
+            font-size: $font-size-20;
+        }
+
+        .contacthero-content-icons {
+            gap: 20px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+                display: flex;
+                position: relative;
+                @include font-size(50px);
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                span {
+                    left: 50%;
+                    opacity: 0;
+                    top: -26px;
+                    color: white;
+                    position: absolute;
+                    visibility: hidden;
+                    white-space: nowrap;
+                    border-radius: 4px;
+                    padding: 0.3rem 0.6rem;
+                    font-size: $font-size-12;
+                    transform: translateX(-50%);
+                    background-color: rgba(0, 0, 0, 0.7);
+                    transition: opacity 0.3s ease, visibility 0.3s ease;
+                }
+
+                &:hover span {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
