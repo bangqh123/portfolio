@@ -6,6 +6,8 @@ import { fetchEducation } from "../../redux/slices/educationSlies";
 import LayoutPage from "../../layouts/LayoutPage/LayoutPage";
 import Hero from "./partials/Hero/Hero";
 import { PROPS } from "../../configs/constants/educationpage.config";
+import Degrees from "./partials/Degrees/Degrees";
+import Certifications from "./partials/Certifications/Certifications";
 
 const EducationPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -24,6 +26,8 @@ const EducationPage = () => {
     <LayoutPage>
       <div className='content-wrapper'>
         <Hero {...PROPS.HERO}/>
+        <Degrees {...PROPS.DEGRESS}/>
+        <Certifications {...PROPS.CERTIFICATION}/>
       </div>
     </LayoutPage>
   )
