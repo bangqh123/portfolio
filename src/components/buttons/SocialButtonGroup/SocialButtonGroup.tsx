@@ -10,7 +10,7 @@ type TSocailButtonProps = {
 
 interface TData {
   icon: React.ReactNode;
-  color: string;
+  color?: string;
   link: string;
 }
 
