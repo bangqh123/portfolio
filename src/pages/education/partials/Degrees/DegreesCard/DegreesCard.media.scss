@@ -1,0 +1,204 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .degreesCard {
+        .degreesCard-content {
+            .degreesCard-content-header {
+                .content-header-school {
+                    h1 {
+                        font-size: $font-size-20;
+                    }
+    
+                    .header-school-tiem {
+                        font-size: $font-size-18;
+    
+                        span {
+                            font-size: $font-size-18;
+                        }
+                    }
+                }
+    
+                .content-header-major {
+                    font-size: $font-size-18;
+                }
+            }
+    
+            .degreesCard-content-body {
+                .content-body-descs {
+                    font-size: $font-size-18;
+    
+                    img {
+                        width: 18px;
+                    }
+    
+                    p {
+                        font-size: $font-size-18;
+                    }
+                }
+    
+                .content-body-btn {
+                    .button-website {
+                        font-size: $font-size-18;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .degreesCard {
+        .degreesCard-logo {
+            img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    
+        .degreesCard-content {
+            .degreesCard-content-header {
+                .content-header-school {
+                    h1 {
+                        font-size: $font-size-18;
+                    }
+    
+                    .header-school-tiem {
+                        font-size: $font-size-16;
+    
+                        span {
+                            font-size: $font-size-16;
+                        }
+                    }
+                }
+    
+                .content-header-major {
+                    font-size: $font-size-16;
+                }
+            }
+    
+            .degreesCard-content-body {
+                .content-body-descs {
+                    font-size: $font-size-16;
+    
+                    img {
+                        width: 16px;
+                    }
+    
+                    p {
+                        font-size: $font-size-16;
+                    }
+                }
+    
+                .content-body-btn {
+                    .button-website {
+                        font-size: $font-size-16;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .degreesCard {
+        align-items: center;
+        flex-direction: column;
+    
+        .degreesCard-content {
+            width: 100%;
+
+            .degreesCard-content-header {
+                .content-header-school {
+                    h1 {
+                        font-size: $font-size-16;
+                    }
+    
+                    .header-school-tiem {
+                        font-size: $font-size-14;
+    
+                        span {
+                            font-size: $font-size-14;
+                        }
+                    }
+                }
+    
+                .content-header-major {
+                    font-size: $font-size-14;
+                }
+            }
+    
+            .degreesCard-content-body {
+                .content-body-descs {
+                    font-size: $font-size-14;
+    
+                    img {
+                        width: 14px;
+                    }
+    
+                    p {
+                        font-size: $font-size-14;
+                    }
+                }
+    
+                .content-body-btn {
+                    .button-website {
+                        font-size: $font-size-14;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .degreesCard {
+        align-items: center;
+        flex-direction: column;
+    
+        .degreesCard-content {
+            width: 100%;
+
+            .degreesCard-content-header {
+                .content-header-school {
+                    h1 {
+                        font-size: $font-size-14;
+                    }
+    
+                    .header-school-tiem {
+                        font-size: $font-size-12;
+    
+                        span {
+                            font-size: $font-size-12;
+                        }
+                    }
+                }
+    
+                .content-header-major {
+                    font-size: $font-size-12;
+                }
+            }
+    
+            .degreesCard-content-body {
+                .content-body-descs {
+                    font-size: $font-size-12;
+    
+                    img {
+                        width: 12px;
+                    }
+    
+                    p {
+                        font-size: $font-size-12;
+                    }
+                }
+    
+                .content-body-btn {
+                    .button-website {
+                        font-size: $font-size-12;
+                    }
+                }
+            }
+        }
+    }
+}
