@@ -1,3 +1,5 @@
+import "./EducationPage.scss"
+
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../../redux/store/store";
@@ -24,7 +26,7 @@ const EducationPage = () => {
 
   return (
     <LayoutPage>
-      <div className='content-wrapper'>
+      <div className='education'>
         <Hero {...PROPS.HERO}/>
         <Degrees {...PROPS.DEGRESS}/>
         <Certifications {...PROPS.CERTIFICATION}/>
