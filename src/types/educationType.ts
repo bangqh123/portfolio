@@ -21,9 +21,12 @@ export interface TEducationData {
         link: string;
     }[];
     certifications: {
-        img?: string;
-        title?: string;
-        person?: string;
+        id: string;
+        img: string;
+        name: string;
         link?: string;
+        title: string;
+        color?: string;
+        person: string;
     }[];
 };

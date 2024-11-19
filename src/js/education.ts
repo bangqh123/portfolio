@@ -7,12 +7,12 @@ const educationData: TEducationData = {
         icons: [
             {
                 name: "LeetCode",
-                icon: "example-icon",
+                icon: ICONS.LEETCODE,
                 link: "example-link",
             },
             {
                 name: "HackerRank",
-                icon: "example-icon",
+                icon: ICONS.HACKERRANK,
                 link: "example-link",
             },
         ],
@@ -20,7 +20,7 @@ const educationData: TEducationData = {
     degrees: [
         {   
             id: "greenwich",
-            logo: "degree-icon",
+            logo: ICONS.GREENWICH,
             major: "Bachelor of Information Technology",
             school_name: "University of Greenwich",
             start: "2018/07",
@@ -39,24 +39,33 @@ const educationData: TEducationData = {
         },
     ],
     certifications: [
-        {
-            img: "certification-image",
-            title: "Certification Title",
-            person: "Certifying Authority",
-            link: "certification-link",
-        },
-        {
-            img: "certification-image",
-            title: "Certification Title",
-            person: "Certifying Authority",
-            link: "certification-link",
-        },
-        {
-            img: "certification-image",
-            title: "Certification Title",
-            person: "Certifying Authority",
-            link: "certification-link",
-        },
+        // {
+        //     id: "certification",
+        //     color: "#b37173",
+        //     person: "Andrew Ng",
+        //     name: "Machine Learning",
+        //     title: "Certification",
+        //     img: "https://ashutoshhathidara.com/static/media/stanford_logo.2c497738.png",
+        //     link: "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
+        // },
+        // {
+        //     id: "certification",
+        //     color: "#b37173",
+        //     person: "Andrew Ng",
+        //     name: "Machine Learning",
+        //     title: "Certification",
+        //     img: "https://ashutoshhathidara.com/static/media/stanford_logo.2c497738.png",
+        //     link: "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
+        // },
+        // {
+        //     id: "certification",
+        //     color: "#b37173",
+        //     person: "Andrew Ng",
+        //     name: "Machine Learning",
+        //     title: "Certification",
+        //     img: "https://ashutoshhathidara.com/static/media/stanford_logo.2c497738.png",
+        //     link: "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
+        // },
     ],
 };
 
