@@ -16,22 +16,22 @@ const portfolioData: TUserData = {
     socials: [  
       { 
         icon: ICONS.GIT, 
-        color: "git", 
+        color: "black", 
         link: "https://github.com/bangqh123" 
       },
       {
         icon: ICONS.LINKIN,
-        color: "linkedin",
+        color: "#0077b5",
         link: "https://www.linkedin.com/in/bang-quach-hai/",
       },
       {
         icon: ICONS.FACE,
-        color: "face",
+        color: "black",
         link: "https://web.facebook.com/bang.quach.906",
       },
       {
         icon: ICONS.TWITTER,
-        color: "twitter",
+        color: "#1877f2",
         link: "https://x.com/BangQuach4",
       },
     ],
