@@ -1,26 +1,32 @@
 export interface TEducationData {
-    gpa: string;
-    title: string;
-    icons: {
-        icon: string;
+    hero: {
+        desc: string;
+        icons: {
+            icon: string;
+            name: string;
+            link: string;
+        }[];
     };
     degrees: {
-        icon: string;
-        title: string;
+        id: string;
+        logo: string;
         major: string;
-        name: string;
+        school_name: string;
         start: string;
         end: string;
-        desc1: string;
-        desc2: string;
-        desc3?: string;
-        desc4?: string;
+        descs: {
+            icon: string;
+            desc: string;
+        }[];
         link: string;
-    };
-    certifications?: {
+    }[];
+    certifications: {
+        id: string;
         img: string;
+        name: string;
+        link?: string;
         title: string;
+        color?: string;
         person: string;
-        link: string;
-    }
+    }[];
 };

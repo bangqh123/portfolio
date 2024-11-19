@@ -1,29 +1,35 @@
-// import { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { fetchPortfolio } from "../../redux/slices/portfolioSlices";
-// import { RootState, AppDispatch } from "../../redux/store/store";
+import "./EducationPage.scss"
+
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState, AppDispatch } from "../../redux/store/store";
+import { fetchEducation } from "../../redux/slices/educationSlies";
 
 import LayoutPage from "../../layouts/LayoutPage/LayoutPage";
-// import Skill from "./partials/Skill/Skill"
-// import { PROPS } from "../../configs/constants/homepage.config"
+import Hero from "./partials/Hero/Hero";
+import { PROPS } from "../../configs/constants/educationpage.config";
+import Degrees from "./partials/Degrees/Degrees";
+import Certifications from "./partials/Certifications/Certifications";
 
 const EducationPage = () => {
-//   const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch<AppDispatch>();
 
-//   const { userInfo } = useSelector(
-//     (state: RootState) => state.portfolio
-//   );
+  const { educationInfo } = useSelector(
+    (state: RootState) => state.education
+  );
 
-//   useEffect(() => {
-//     if (!userInfo) {
-//       dispatch(fetchPortfolio());
-//     }
-//   }, [dispatch, userInfo]);
+  useEffect(() => {
+    if (!educationInfo) {
+      dispatch(fetchEducation());
+    }
+  }, [dispatch, educationInfo]);
 
   return (
     <LayoutPage>
-      <div className='content-wrapper'>
-        Ed
+      <div className='education'>
+        <Hero {...PROPS.HERO}/>
+        <Degrees {...PROPS.DEGRESS}/>
+        <Certifications {...PROPS.CERTIFICATION}/>
       </div>
     </LayoutPage>
   )

@@ -2,8 +2,8 @@ import "./Blogs.scss";
 import "./Blogs.media.scss";
 
 import React, { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState, AppDispatch } from "../../../../redux/store/store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../redux/store/store";
 import { blueTheme } from "../../../../styles/theme";
 import BlogImg from "./blogimg";
 import Button from "../../../../components/buttons/Buttons/Buttons";
@@ -18,8 +18,6 @@ interface TBlog {
 }
 
 const Blogs: React.FC<TBlogProps> = ({ blog }) => {
-    const dispatch = useDispatch<AppDispatch>();
-
     const [isData, setIsData] = useState<TBlog | null>(null);
     const [isAnimation, setIsAnimation] = useState(false);
     const { contactInfo } = useSelector((state: RootState) => state.contact);
@@ -42,20 +40,13 @@ const Blogs: React.FC<TBlogProps> = ({ blog }) => {
     }, []);
 
     useEffect(() => {
-        if (contactInfo?.length > 0) {
-            const blog = contactInfo[0]?.blog;
-            if (blog && Object.keys(blog).length > 0) {
-                console.log("Blog data found:", blog);
-                setIsData(blog);
-            } else {
-                console.log("No blog data available.");
-                setIsData(null);
-            }
+        const blog = contactInfo?.blog;
+        if (blog && Object.keys(blog).length > 0) {
+            setIsData(blog);
         } else {
-            console.log("contactInfo is empty or undefined.");
             setIsData(null);
         }
-    }, [dispatch, contactInfo]);
+    }, [contactInfo]);
 
     return (
         <>

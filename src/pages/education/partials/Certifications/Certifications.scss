@@ -1,0 +1,24 @@
+.educationcertification {
+    gap: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0 40px;
+
+    .educationcertification-title {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        @include font-size(32px);
+        color: $title-text-color;
+    }
+
+    .educationcertification-content {
+        gap: 20px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

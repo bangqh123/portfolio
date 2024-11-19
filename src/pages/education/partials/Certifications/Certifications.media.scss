@@ -1,0 +1,46 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .educationcertification {
+        .educationcertification-title {
+            @include font-size(28px);
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .educationcertification {
+        .educationcertification-title {
+            @include font-size(24px);
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .educationcertification {
+        .educationcertification-title {
+            font-size: $font-size-20;
+        }
+    
+        .educationcertification-content {
+            flex-wrap: nowrap;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .educationcertification {
+        .educationcertification-title {
+            font-size: $font-size-16;
+        }
+    
+        .educationcertification-content {
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+    }
+}

@@ -2,8 +2,8 @@ import "./Hero.scss";
 import "./Hero.media.scss";
 
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState, AppDispatch } from "../../../../redux/store/store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../redux/store/store";
 import SocailButton from "../../../../components/buttons/SocialButtonGroup/SocialButtonGroup";
 import Button from "../../../../components/buttons/Buttons/Buttons";
 
@@ -26,15 +26,13 @@ interface TIcon {
 }
 
 const Hero: React.FC<THeroProps> = ({ contact }) => {
-  const dispatch = useDispatch<AppDispatch>();
-
   const [isData, setIsData] = useState<THero>();
 
   const { contactInfo } = useSelector((state: RootState) => state.contact);
 
   useEffect(() => {
-    setIsData(contactInfo?.[0]?.hero);
-  }, [dispatch, contactInfo]);
+    setIsData(contactInfo?.hero);
+  }, [contactInfo]);
 
   return (
     <div className="contacthero">

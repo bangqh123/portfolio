@@ -19,5 +19,8 @@ export const ICONS = {
     GIT: new URL('./github.svg', import.meta.url).href,
     LINKIN: new URL('./linkedin.svg', import.meta.url).href,
     TWITTER: new URL('./twitter.svg', import.meta.url).href,
+    LEETCODE: new URL('./leetcode.svg', import.meta.url).href,
+    HACKERRANK: new URL('./hackerrank.svg', import.meta.url).href,
+    GREENWICH: new URL('./Greenwich.svg', import.meta.url).href,
     STAR: new URL('./star.svg', import.meta.url).href,
 };

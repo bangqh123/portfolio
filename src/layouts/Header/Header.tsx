@@ -26,28 +26,30 @@ const Header: React.FC<HeaderLayoutProps> = ({ isScroll }) => {
 
   return (
     <header className={`header ${isScroll ? "scrolled" : ""}`}>
-      <a className="header-name" href="/">
-        HaiBang
-      </a>
-      <div
-        className={`header-menu ${menuOpen ? "active" : ""}`}
-        onClick={() => setMenuOpen(!menuOpen)}
-      > 
-        <img 
-          className="header-menu-icon" 
-          src={
-            menuOpen ? (ICONS.CLOSE) : (ICONS.HAMBURGER)
-          } 
-          alt="Menu Icon"
+      <div className="header-layout">
+        <a className="header-name" href="/">
+          HaiBang
+        </a>
+        <div
+          className={`header-menu ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <img
+            className="header-menu-icon"
+            src={
+              menuOpen ? (ICONS.CLOSE) : (ICONS.HAMBURGER)
+            }
+            alt="Menu Icon"
+          />
+        </div>
+        <HeaderNav
+          navItems={navItems}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
         />
       </div>
-      <HeaderNav
-        navItems={navItems}
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      />
     </header>
   );
 };
