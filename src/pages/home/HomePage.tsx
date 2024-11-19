@@ -23,7 +23,7 @@ const HomePage = () => {
 
   return (
     <LayoutPage>
-      <div className='content-wrapper'>
+      <div className='home'>
         <HeroSection />
         <IDo {...PROPS.WHAT}/>
       </div>
