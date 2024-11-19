@@ -34,7 +34,7 @@ const Buttons: React.FC<TButtonsProps> = ({
   };  
 
   return (
-    <button className={`button ${className} ${color}`} onClick={handleClick}>
+    <button className={`button ${className}`} onClick={handleClick} style={ {backgroundColor: color}}>
       {typeof icon === "string" ? (
         <img src={icon} alt="" />
       ) : (
