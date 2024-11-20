@@ -1,29 +1,36 @@
-// import { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { fetchPortfolio } from "../../redux/slices/portfolioSlices";
-// import { RootState, AppDispatch } from "../../redux/store/store";
+import "./ExperiencePage.scss"
 
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchExperience } from "../../redux/slices/experienceSlices";
+import { RootState, AppDispatch } from "../../redux/store/store";
 import LayoutPage from "../../layouts/LayoutPage/LayoutPage";
-// import Skill from "./partials/Skill/Skill"
-// import { PROPS } from "../../configs/constants/homepage.config"
+import Hero from "./partials/Hero/Hero";
+import Works from "./partials/Works/Works";
+import Interships from "./partials/Interships/Internships";
+import Skills from "./partials/Skills/Skills";
+import { PROPS } from "../../configs/constants/experiencepage.config";
 
 const ExperiencePage = () => {
-//   const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch<AppDispatch>();
 
-//   const { userInfo } = useSelector(
-//     (state: RootState) => state.portfolio
-//   );
+  const { experienceInfo } = useSelector(
+    (state: RootState) => state.experience
+  );
 
-//   useEffect(() => {
-//     if (!userInfo) {
-//       dispatch(fetchPortfolio());
-//     }
-//   }, [dispatch, userInfo]);
+  useEffect(() => {
+    if (!experienceInfo) {
+      dispatch(fetchExperience());
+    }
+  }, [dispatch, experienceInfo]);
 
   return (
     <LayoutPage>
-      <div className='content-wrapper'>
-        Ex
+      <div className='experience'>
+        <Hero {...PROPS.HERO} />
+        <Works {...PROPS.WORK}/>
+        <Interships {...PROPS.INTERSHIP} />
+        <Skills {...PROPS.SKILL} />
       </div>
     </LayoutPage>
   )
