@@ -1,0 +1,119 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .experiencehero {
+        .experiencehero-img {
+            svg {
+                width: 100%;
+                height: 460px;
+            }
+        }
+    
+        .experiencehero-content {
+            .experiencehero-content-title {
+                @include font-size(28px);
+            }
+    
+            .experiencehero-content-desc {
+                font-size: $font-size-18;
+            }
+    
+            p {
+                font-size: $font-size-18;
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .experiencehero {
+        .experiencehero-img {
+            svg {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    
+        .experiencehero-content {
+            .experiencehero-content-title {
+                @include font-size(24px);
+            }
+    
+            .experiencehero-content-desc {
+                font-size: $font-size-16;
+            }
+    
+            p {
+                font-size: $font-size-16;
+            }
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .experiencehero {
+        padding-top: 20px;
+        align-items: center;
+        flex-direction: column;
+
+        .experiencehero-img {
+            width: 80%;
+
+            svg {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    
+        .experiencehero-content {
+            width: 100%;
+
+            .experiencehero-content-title {
+                font-size: $font-size-20;
+            }
+    
+            .experiencehero-content-desc {
+                font-size: $font-size-14;
+            }
+    
+            p {
+                font-size: $font-size-14;
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .experiencehero {
+        padding-top: 20px;
+        align-items: center;
+        flex-direction: column;
+
+        .experiencehero-img {
+            width: 80%;
+
+            svg {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    
+        .experiencehero-content {
+            width: 100%;
+
+            .experiencehero-content-title {
+                font-size: $font-size-16;
+            }
+    
+            .experiencehero-content-desc {
+                font-size: $font-size-12;
+            }
+    
+            p {
+                font-size: $font-size-12;
+            }
+        }
+    }
+}
