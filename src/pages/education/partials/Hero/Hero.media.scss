@@ -1,23 +1,23 @@
 /* 992px to 1199px */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .educationhero {
-        .contacthero-img {
+        .educationhero-img {
             svg {
                 width: 100%;
                 height: 460px;
             }
         }
     
-        .contacthero-content {
-            .contacthero-content-title {
+        .educationhero-content {
+            .educationhero-content-title {
                 @include font-size(28px);
             }
     
-            .contacthero-content-desc {
+            .educationhero-content-desc {
                 font-size: $font-size-18;
             }
     
-            .contacthero-content-icons {
+            .educationhero-content-icons {
                 .icon {
                     img {
                         width: 44px;
@@ -32,23 +32,23 @@
 /* 768px to 991px */
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .educationhero {
-        .contacthero-img {
+        .educationhero-img {
             svg {
                 width: 100%;
                 height: 400px;
             }
         }
     
-        .contacthero-content {
-            .contacthero-content-title {
+        .educationhero-content {
+            .educationhero-content-title {
                 @include font-size(24px);
             }
     
-            .contacthero-content-desc {
+            .educationhero-content-desc {
                 font-size: $font-size-16;
             }
     
-            .contacthero-content-icons {
+            .educationhero-content-icons {
                 .icon {
                     img {
                         width: 38px;
@@ -67,7 +67,7 @@
         margin-bottom: 60px;
         flex-direction: column;
 
-        .contacthero-img {
+        .educationhero-img {
             width: 80%;
 
             svg {
@@ -76,18 +76,18 @@
             }
         }
     
-        .contacthero-content {
+        .educationhero-content {
             width: 100%;
 
-            .contacthero-content-title {
+            .educationhero-content-title {
                 font-size: $font-size-20;
             }
     
-            .contacthero-content-desc {
+            .educationhero-content-desc {
                 font-size: $font-size-14;
             }
     
-            .contacthero-content-icons {
+            .educationhero-content-icons {
                 .icon {
                     img {
                         width: 32px;
@@ -106,7 +106,7 @@
         margin-bottom: 40px;
         flex-direction: column;
 
-        .contacthero-img {
+        .educationhero-img {
             width: 80%;
 
             svg {
@@ -115,18 +115,18 @@
             }
         }
     
-        .contacthero-content {
+        .educationhero-content {
             width: 100%;
 
-            .contacthero-content-title {
+            .educationhero-content-title {
                 font-size: $font-size-16;
             }
     
-            .contacthero-content-desc {
+            .educationhero-content-desc {
                 font-size: $font-size-12;
             }
     
-            .contacthero-content-icons {
+            .educationhero-content-icons {
                 .icon {
                     img {
                         width: 28px;

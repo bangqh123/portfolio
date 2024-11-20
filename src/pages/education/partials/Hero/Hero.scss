@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
 
-    .contacthero-img {
+    .educationhero-img {
         flex: 1;
 
         svg {
@@ -12,7 +12,7 @@
         }
     }
 
-    .contacthero-content {
+    .educationhero-content {
         gap: 20px;
         width: 50%;
         display: flex;
@@ -21,7 +21,7 @@
         flex-direction: column;
         justify-content: center;
 
-        .contacthero-content-title {
+        .educationhero-content-title {
             margin: 0;
             font-weight: 700;
             text-align: center;
@@ -30,7 +30,7 @@
             text-transform: uppercase;
         }
 
-        .contacthero-content-desc {
+        .educationhero-content-desc {
             margin: 0;
             font-weight: 600;
             text-align: center;
@@ -38,7 +38,7 @@
             font-size: $font-size-20;
         }
 
-        .contacthero-content-icons {
+        .educationhero-content-icons {
             gap: 20px;
             width: 100%;
             height: auto;
