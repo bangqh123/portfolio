@@ -4,7 +4,7 @@ import "./Internships.media.scss"
 import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { RootState } from "../../../../redux/store/store";
-import InternshipItem from "./IntershipItem/InternshipItem";
+import InternshipItem from "./InternshipItem/InternshipItem";
 
 type TInternshipsProps = {
     title: string
@@ -28,7 +28,7 @@ interface TInternships {
 
 const Internships: React.FC<TInternshipsProps> = ( {title} ) => {
     const [isData, setIsData] = useState<TInternships>();
-    const [isHide, setIsHiden] = useState(false)
+    const [isHiden, setIsHiden] = useState(false)
 
     const { experienceInfo } = useSelector((state: RootState) => state.experience);
 
@@ -40,16 +40,15 @@ const Internships: React.FC<TInternshipsProps> = ( {title} ) => {
         <div className="experienceinternship">
              <div className="experienceinternship-title">
                 <div className="experienceinternship-title-text">{title}</div>
-                <div className="experienceinternship-title-icon" onClick={() => setIsHiden(!isHide)}>
-                    {isHide ? (
+                <div className="experienceinternship-title-icon" onClick={() => setIsHiden(!isHiden)}>
+                    {isHiden ? (
                         <img src={isData?.icons.minus} alt="Collapse" />
                     ) : (
                         <img src={isData?.icons.plus} alt="Expand" />
                     )}
                 </div>
             </div>
-            <InternshipItem className="experienceinternship-content" isHide={isHide}/>
-            {/* <div className={`experienceinternship-content ${isHide ? "show" : ""}`}></div> */}
+            <InternshipItem className="experienceinternship-content" isHiden={isHiden}/>
         </div>
     )
 }

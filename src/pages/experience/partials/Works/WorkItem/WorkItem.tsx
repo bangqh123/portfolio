@@ -7,7 +7,7 @@ import { RootState } from "../../../../../redux/store/store";
 
 type TWorkItemProps = {
     className: string;
-    isHide: boolean;
+    isHiden: boolean;
 };
 
 interface TWorkItemInfor {
@@ -24,7 +24,7 @@ interface TWorkItemInfor {
     address: string;
 }
 
-const WorkItem: React.FC<TWorkItemProps> = ({ className, isHide }) => {
+const WorkItem: React.FC<TWorkItemProps> = ({ className, isHiden }) => {
     const [isData, setIsData] = useState<TWorkItemInfor[]>([]);
 
     const { experienceInfo } = useSelector((state: RootState) => state.experience);
@@ -54,7 +54,7 @@ const WorkItem: React.FC<TWorkItemProps> = ({ className, isHide }) => {
     }, [experienceInfo]);
 
     return (
-        <div className={`${className} ${isHide ? "show" : ""}`}>
+        <div className={`${className} ${isHiden ? "show" : ""}`}>
             {isData.map((item, index) => (
                 <div 
                     key={index}

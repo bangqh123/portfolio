@@ -7,7 +7,7 @@ import { RootState } from "../../../../../redux/store/store";
 
 type TInternshipItemProps = {
     className: string;
-    isHide: boolean;
+    isHiden: boolean;
 };
 
 interface TInternship {
@@ -24,7 +24,7 @@ interface TInternship {
     address: string;
 }
 
-const InternshipItem: React.FC<TInternshipItemProps> = ({ className, isHide }) => {
+const InternshipItem: React.FC<TInternshipItemProps> = ({ className, isHiden }) => {
     const [isData, setIsData] = useState<TInternship[]>([]);
 
     const { experienceInfo } = useSelector((state: RootState) => state.experience);
@@ -54,7 +54,7 @@ const InternshipItem: React.FC<TInternshipItemProps> = ({ className, isHide }) =
     }, [experienceInfo]);
 
     return (
-        <div className={`${className} ${isHide ? "show" : ""}`}>
+        <div className={`${className} ${isHiden ? "show" : ""}`}>
             {isData.map((item, index) => (
                 <div
                     key={index}

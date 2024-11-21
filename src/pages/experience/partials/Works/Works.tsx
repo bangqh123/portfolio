@@ -20,7 +20,7 @@ interface TWork {
 
 const Works: React.FC<TWorksProps> = ({ title }) => {
     const [isData, setIsData] = useState<TWork>();
-    const [isHide, setIsHiden] = useState(false)
+    const [isHiden, setIsHiden] = useState(false)
 
     const { experienceInfo } = useSelector((state: RootState) => state.experience);
 
@@ -32,15 +32,15 @@ const Works: React.FC<TWorksProps> = ({ title }) => {
         <div className="experiencework">
             <div className="experiencework-title">
                 <div className="experiencework-title-text">{title}</div>
-                <div className="experiencework-title-icon" onClick={() => setIsHiden(!isHide)}>
-                    {isHide ? (
+                <div className="experiencework-title-icon" onClick={() => setIsHiden(!isHiden)}>
+                    {isHiden ? (
                         <img src={isData?.icons.minus} alt="Collapse" />
                     ) : (
                         <img src={isData?.icons.plus} alt="Expand" />
                     )}
                 </div>
             </div>
-            <WorkItem className="experiencework-content" isHide={isHide}/>
+            <WorkItem className="experiencework-content" isHiden={isHiden}/>
         </div>
     )
 }
