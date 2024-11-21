@@ -23,19 +23,20 @@ const CertificationCard: React.FC = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollFraction = scrollTop / docHeight;
-
-            setIsAnimation((prevState) => ({
-                ...prevState,
-                certification: itemsRef.current[0]?.getBoundingClientRect().top <= window.innerHeight && scrollFraction >= 0.01,
-            }));
+            itemsRef.current.forEach((itemRef, idx) => {
+                if (itemRef) {
+                    const isVisible = itemRef.getBoundingClientRect().top <= window.innerHeight;
+                    setIsAnimation((prev) => ({
+                        ...prev,
+                        [isData[idx]?.id]: isVisible,
+                    }));
+                }
+            });
         };
-
+    
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [isData]);
 
     useEffect(() => {
         setIsData(educationInfo?.certifications);

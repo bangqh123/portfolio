@@ -9,8 +9,6 @@ type TDegreesProps = {
 };
 
 const Degrees: React.FC<TDegreesProps> = ({ title }) => {
- 
-
   return (
     <div className="educationdegrees">
       <h1 className="educationdegrees-title">
