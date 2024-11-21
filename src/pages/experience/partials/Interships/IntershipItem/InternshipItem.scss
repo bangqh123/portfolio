@@ -1,0 +1,138 @@
+.experienceinternship-content {
+    gap: 20px;
+    height: 0;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    transform: scaleY(0.95);
+    transition: height 0.5s ease, opacity 0.5s ease, transform .5s ease;
+    
+    .item {
+        gap: 20px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+
+        .item-img {
+            opacity: 0;
+            width: auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+            }
+        }
+
+        .item-content {
+            flex: 1;
+            opacity: 0;
+            display: flex;
+            padding: 16px 12px;
+            flex-direction: column;
+
+            .item-content-title {
+                display: flex;
+                padding: 12px 0;
+                background-color: #85b7d5;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                justify-content: space-between;
+
+                .title {
+                    gap: 12px;
+                    display: flex;
+                    padding-left: 12px;
+                    flex-direction: column;
+
+                    h3 {
+                        margin: 0;
+                        font-weight: 700;
+                        color: $title-text-color;
+                        @include font-size(24px);
+                        text-transform: capitalize;
+                    }
+
+                    p {
+                        margin: 0;
+                        opacity: .7;
+                        font-weight: 400;
+                        color: $title-text-color;
+                        font-size: $font-size-20;
+                    }
+                }
+
+                .desc {
+                    gap: 12px;
+                    display: flex;
+                    padding-right: 12px;
+                    align-items: flex-end;
+                    flex-direction: column;
+
+                    p {
+                        margin: 0;
+                        opacity: .7;
+                        font-weight: 400;
+                        color: $title-text-color;
+                        font-size: $font-size-20;
+                    }
+                }
+            }
+
+            .item-content-body {
+                gap: 20px;
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0,5);
+
+                .content-body-descs {
+                    gap: 8px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    
+                    p {
+                        flex: 1;
+                        margin: 0;
+                        opacity: .7;
+                        font-weight: 300;
+                        color: $title-text-color;
+                        font-size: $font-size-20;
+                    }
+                }
+            }
+        }
+    }
+
+    .item.animation {
+        .item-img {
+            opacity: 1;
+            animation: revealRotate 3s ease-in-out forwards;
+        }
+
+        .item-content {
+            opacity: 1;
+            animation: slideInFromRight 2s ease forwards;
+        }
+    }
+}
+
+.experienceinternship-content.show {
+    opacity: 1;
+    height: auto;
+    margin: 20px 0;
+    transform: scaleY(1);
+}
