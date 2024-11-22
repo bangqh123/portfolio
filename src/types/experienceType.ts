@@ -46,8 +46,14 @@ export interface TExperienceData {
             minus: string;
         };
         infor: {
-            technical: string[];
-            soft: string[];
+            technical: {
+                icon: string;
+                desc: string;
+            }[];
+            soft: {
+                icon: string;
+                desc: string;
+            }[];
         };
     }
 };

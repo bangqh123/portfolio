@@ -70,15 +70,37 @@ const experiencedata: TExperienceData = {
         },
         infor: {
             technical: [
-                "Git, Npm",
-                "HTML, CSS, JavaScript, TypeScript",
-                "Bootstrap, Tailwind, Ant Design",
-                "ReactJS, React Native",
+                {
+                    icon: ICONS.LIGHTNING,
+                    desc: "Git, Npm",
+                },
+                {
+                    icon: ICONS.LIGHTNING,
+                    desc: "HTML, CSS, JavaScript, TypeScript",
+                },
+                {
+                    icon: ICONS.LIGHTNING,
+                    desc: "Bootstrap, Tailwind, Ant Design",
+                },
+                {
+                    icon: ICONS.LIGHTNING,
+                    desc: "ReactJS, React Native",
+
+                }  
             ],
             soft: [
-                "Teamwork",
-                "Communication",
-                "Problem-Solving"
+                {
+                    icon: ICONS.LIGHTNING,
+                    desc: "Teamwork",
+                },
+                {
+                    icon: ICONS.LIGHTNING,
+                    desc: "Communication",
+                },
+                {
+                    icon: ICONS.LIGHTNING,
+                    desc: "Problem-Solving"
+                }   
             ]
         },
     },
