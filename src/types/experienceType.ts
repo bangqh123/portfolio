@@ -1,28 +1,53 @@
 export interface TExperienceData {
-    desc: string;
-    title: string;
-    internship: {
-        icon: string;
-        role: string;
-        company: string;
-        job: string;
+    hero: {
         desc: string;
-        start: string;
-        end: string;
-        address: string;
     };
-    wokr: {
-        icon: string;
-        role: string;
-        company: string;
-        job: string;
-        desc: string;
-        start: string;
-        end: string;
-        address: string;
+    works?: {
+        icons: {
+            plus: string;
+            minus: string;
+        };
+        infor: {
+            id: string;
+            img: string;
+            name: string;
+            major: string;
+            descs: {
+                icon: string;
+                desc: string;
+            }[];
+            start: string;
+            end: string;
+            address: string;
+        }[],
     };
-    skill: {
-      technical: { name: string; desc: string };
-      soft: { name: string };
+    interships?: {
+        icons: {
+            plus: string;
+            minus: string;
+        };
+        infor: {
+            id: string;
+            img: string;
+            name: string;
+            major: string;
+            descs: {
+                icon: string;
+                desc: string;
+            }[];
+            start: string;
+            end: string;
+            address: string;
+        }[];
     };
+    skills?: {
+        icons: {
+            plus: string;
+            minus: string;
+        };
+        infor: {
+            technical: string[];
+            soft: string[];
+        };
+    }
 };

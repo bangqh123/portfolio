@@ -13,6 +13,8 @@ const intershipsPros = {
 
 const skillsPros = {
     title: 'Skills',
+    technical: 'Technical Skills',
+    soft: 'Soft Skills'
 }
 
 export const PROPS = {
