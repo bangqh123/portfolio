@@ -1,29 +1,24 @@
 /* 992px to 1199px */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-    .educationhero {
-        .educationhero-img {
+    .experiencehero {
+        .experiencehero-img {
             svg {
                 width: 100%;
                 height: 460px;
             }
         }
     
-        .educationhero-content {
-            .educationhero-content-title {
+        .experiencehero-content {
+            .experiencehero-content-title {
                 @include font-size(28px);
             }
     
-            .educationhero-content-desc {
+            .experiencehero-content-desc {
                 font-size: $font-size-18;
             }
     
-            .educationhero-content-icons {
-                .icon {
-                    img {
-                        width: 44px;
-                        height: 44px;
-                    }
-                }
+            p {
+                font-size: $font-size-18;
             }
         }
     }
@@ -31,30 +26,25 @@
 
 /* 768px to 991px */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .educationhero {
-        .educationhero-img {
+    .experiencehero {
+        .experiencehero-img {
             svg {
                 width: 100%;
                 height: 400px;
             }
         }
     
-        .educationhero-content {
-            .educationhero-content-title {
+        .experiencehero-content {
+            .experiencehero-content-title {
                 @include font-size(24px);
             }
     
-            .educationhero-content-desc {
+            .experiencehero-content-desc {
                 font-size: $font-size-16;
             }
     
-            .educationhero-content-icons {
-                .icon {
-                    img {
-                        width: 38px;
-                        height: 38px;
-                    }
-                }
+            p {
+                font-size: $font-size-16;
             }
         }
     }
@@ -62,12 +52,12 @@
 
 /* 500px to 768px */
 @media screen and (min-width: 500px) and (max-width: 767px) {
-    .educationhero {
+    .experiencehero {
+        padding-top: 20px;
         align-items: center;
-        margin-bottom: 60px;
         flex-direction: column;
 
-        .educationhero-img {
+        .experiencehero-img {
             width: 80%;
 
             svg {
@@ -76,24 +66,19 @@
             }
         }
     
-        .educationhero-content {
+        .experiencehero-content {
             width: 100%;
 
-            .educationhero-content-title {
+            .experiencehero-content-title {
                 font-size: $font-size-20;
             }
     
-            .educationhero-content-desc {
+            .experiencehero-content-desc {
                 font-size: $font-size-14;
             }
     
-            .educationhero-content-icons {
-                .icon {
-                    img {
-                        width: 32px;
-                        height: 32px;
-                    }
-                }
+            p {
+                font-size: $font-size-14;
             }
         }
     }
@@ -101,12 +86,12 @@
 
 /* max 499px */
 @media screen and (max-width: 499px) {
-    .educationhero {
+    .experiencehero {
+        padding-top: 20px;
         align-items: center;
-        margin-bottom: 40px;
         flex-direction: column;
 
-        .educationhero-img {
+        .experiencehero-img {
             width: 80%;
 
             svg {
@@ -115,24 +100,19 @@
             }
         }
     
-        .educationhero-content {
+        .experiencehero-content {
             width: 100%;
 
-            .educationhero-content-title {
+            .experiencehero-content-title {
                 font-size: $font-size-16;
             }
     
-            .educationhero-content-desc {
+            .experiencehero-content-desc {
                 font-size: $font-size-12;
             }
     
-            .educationhero-content-icons {
-                .icon {
-                    img {
-                        width: 28px;
-                        height: 28px;
-                    }
-                }
+            p {
+                font-size: $font-size-12;
             }
         }
     }

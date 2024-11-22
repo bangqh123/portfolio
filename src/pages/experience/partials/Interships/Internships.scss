@@ -1,0 +1,36 @@
+.experienceinternship {
+    width: 100%;
+    height: auto;
+    margin-top: -20px;
+
+    .experienceinternship-title {
+        display: flex;
+        padding: 16px 20px;
+        border-radius: 4px;
+        justify-content: space-between;
+        border: 1px solid rgba(14, 107, 168, 0.467);
+        
+        .experienceinternship-title-text {
+            color: $title-text-color;
+            font-size: $font-size-20;
+        }
+
+        .experienceinternship-title-icon {
+            display: flex;
+            align-items: center;
+            
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .experienceinternship-content {
+        width: 100%;
+    }
+}

@@ -1,0 +1,71 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .experienceinternship {
+        .experienceinternship-title {
+            .experienceinternship-title-text {
+                font-size: $font-size-18;
+            }
+    
+            .experienceinternship-title-icon {
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .experienceinternship {
+        .experienceinternship-title {
+            .experienceinternship-title-text {
+                font-size: $font-size-16;
+            }
+    
+            .experienceinternship-title-icon {
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .experienceinternship {
+        .experienceinternship-title {
+            .experienceinternship-title-text {
+                font-size: $font-size-14;
+            }
+    
+            .experienceinternship-title-icon {
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .experienceinternship {
+        .experienceinternship-title {
+            .experienceinternship-title-text {
+                font-size: $font-size-12;
+            }
+    
+            .experienceinternship-title-icon {
+                img {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+}

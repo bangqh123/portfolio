@@ -31,13 +31,13 @@ const Hero: React.FC<THeroProps> = ({ title }) => {
 
   return (
     <div className="educationhero">
-      <div className="contacthero-img">
+      <div className="educationhero-img">
         <HeroImg theme={blueTheme} />
       </div>
-      <div className="contacthero-content">
-        <h1 className="contacthero-content-title">{title}</h1>
-        <p className="contacthero-content-desc">{isData?.desc}</p>
-        <div className="contacthero-content-icons">
+      <div className="educationhero-content">
+        <h1 className="educationhero-content-title">{title}</h1>
+        <p className="educationhero-content-desc">{isData?.desc}</p>
+        <div className="educationhero-content-icons">
           {isData?.icons?.map((iconData, i) => {
             const IconComponent = iconData.icon;
             return (

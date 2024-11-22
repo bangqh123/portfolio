@@ -1,0 +1,193 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .experiencework-content {
+        .item {
+            .item-img {
+                img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+    
+            .item-content {
+                .item-content-title {
+                    .title {
+                        h3 {
+                            font-size: $font-size-20;
+                        }
+    
+                        p {
+                            font-size: $font-size-18;
+                        }
+                    }
+    
+                    .desc {
+                        p {
+                            font-size: $font-size-18;
+                        }
+                    }
+                }
+    
+                .item-content-body {
+                    .content-body-descs {
+                        img {
+                            width: 18px;
+                            height: 18px;
+                        }
+                        
+                        p {
+                            font-size: $font-size-18;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .experiencework-content {
+        .item {
+            .item-img {
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+    
+            .item-content {
+                .item-content-title {
+                    .title {
+                        h3 {
+                            font-size: $font-size-18;
+                        }
+    
+                        p {
+                            font-size: $font-size-16;
+                        }
+                    }
+    
+                    .desc {
+                        p {
+                            font-size: $font-size-16;
+                        }
+                    }
+                }
+    
+                .item-content-body {
+                    .content-body-descs {
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                        
+                        p {
+                            font-size: $font-size-16;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .experiencework-content {
+        .item {
+            align-items: center;
+            flex-direction: column;
+
+            .item-img {
+                img {
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+    
+            .item-content {
+                .item-content-title {
+                    .title {
+                        h3 {
+                            font-size: $font-size-16;
+                        }
+    
+                        p {
+                            font-size: $font-size-14;
+                        }
+                    }
+    
+                    .desc {
+                        p {
+                            font-size: $font-size-14;
+                        }
+                    }
+                }
+    
+                .item-content-body {
+                    .content-body-descs {
+                        img {
+                            width: 14px;
+                            height: 14px;
+                        }
+                        
+                        p {
+                            font-size: $font-size-14;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .experiencework-content {
+        .item {
+            align-items: center;
+            flex-direction: column;
+            
+            .item-img {
+                img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+    
+            .item-content {
+                .item-content-title {
+                    .title {
+                        h3 {
+                            font-size: $font-size-14;
+                        }
+    
+                        p {
+                            font-size: $font-size-12;
+                        }
+                    }
+    
+                    .desc {
+                        p {
+                            font-size: $font-size-12;
+                        }
+                    }
+                }
+    
+                .item-content-body {
+                    .content-body-descs {
+                        img {
+                            width: 12px;
+                            height: 12px;
+                        }
+                        
+                        p {
+                            font-size: $font-size-12;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

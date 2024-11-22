@@ -22,5 +22,7 @@ export const ICONS = {
     LEETCODE: new URL('./leetcode.svg', import.meta.url).href,
     HACKERRANK: new URL('./hackerrank.svg', import.meta.url).href,
     GREENWICH: new URL('./Greenwich.svg', import.meta.url).href,
+    PLUS: new URL('./plus.svg', import.meta.url).href,
+    MINUS: new URL('./minus.svg', import.meta.url).href,
     STAR: new URL('./star.svg', import.meta.url).href,
 };

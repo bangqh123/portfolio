@@ -1,20 +1,33 @@
-const experienceProps = {
+const heroProps = {
     title: 'Experience',
-    company: 'Company: ',
-    role: 'Roles/Responsibilities'
+    desc: "Work, Internship and Skill"
 }
 
-const skillPros = {
-    title: 'Skill',
-    soft: 'Soft Skills',
+const worksPros = {
+    title: 'Works',
+}
+
+const intershipsPros = {
+    title: 'Internships',
+}
+
+const skillsPros = {
+    title: 'Skills',
     technical: 'Technical Skills',
+    soft: 'Soft Skills'
 }
 
 export const PROPS = {
-    EXPERIENCE: {
-        ...experienceProps
+    HERO: {
+        ...heroProps
+    },
+    WORK: {
+        ...worksPros
+    },
+    INTERSHIP: {
+        ...intershipsPros
     },
     SKILL: {
-        ...skillPros
+        ...skillsPros
     },
 }

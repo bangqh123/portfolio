@@ -46,21 +46,20 @@ const IDo: React.FC<TIDoProps> = ({ title }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollFraction = scrollTop / docHeight;
-
-      setIsAnimation((prevState) => ({
-        ...prevState,
-        frontend: itemsRef.current[0]?.getBoundingClientRect().top <= window.innerHeight && scrollFraction >= 0.01,
-        backend: itemsRef.current[1]?.getBoundingClientRect().top <= window.innerHeight && scrollFraction >= 0.01,
-        design: itemsRef.current[2]?.getBoundingClientRect().top <= window.innerHeight && scrollFraction >= 0.01,
-      }));
+      itemsRef.current.forEach((itemRef, idx) => {
+        if (itemRef) {
+          const isVisible = itemRef.getBoundingClientRect().top <= window.innerHeight;
+          setIsAnimation((prev) => ({
+            ...prev,
+            [isData[idx]?.id]: isVisible,
+          }));
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isData]);
 
   useEffect(() => {
     if (userInfo?.whatido) {
