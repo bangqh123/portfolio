@@ -1,0 +1,105 @@
+.experienceskill-content {
+    gap: 20px;
+    height: 0;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    transform: scaleY(0.95);
+    transition: height 0.5s ease, opacity 0.5s ease, transform .5s ease;
+
+    .technical {
+        flex: 1;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .technical-title {
+            margin: 0;
+            font-weight: 500;
+            color: $title-text-color;
+            @include font-size(24px);
+        }
+
+        .technical-info {
+            gap: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .skill-item {
+                gap: 12px;
+                display: flex;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                p {
+                    margin: 0;
+                    font-weight: 300;
+                    color: $title-text-color;
+                    font-size: $font-size-20;
+                }
+            }
+        }
+    }
+
+    .soft {
+        flex: 1;
+        gap: 20px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include font-size(24px);
+
+        .soft-title {
+            margin: 0;
+            font-weight: 500;
+            color: $title-text-color;
+            font-size: $font-size-20;
+        }
+
+        .soft-info {
+            gap: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .skill-item {
+                gap: 12px;
+                display: flex;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                p {
+                    margin: 0;
+                    font-weight: 300;
+                    color: $title-text-color;
+                    font-size: $font-size-20;
+                }
+            }
+        }
+    }
+}
+
+.experienceskill-content.show {
+    opacity: 1;
+    height: auto;
+    margin: 20px 0;
+    transform: scaleY(1);
+
+    .technical {
+        animation: slideInFromLeft 2s ease forwards;
+    }
+
+    .soft {
+        animation: slideInFromRight 2s ease forwards;
+    }
+}
