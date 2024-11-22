@@ -17,7 +17,7 @@ const Loading: React.FC<LoadingProps> = ( { isLoading } ) => {
 
   return (
     <div className="loading-container">
-      <RingLoader size={80} color="white" loading={loading} />
+      <RingLoader size={80} color="#001c55" loading={loading} />
     </div>
   );
 };
