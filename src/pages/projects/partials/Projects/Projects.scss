@@ -4,29 +4,6 @@
     height: auto;
     display: flex;
     padding: 20px 0;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
-
-    h1 {
-        margin: 0;
-        font-weight: 700;
-        color: $text-color;
-        @include font-size(32px);
-        text-transform: uppercase;
-    }
-
-    p {
-        margin: 0;
-        color: $white-color;
-        @include font-size(24px);
-    }
-
-    .project-cards {
-        gap: 40px;
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
 }
