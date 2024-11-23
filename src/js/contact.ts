@@ -8,7 +8,7 @@ const contactData: TContactData = {
   hero: {
     img: AVATAR,
     alt: "Avatar picture",
-    desc: "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, React, Android, Cloud and Opensource Development.",
+    desc: "You can message me, I will reply within 24 hours. I can help you develop a website interface using React Js, TypeScript, Less, and Redux open source.",
     icons: [
       { 
         icon: ICONS.GIT, 

@@ -5,7 +5,7 @@ import IVS from "../assets/images/ivs.png"
 
 const experiencedata: TExperienceData = {
     hero: {
-        desc: "I have worked with many evolving startups as ML and DL Developer, Designer and Software Architect. I have also worked with some well established companies mostly as AI Developer. I love organising events and that is why I am also involved with many opensource communities as a representative.",
+        desc: "I graduated with a major in computer science in July 2023. I interned for four months at IVS, a Japanese software outsourcing company in Can Tho, and for more than five months at Likelion in District 7, Ho Chi Minh City.",
     },
     works: {
         icons: {
