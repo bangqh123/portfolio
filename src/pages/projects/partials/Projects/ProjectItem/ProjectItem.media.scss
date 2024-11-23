@@ -1,0 +1,214 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .card {
+        width: 340px;
+    
+        .card-content {
+            .card-content-info {
+                .info-header {
+                    .info-header-name {
+                        @include font-size(22px);
+                    }
+    
+                    .info-header-technicals {
+                        .technical {
+                            img {
+                                width: 32px;
+                                height: 32px;
+                            }
+
+                        }
+                    }
+                }
+        
+                .info-desc {
+                    font-size: $font-size-18;
+                }
+            }
+            
+            .card-content-button {
+                .btn-git,
+                .btn-demo {
+                    font-size: $font-size-14;
+
+                    svg {
+                        font-size: $font-size-18;
+                    }
+    
+                }
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .card {
+        width: 320px;
+    
+        .card-content {
+            .card-content-info {
+                .info-header {
+                    .info-header-name {
+                        font-size: $font-size-20;
+                    }
+    
+                    .info-header-technicals {
+                        .technical {
+                            img {
+                                width: 26px;
+                                height: 26px;
+                            }
+
+                        }
+                    }
+                }
+        
+                .info-desc {
+                    font-size: $font-size-16;
+                }
+            }
+            
+            .card-content-button {
+                .btn-git,
+                .btn-demo {
+                    font-size: $font-size-14;
+
+                    svg {
+                        font-size: $font-size-16;
+                    }
+    
+                }
+            }
+        }
+    }
+}
+
+/* 620px to 768px */
+@media screen and (min-width: 620px) and (max-width: 767px) {
+    .card {
+        width: 300px;
+    
+        .card-content {
+            .card-content-info {
+                .info-header {
+                    .info-header-name {
+                        font-size: $font-size-18;
+                    }
+    
+                    .info-header-technicals {
+                        .technical {
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                        }
+                    }
+                }
+        
+                .info-desc {
+                    font-size: $font-size-14;
+                }
+            }
+            
+            .card-content-button {
+                .btn-git,
+                .btn-demo {
+                    font-size: $font-size-14;
+
+                    svg {
+                        font-size: $font-size-14;
+                    }
+    
+                }
+            }
+        }
+    }
+}
+
+/* 500px to 619px */
+@media screen and (min-width: 500px) and (max-width: 619px) {
+    .card {
+        width: 280px;
+    
+        .card-content {
+            .card-content-info {
+                .info-header {
+                    .info-header-name {
+                        font-size: $font-size-16;
+                    }
+    
+                    .info-header-technicals {
+                        .technical {
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                        }
+                    }
+                }
+        
+                .info-desc {
+                    font-size: $font-size-14;
+                }
+            }
+            
+            .card-content-button {
+                .btn-git,
+                .btn-demo {
+                    font-size: $font-size-14;
+
+                    svg {
+                        font-size: $font-size-14;
+                    }
+    
+                }
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .card {
+        width: 280px;
+    
+        .card-content {
+            .card-content-info {
+                .info-header {
+                    .info-header-name {
+                        font-size: $font-size-14;
+                    }
+    
+                    .info-header-technicals {
+                        .technical {
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                        }
+                    }
+                }
+        
+                .info-desc {
+                    font-size: $font-size-12;
+                }
+            }
+            
+            .card-content-button {
+                .btn-git,
+                .btn-demo {
+                    font-size: $font-size-12;
+
+                    svg {
+                        font-size: $font-size-12;
+                    }
+    
+                }
+            }
+        }
+    }
+}

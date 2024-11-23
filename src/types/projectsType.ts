@@ -1,7 +1,17 @@
 export interface TProjectData {
-    img: string;
-    name: string;
-    description: string;
-    git: string;
-    demo: string;
+    hero: {
+        desc: string;
+    };
+    projects: {
+        id: string
+        img: string;
+        name: string;
+        git: string;
+        demo: string;
+        description: string;
+        technicals: {
+            name: string;
+            icon: string;
+        }[]
+    }[];
 }

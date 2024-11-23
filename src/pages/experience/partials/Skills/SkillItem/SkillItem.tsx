@@ -34,9 +34,6 @@ const SkillItem: React.FC<TSkillItemProps> = ({ className, technical, soft, isHi
         }
     }, [experienceInfo]);
 
-    console.log("Technical Skills:", isData?.technical);
-    console.log("Soft Skills:", isData?.soft);
-
     return (
         <div className={`${className} ${isHidden ? "show" : ""}`}>
             <div className="technical">

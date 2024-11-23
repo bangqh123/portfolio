@@ -1,0 +1,103 @@
+/* 992px to 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .projecthero {
+        .projecthero-img {
+            svg {
+                width: 100%;
+                height: 460px;
+            }
+        }
+    
+        .projecthero-content {
+            .projecthero-content-title {
+                @include font-size(28px);
+            }
+    
+            .projecthero-content-desc {
+                font-size: $font-size-18;
+            }
+        }
+    }
+}
+
+/* 768px to 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .projecthero {
+        .projecthero-img {
+            svg {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    
+        .projecthero-content {
+            .projecthero-content-title {
+                @include font-size(24px);
+            }
+    
+            .projecthero-content-desc {
+                font-size: $font-size-16;
+            }
+        }
+    }
+}
+
+/* 500px to 768px */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .projecthero {
+        align-items: center;
+        margin-bottom: 60px;
+        flex-direction: column;
+
+        .projecthero-img {
+            width: 80%;
+
+            svg {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    
+        .projecthero-content {
+            width: 100%;
+
+            .projecthero-content-title {
+                font-size: $font-size-20;
+            }
+    
+            .projecthero-content-desc {
+                font-size: $font-size-14;
+            }
+        }
+    }
+}
+
+/* max 499px */
+@media screen and (max-width: 499px) {
+    .projecthero {
+        align-items: center;
+        margin-bottom: 40px;
+        flex-direction: column;
+
+        .projecthero-img {
+            width: 80%;
+
+            svg {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    
+        .projecthero-content {
+            width: 100%;
+
+            .projecthero-content-title {
+                font-size: $font-size-16;
+            }
+    
+            .projecthero-content-desc {
+                font-size: $font-size-12;
+            }
+        }
+    }
+}

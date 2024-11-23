@@ -25,4 +25,8 @@ export const ICONS = {
     PLUS: new URL('./plus.svg', import.meta.url).href,
     MINUS: new URL('./minus.svg', import.meta.url).href,
     STAR: new URL('./star.svg', import.meta.url).href,
+    HTML: new URL('./html.svg', import.meta.url).href,
+    CSS: new URL('./css.svg', import.meta.url).href,
+    LESS: new URL('./less.svg', import.meta.url).href,
+    ANT: new URL('./antdesign.svg', import.meta.url).href,
 };

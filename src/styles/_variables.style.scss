@@ -132,3 +132,24 @@ $font-size-20: 20px;
         transform: perspective(400px);
     }
 }
+
+@keyframes projectsRotate {
+    0% {
+        transform: perspective(400px) rotate3d(0, -1, 0, 60deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    
+    25% {
+        transform: perspective(400px) rotate3d(0, -1, 0, -20deg);
+        opacity: 1;
+    }
+    
+    75% {
+        transform: perspective(400px) rotate3d(0, -1, 0, 15deg);
+    }
+    
+    100% {
+        transform: perspective(400px);
+    }
+}

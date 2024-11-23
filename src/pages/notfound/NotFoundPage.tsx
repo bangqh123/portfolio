@@ -1,4 +1,5 @@
 import "./NotFoundPage.scss"
+import "./NotFoundPage.media.scss"
 
 import React from "react";
 import Buttons from "../../components/buttons/Buttons/Buttons";
@@ -20,7 +21,7 @@ const NotFoundPage: React.FC = () => {
         <div className="notfound-text">
             <h1>Oops!</h1>
             <p>The page you're looking for doesn't exist.</p>
-            <Buttons title="Go Back" className="notfound-text-btn" onClick={handleBack}/>
+            <Buttons title="Back" className="notfound-text-btn" onClick={handleBack}/>
         </div>
       </div>
     );
