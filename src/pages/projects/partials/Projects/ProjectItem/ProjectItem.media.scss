@@ -1,7 +1,8 @@
 /* 992px to 1199px */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .card {
-        width: 340px;
+        width: 400px;
+        height: 500px;
     
         .card-content {
             .card-content-info {
@@ -44,7 +45,8 @@
 /* 768px to 991px */
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .card {
-        width: 320px;
+        width: 360px;
+        height: 480px;
     
         .card-content {
             .card-content-info {
@@ -87,7 +89,8 @@
 /* 620px to 768px */
 @media screen and (min-width: 620px) and (max-width: 767px) {
     .card {
-        width: 300px;
+        width: 340px;
+        height: 460px;
     
         .card-content {
             .card-content-info {
@@ -130,7 +133,8 @@
 /* 500px to 619px */
 @media screen and (min-width: 500px) and (max-width: 619px) {
     .card {
-        width: 280px;
+        width: 360px;
+        height: 460px;
     
         .card-content {
             .card-content-info {
@@ -173,7 +177,8 @@
 /* max 499px */
 @media screen and (max-width: 499px) {
     .card {
-        width: 280px;
+        width: 90%;
+        height: 440px;
     
         .card-content {
             .card-content-info {

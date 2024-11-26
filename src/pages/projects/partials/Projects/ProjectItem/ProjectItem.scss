@@ -1,7 +1,7 @@
 .card {
     opacity: 0;
-    width: 360px;
-    min-height: 460px;
+    width: 440px;
+    height: 520px;
     display: flex;
     overflow: hidden;
     border-radius: 20px;
@@ -129,13 +129,15 @@
     }
 
     &:hover {
-        transform: scale(1.02);
+        cursor: default;
+        transform: scale(1.03);
         transition: 0.5s ease 0s;
-        box-shadow: 0 0 8px $btn-color;
+        box-shadow: 0 0 12px $btn-color;
     }
 }
 
+
 .card.animation {
     opacity: 1;
-    animation: projectsRotate 2s ease forwards;
+    animation: projectsRotate 2s ease;
 }
