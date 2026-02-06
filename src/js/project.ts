@@ -1,5 +1,6 @@
 import { TProjectData } from "../types/projectsType"
 
+import YearImage from "../assets/images/newyear.png"
 import ShopImage from "../assets/images/Shop.png"
 import DockImage from "../assets/images/Dock.png"
 import BookingImage from "../assets/images/Booking.png"
@@ -11,6 +12,28 @@ const projectData: TProjectData = {
         desc: "My projects makes use of vast variety of latest technology tools."
     },
     projects: [
+        {
+            id: "New-year",
+            img: YearImage,
+            name: "Lunar-new-years",
+            description: "Develop a real-time New Year's greeting app with features including a timer, fireworks, and New Year's wishes with meaningful messages.",
+            git: "https://github.com/bangqh123/Lunar-new-year",
+            demo: "https://lunar-new-year-gamma.vercel.app/",
+            technicals: [
+                {
+                    name: "ReactJS",
+                    icon: ICONS.REACT,
+                },
+                {
+                    name: "LESS",
+                    icon: ICONS.LESS,
+                },
+                {
+                    name: "TypeScript",
+                    icon: ICONS.TYPE,
+                },
+            ]
+        },
         {
             id: "dock",
             img: DockImage,
@@ -105,7 +128,7 @@ const projectData: TProjectData = {
         },
     ]
 }
-    
+
 
 
 export default projectData;
